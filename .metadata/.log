@@ -1,0 +1,858 @@
+!SESSION 2020-05-04 12:34:51.165 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_241
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
+Framework arguments:  -product org.eclipse.epp.package.modeling.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.modeling.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2020-05-04 12:35:34.786
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\gsb-d'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2020-05-04 12:35:37.860
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1. ; version: 2.0.4.v20170307-1435
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:176)
+	at com.google.gson.Gson.fromJson(Gson.java:803)
+	at com.google.gson.Gson.fromJson(Gson.java:768)
+	at com.google.gson.Gson.fromJson(Gson.java:717)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:93)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:70)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:374)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:165)
+	... 9 more
+
+!ENTRY org.eclipse.help 4 0 2020-05-04 12:59:41.028
+!MESSAGE Error reading help table of contents file /"org.eclipse.emf.query.doc/toc.xml" (skipping file)
+!STACK 0
+java.io.FileNotFoundException
+	at org.eclipse.help.internal.toc.TocFileParser.parse(TocFileParser.java:49)
+	at org.eclipse.help.internal.toc.TocFileProvider.getTocContributions(TocFileProvider.java:45)
+	at org.eclipse.help.internal.toc.TocManager.getAndCacheTocContributions(TocManager.java:211)
+	at org.eclipse.help.internal.toc.TocManager.getTocContributionsForToc(TocManager.java:199)
+	at org.eclipse.help.internal.toc.TocManager.getRootTocContributions(TocManager.java:307)
+	at org.eclipse.help.internal.toc.TocManager.getTocs(TocManager.java:68)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.getTopicCategory(ContextHelpPart.java:673)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.formatHelpContext(ContextHelpPart.java:623)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.handleActivation(ContextHelpPart.java:326)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.setFormInput(ContextHelpPart.java:712)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.RelatedTopicsPart.setFormInput(RelatedTopicsPart.java:187)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.ReusableHelpPart.update(ReusableHelpPart.java:1158)
+	at org.eclipse.help.ui.internal.views.HelpView.displayContext(HelpView.java:367)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:334)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:288)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem.displayContext(WorkbenchHelpSystem.java:911)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem$WorkbenchHelpListener.helpRequested(WorkbenchHelpSystem.java:143)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:154)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.help 4 0 2020-05-04 12:59:41.056
+!MESSAGE Error reading help table of contents file /"org.eclipse.emf.query.doc/topics_Reference.xml" (skipping file)
+!STACK 0
+java.io.FileNotFoundException
+	at org.eclipse.help.internal.toc.TocFileParser.parse(TocFileParser.java:49)
+	at org.eclipse.help.internal.toc.TocFileProvider.getTocContributions(TocFileProvider.java:45)
+	at org.eclipse.help.internal.toc.TocManager.getAndCacheTocContributions(TocManager.java:211)
+	at org.eclipse.help.internal.toc.TocManager.getTocContributionsForToc(TocManager.java:199)
+	at org.eclipse.help.internal.toc.TocManager.getRootTocContributions(TocManager.java:307)
+	at org.eclipse.help.internal.toc.TocManager.getTocs(TocManager.java:68)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.getTopicCategory(ContextHelpPart.java:673)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.formatHelpContext(ContextHelpPart.java:623)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.handleActivation(ContextHelpPart.java:326)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.setFormInput(ContextHelpPart.java:712)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.RelatedTopicsPart.setFormInput(RelatedTopicsPart.java:187)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.ReusableHelpPart.update(ReusableHelpPart.java:1158)
+	at org.eclipse.help.ui.internal.views.HelpView.displayContext(HelpView.java:367)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:334)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:288)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem.displayContext(WorkbenchHelpSystem.java:911)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem$WorkbenchHelpListener.helpRequested(WorkbenchHelpSystem.java:143)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:154)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.help 4 0 2020-05-04 12:59:41.058
+!MESSAGE Error reading help table of contents file /"org.eclipse.emf.transaction.doc/toc.xml" (skipping file)
+!STACK 0
+java.io.FileNotFoundException
+	at org.eclipse.help.internal.toc.TocFileParser.parse(TocFileParser.java:49)
+	at org.eclipse.help.internal.toc.TocFileProvider.getTocContributions(TocFileProvider.java:45)
+	at org.eclipse.help.internal.toc.TocManager.getAndCacheTocContributions(TocManager.java:211)
+	at org.eclipse.help.internal.toc.TocManager.getTocContributionsForToc(TocManager.java:199)
+	at org.eclipse.help.internal.toc.TocManager.getRootTocContributions(TocManager.java:307)
+	at org.eclipse.help.internal.toc.TocManager.getTocs(TocManager.java:68)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.getTopicCategory(ContextHelpPart.java:673)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.formatHelpContext(ContextHelpPart.java:623)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.handleActivation(ContextHelpPart.java:326)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.setFormInput(ContextHelpPart.java:712)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.RelatedTopicsPart.setFormInput(RelatedTopicsPart.java:187)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.ReusableHelpPart.update(ReusableHelpPart.java:1158)
+	at org.eclipse.help.ui.internal.views.HelpView.displayContext(HelpView.java:367)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:334)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:288)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem.displayContext(WorkbenchHelpSystem.java:911)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem$WorkbenchHelpListener.helpRequested(WorkbenchHelpSystem.java:143)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:154)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.help 4 0 2020-05-04 12:59:41.060
+!MESSAGE Error reading help table of contents file /"org.eclipse.emf.transaction.doc/topics_Reference.xml" (skipping file)
+!STACK 0
+java.io.FileNotFoundException
+	at org.eclipse.help.internal.toc.TocFileParser.parse(TocFileParser.java:49)
+	at org.eclipse.help.internal.toc.TocFileProvider.getTocContributions(TocFileProvider.java:45)
+	at org.eclipse.help.internal.toc.TocManager.getAndCacheTocContributions(TocManager.java:211)
+	at org.eclipse.help.internal.toc.TocManager.getTocContributionsForToc(TocManager.java:199)
+	at org.eclipse.help.internal.toc.TocManager.getRootTocContributions(TocManager.java:307)
+	at org.eclipse.help.internal.toc.TocManager.getTocs(TocManager.java:68)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.getTopicCategory(ContextHelpPart.java:673)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.formatHelpContext(ContextHelpPart.java:623)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.handleActivation(ContextHelpPart.java:326)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.setFormInput(ContextHelpPart.java:712)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.RelatedTopicsPart.setFormInput(RelatedTopicsPart.java:187)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.ReusableHelpPart.update(ReusableHelpPart.java:1158)
+	at org.eclipse.help.ui.internal.views.HelpView.displayContext(HelpView.java:367)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:334)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:288)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem.displayContext(WorkbenchHelpSystem.java:911)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem$WorkbenchHelpListener.helpRequested(WorkbenchHelpSystem.java:143)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:154)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.help 4 0 2020-05-04 12:59:41.062
+!MESSAGE Error reading help table of contents file /"org.eclipse.emf.validation.doc/toc.xml" (skipping file)
+!STACK 0
+java.io.FileNotFoundException
+	at org.eclipse.help.internal.toc.TocFileParser.parse(TocFileParser.java:49)
+	at org.eclipse.help.internal.toc.TocFileProvider.getTocContributions(TocFileProvider.java:45)
+	at org.eclipse.help.internal.toc.TocManager.getAndCacheTocContributions(TocManager.java:211)
+	at org.eclipse.help.internal.toc.TocManager.getTocContributionsForToc(TocManager.java:199)
+	at org.eclipse.help.internal.toc.TocManager.getRootTocContributions(TocManager.java:307)
+	at org.eclipse.help.internal.toc.TocManager.getTocs(TocManager.java:68)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.getTopicCategory(ContextHelpPart.java:673)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.formatHelpContext(ContextHelpPart.java:623)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.handleActivation(ContextHelpPart.java:326)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.setFormInput(ContextHelpPart.java:712)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.RelatedTopicsPart.setFormInput(RelatedTopicsPart.java:187)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.ReusableHelpPart.update(ReusableHelpPart.java:1158)
+	at org.eclipse.help.ui.internal.views.HelpView.displayContext(HelpView.java:367)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:334)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:288)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem.displayContext(WorkbenchHelpSystem.java:911)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem$WorkbenchHelpListener.helpRequested(WorkbenchHelpSystem.java:143)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:154)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.help 4 0 2020-05-04 12:59:41.064
+!MESSAGE Error reading help table of contents file /"org.eclipse.emf.validation.doc/topics_Reference.xml" (skipping file)
+!STACK 0
+java.io.FileNotFoundException
+	at org.eclipse.help.internal.toc.TocFileParser.parse(TocFileParser.java:49)
+	at org.eclipse.help.internal.toc.TocFileProvider.getTocContributions(TocFileProvider.java:45)
+	at org.eclipse.help.internal.toc.TocManager.getAndCacheTocContributions(TocManager.java:211)
+	at org.eclipse.help.internal.toc.TocManager.getTocContributionsForToc(TocManager.java:199)
+	at org.eclipse.help.internal.toc.TocManager.getRootTocContributions(TocManager.java:307)
+	at org.eclipse.help.internal.toc.TocManager.getTocs(TocManager.java:68)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.getTopicCategory(ContextHelpPart.java:673)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.formatHelpContext(ContextHelpPart.java:623)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.handleActivation(ContextHelpPart.java:326)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.setFormInput(ContextHelpPart.java:712)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.RelatedTopicsPart.setFormInput(RelatedTopicsPart.java:187)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.ReusableHelpPart.update(ReusableHelpPart.java:1158)
+	at org.eclipse.help.ui.internal.views.HelpView.displayContext(HelpView.java:367)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:334)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:288)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem.displayContext(WorkbenchHelpSystem.java:911)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem$WorkbenchHelpListener.helpRequested(WorkbenchHelpSystem.java:143)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:154)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.help 4 0 2020-05-04 12:59:41.067
+!MESSAGE Error reading help table of contents file /"org.eclipse.emf.workspace.doc/topics_Overviews.xml" (skipping file)
+!STACK 0
+java.io.FileNotFoundException
+	at org.eclipse.help.internal.toc.TocFileParser.parse(TocFileParser.java:49)
+	at org.eclipse.help.internal.toc.TocFileProvider.getTocContributions(TocFileProvider.java:45)
+	at org.eclipse.help.internal.toc.TocManager.getAndCacheTocContributions(TocManager.java:211)
+	at org.eclipse.help.internal.toc.TocManager.getTocContributionsForToc(TocManager.java:199)
+	at org.eclipse.help.internal.toc.TocManager.getRootTocContributions(TocManager.java:307)
+	at org.eclipse.help.internal.toc.TocManager.getTocs(TocManager.java:68)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.getTopicCategory(ContextHelpPart.java:673)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.formatHelpContext(ContextHelpPart.java:623)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.handleActivation(ContextHelpPart.java:326)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.setFormInput(ContextHelpPart.java:712)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.RelatedTopicsPart.setFormInput(RelatedTopicsPart.java:187)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.ReusableHelpPart.update(ReusableHelpPart.java:1158)
+	at org.eclipse.help.ui.internal.views.HelpView.displayContext(HelpView.java:367)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:334)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:288)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem.displayContext(WorkbenchHelpSystem.java:911)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem$WorkbenchHelpListener.helpRequested(WorkbenchHelpSystem.java:143)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:154)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.help 4 0 2020-05-04 12:59:41.068
+!MESSAGE Error reading help table of contents file /"org.eclipse.emf.workspace.doc/topics_Tutorials.xml" (skipping file)
+!STACK 0
+java.io.FileNotFoundException
+	at org.eclipse.help.internal.toc.TocFileParser.parse(TocFileParser.java:49)
+	at org.eclipse.help.internal.toc.TocFileProvider.getTocContributions(TocFileProvider.java:45)
+	at org.eclipse.help.internal.toc.TocManager.getAndCacheTocContributions(TocManager.java:211)
+	at org.eclipse.help.internal.toc.TocManager.getTocContributionsForToc(TocManager.java:199)
+	at org.eclipse.help.internal.toc.TocManager.getRootTocContributions(TocManager.java:307)
+	at org.eclipse.help.internal.toc.TocManager.getTocs(TocManager.java:68)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.getTopicCategory(ContextHelpPart.java:673)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.formatHelpContext(ContextHelpPart.java:623)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.handleActivation(ContextHelpPart.java:326)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.setFormInput(ContextHelpPart.java:712)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.RelatedTopicsPart.setFormInput(RelatedTopicsPart.java:187)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.ReusableHelpPart.update(ReusableHelpPart.java:1158)
+	at org.eclipse.help.ui.internal.views.HelpView.displayContext(HelpView.java:367)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:334)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:288)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem.displayContext(WorkbenchHelpSystem.java:911)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem$WorkbenchHelpListener.helpRequested(WorkbenchHelpSystem.java:143)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:154)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.help 4 0 2020-05-04 12:59:41.070
+!MESSAGE Error reading help table of contents file /"org.eclipse.emf.workspace.doc/topics_Examples.xml" (skipping file)
+!STACK 0
+java.io.FileNotFoundException
+	at org.eclipse.help.internal.toc.TocFileParser.parse(TocFileParser.java:49)
+	at org.eclipse.help.internal.toc.TocFileProvider.getTocContributions(TocFileProvider.java:45)
+	at org.eclipse.help.internal.toc.TocManager.getAndCacheTocContributions(TocManager.java:211)
+	at org.eclipse.help.internal.toc.TocManager.getTocContributionsForToc(TocManager.java:199)
+	at org.eclipse.help.internal.toc.TocManager.getRootTocContributions(TocManager.java:307)
+	at org.eclipse.help.internal.toc.TocManager.getTocs(TocManager.java:68)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.getTopicCategory(ContextHelpPart.java:673)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.formatHelpContext(ContextHelpPart.java:623)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.handleActivation(ContextHelpPart.java:326)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.setFormInput(ContextHelpPart.java:712)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.RelatedTopicsPart.setFormInput(RelatedTopicsPart.java:187)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.ReusableHelpPart.update(ReusableHelpPart.java:1158)
+	at org.eclipse.help.ui.internal.views.HelpView.displayContext(HelpView.java:367)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:334)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:288)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem.displayContext(WorkbenchHelpSystem.java:911)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem$WorkbenchHelpListener.helpRequested(WorkbenchHelpSystem.java:143)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:154)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.help 4 0 2020-05-04 12:59:41.072
+!MESSAGE Error reading help table of contents file /"org.eclipse.emf.workspace.doc/topics_Reference.xml" (skipping file)
+!STACK 0
+java.io.FileNotFoundException
+	at org.eclipse.help.internal.toc.TocFileParser.parse(TocFileParser.java:49)
+	at org.eclipse.help.internal.toc.TocFileProvider.getTocContributions(TocFileProvider.java:45)
+	at org.eclipse.help.internal.toc.TocManager.getAndCacheTocContributions(TocManager.java:211)
+	at org.eclipse.help.internal.toc.TocManager.getTocContributionsForToc(TocManager.java:199)
+	at org.eclipse.help.internal.toc.TocManager.getRootTocContributions(TocManager.java:307)
+	at org.eclipse.help.internal.toc.TocManager.getTocs(TocManager.java:68)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.getTopicCategory(ContextHelpPart.java:673)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.formatHelpContext(ContextHelpPart.java:623)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.handleActivation(ContextHelpPart.java:326)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.setFormInput(ContextHelpPart.java:712)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.RelatedTopicsPart.setFormInput(RelatedTopicsPart.java:187)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.ReusableHelpPart.update(ReusableHelpPart.java:1158)
+	at org.eclipse.help.ui.internal.views.HelpView.displayContext(HelpView.java:367)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:334)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:288)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem.displayContext(WorkbenchHelpSystem.java:911)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem$WorkbenchHelpListener.helpRequested(WorkbenchHelpSystem.java:143)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:154)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.help 4 0 2020-05-04 12:59:41.221
+!MESSAGE Error reading help table of contents file /"org.eclipse.gmf.doc/toc-runtime.xml" (skipping file)
+!STACK 0
+java.io.FileNotFoundException
+	at org.eclipse.help.internal.toc.TocFileParser.parse(TocFileParser.java:49)
+	at org.eclipse.help.internal.toc.TocFileProvider.getTocContributions(TocFileProvider.java:45)
+	at org.eclipse.help.internal.toc.TocManager.getAndCacheTocContributions(TocManager.java:211)
+	at org.eclipse.help.internal.toc.TocManager.getTocContributionsForToc(TocManager.java:199)
+	at org.eclipse.help.internal.toc.TocManager.getRootTocContributions(TocManager.java:307)
+	at org.eclipse.help.internal.toc.TocManager.getTocs(TocManager.java:68)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.getTopicCategory(ContextHelpPart.java:673)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.formatHelpContext(ContextHelpPart.java:623)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.handleActivation(ContextHelpPart.java:326)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.setFormInput(ContextHelpPart.java:712)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.RelatedTopicsPart.setFormInput(RelatedTopicsPart.java:187)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.ReusableHelpPart.update(ReusableHelpPart.java:1158)
+	at org.eclipse.help.ui.internal.views.HelpView.displayContext(HelpView.java:367)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:334)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:288)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem.displayContext(WorkbenchHelpSystem.java:911)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem$WorkbenchHelpListener.helpRequested(WorkbenchHelpSystem.java:143)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:154)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.help 4 0 2020-05-04 12:59:41.223
+!MESSAGE Error reading help table of contents file /"org.eclipse.gmf.doc/toc-tooling.xml" (skipping file)
+!STACK 0
+java.io.FileNotFoundException
+	at org.eclipse.help.internal.toc.TocFileParser.parse(TocFileParser.java:49)
+	at org.eclipse.help.internal.toc.TocFileProvider.getTocContributions(TocFileProvider.java:45)
+	at org.eclipse.help.internal.toc.TocManager.getAndCacheTocContributions(TocManager.java:211)
+	at org.eclipse.help.internal.toc.TocManager.getTocContributionsForToc(TocManager.java:199)
+	at org.eclipse.help.internal.toc.TocManager.getRootTocContributions(TocManager.java:307)
+	at org.eclipse.help.internal.toc.TocManager.getTocs(TocManager.java:68)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.getTopicCategory(ContextHelpPart.java:673)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.formatHelpContext(ContextHelpPart.java:623)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.handleActivation(ContextHelpPart.java:326)
+	at org.eclipse.help.ui.internal.views.ContextHelpPart.setFormInput(ContextHelpPart.java:712)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.RelatedTopicsPart.setFormInput(RelatedTopicsPart.java:187)
+	at org.eclipse.ui.forms.ManagedForm.setInput(ManagedForm.java:210)
+	at org.eclipse.help.ui.internal.views.ReusableHelpPart.update(ReusableHelpPart.java:1158)
+	at org.eclipse.help.ui.internal.views.HelpView.displayContext(HelpView.java:367)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:334)
+	at org.eclipse.help.ui.internal.DefaultHelpUI.displayContext(DefaultHelpUI.java:288)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem.displayContext(WorkbenchHelpSystem.java:911)
+	at org.eclipse.ui.internal.help.WorkbenchHelpSystem$WorkbenchHelpListener.helpRequested(WorkbenchHelpSystem.java:143)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:154)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+
+!ENTRY org.eclipse.help.base 4 0 2020-05-04 12:59:44.595
+!MESSAGE Help index declared, but missing for plugin org.eclipse.ocl.doc.
+
+!ENTRY org.eclipse.help.base 4 0 2020-05-04 12:59:44.597
+!MESSAGE Help index declared, but missing for plugin org.eclipse.emf.query.doc.
+
+!ENTRY org.eclipse.help.base 4 0 2020-05-04 12:59:44.615
+!MESSAGE Help index declared, but missing for plugin org.eclipse.emf.cdo.doc.
+
+!ENTRY org.eclipse.help.base 4 0 2020-05-04 12:59:44.616
+!MESSAGE Help index declared, but missing for plugin org.eclipse.emf.transaction.doc.
+
+!ENTRY org.eclipse.help.base 4 0 2020-05-04 12:59:44.637
+!MESSAGE index/indexed_dependencies file missing from help index "index" of plugin org.eclipse.uml2.doc
+
+!ENTRY org.eclipse.help.base 4 0 2020-05-04 12:59:44.651
+!MESSAGE Help index declared, but missing for plugin org.eclipse.emf.workspace.doc.
+
+!ENTRY org.eclipse.help.base 4 4 2020-05-04 13:00:07.286
+!MESSAGE Help documentation could not be indexed completely.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.286
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_diagram_ui_editpolicyProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.286
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_diagram_ui_decoratorProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.286
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_draw2d_ui_render_renderedImageFactory.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.286
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_common_ui_services_properties_propertiesProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_common_ui_services_iconProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_diagram_ui_layoutProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_diagram_core_viewProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_common_ui_services_parserProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_emf_type_core_elementTypes.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Parse error occurred while adding document /org.eclipse.gmf.doc/prog-guide/runtime/Developer Guide to Contribution Item Service.html to search index D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Eclipse\configuration\org.eclipse.help.base\index\es_ES.
+!STACK 0
+org.apache.lucene.demo.html.ParseException: Encountered "<EOF>" at line 1031, column 8.
+Was expecting one of:
+    <CommentText1> ...
+    "-->" ...
+    
+	at org.apache.lucene.demo.html.HTMLParser.generateParseException(HTMLParser.java:693)
+	at org.apache.lucene.demo.html.HTMLParser.jj_consume_token(HTMLParser.java:574)
+	at org.apache.lucene.demo.html.HTMLParser.CommentTag(HTMLParser.java:401)
+	at org.apache.lucene.demo.html.HTMLParser.HTMLDocument(HTMLParser.java:200)
+	at org.apache.lucene.demo.html.HTMLParser.parse(HTMLParser.java:94)
+	at org.eclipse.help.internal.search.HTMLDocParser.openDocument(HTMLDocParser.java:87)
+	at org.eclipse.help.internal.search.HTMLSearchParticipant.addDocument(HTMLSearchParticipant.java:60)
+	at org.eclipse.help.internal.search.SearchIndex.addDocument(SearchIndex.java:236)
+	at org.eclipse.help.internal.search.IndexingOperation.addDocuments(IndexingOperation.java:252)
+	at org.eclipse.help.internal.search.IndexingOperation.addNewDocuments(IndexingOperation.java:159)
+	at org.eclipse.help.internal.search.IndexingOperation.execute(IndexingOperation.java:106)
+	at org.eclipse.help.internal.search.LocalSearchManager.updateIndex(LocalSearchManager.java:630)
+	at org.eclipse.help.internal.search.LocalSearchManager.ensureIndexUpdated(LocalSearchManager.java:604)
+	at org.eclipse.help.internal.search.federated.IndexerJob.run(IndexerJob.java:32)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_diagram_ui_resources_editor_documentProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_common_core_logListeners.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_emf_type_core_elementTypeBindings.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_common_ui_services_action_globalActionHandlerProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.emf.emfatic.doc.user/html/reference/EmfaticRailroadDiagrams.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_emf_core_Pathmaps.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_common_ui_services_elementSelectionProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_common_ui_services_editorProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Parse error occurred while adding document /org.eclipse.gmf.doc/prog-guide/runtime/Developer Guide to Command Framework.html to search index D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Eclipse\configuration\org.eclipse.help.base\index\es_ES.
+!STACK 0
+org.apache.lucene.demo.html.ParseException: Encountered "<EOF>" at line 1627, column 8.
+Was expecting one of:
+    <CommentText1> ...
+    "-->" ...
+    
+	at org.apache.lucene.demo.html.HTMLParser.generateParseException(HTMLParser.java:693)
+	at org.apache.lucene.demo.html.HTMLParser.jj_consume_token(HTMLParser.java:574)
+	at org.apache.lucene.demo.html.HTMLParser.CommentTag(HTMLParser.java:401)
+	at org.apache.lucene.demo.html.HTMLParser.HTMLDocument(HTMLParser.java:200)
+	at org.apache.lucene.demo.html.HTMLParser.parse(HTMLParser.java:94)
+	at org.eclipse.help.internal.search.HTMLDocParser.openDocument(HTMLDocParser.java:87)
+	at org.eclipse.help.internal.search.HTMLSearchParticipant.addDocument(HTMLSearchParticipant.java:60)
+	at org.eclipse.help.internal.search.SearchIndex.addDocument(SearchIndex.java:236)
+	at org.eclipse.help.internal.search.IndexingOperation.addDocuments(IndexingOperation.java:252)
+	at org.eclipse.help.internal.search.IndexingOperation.addNewDocuments(IndexingOperation.java:159)
+	at org.eclipse.help.internal.search.IndexingOperation.execute(IndexingOperation.java:106)
+	at org.eclipse.help.internal.search.LocalSearchManager.updateIndex(LocalSearchManager.java:630)
+	at org.eclipse.help.internal.search.LocalSearchManager.ensureIndexUpdated(LocalSearchManager.java:604)
+	at org.eclipse.help.internal.search.federated.IndexerJob.run(IndexerJob.java:32)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_common_ui_services_action_contributionItemProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_emf_ui_modelingAssistantProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.287
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_diagram_ui_paletteProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.288
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_diagram_ui_editpartProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.288
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_common_ui_services_dnd_transferAdapterProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.288
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_common_ui_services_markerNavigationProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.288
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_common_ui_services_action_actionFilterProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.288
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_common_core_propertiesConfiguration.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.288
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_emf_clipboard_core_clipboardSupport.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.288
+!MESSAGE Parse error occurred while adding document /org.eclipse.gmf.doc/prog-guide/runtime/Developer Guide to Global Actions.html to search index D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Eclipse\configuration\org.eclipse.help.base\index\es_ES.
+!STACK 0
+org.apache.lucene.demo.html.ParseException: Encountered "<EOF>" at line 812, column 8.
+Was expecting one of:
+    <CommentText1> ...
+    "-->" ...
+    
+	at org.apache.lucene.demo.html.HTMLParser.generateParseException(HTMLParser.java:693)
+	at org.apache.lucene.demo.html.HTMLParser.jj_consume_token(HTMLParser.java:574)
+	at org.apache.lucene.demo.html.HTMLParser.CommentTag(HTMLParser.java:401)
+	at org.apache.lucene.demo.html.HTMLParser.HTMLDocument(HTMLParser.java:200)
+	at org.apache.lucene.demo.html.HTMLParser.parse(HTMLParser.java:94)
+	at org.eclipse.help.internal.search.HTMLDocParser.openDocument(HTMLDocParser.java:87)
+	at org.eclipse.help.internal.search.HTMLSearchParticipant.addDocument(HTMLSearchParticipant.java:60)
+	at org.eclipse.help.internal.search.SearchIndex.addDocument(SearchIndex.java:236)
+	at org.eclipse.help.internal.search.IndexingOperation.addDocuments(IndexingOperation.java:252)
+	at org.eclipse.help.internal.search.IndexingOperation.addNewDocuments(IndexingOperation.java:159)
+	at org.eclipse.help.internal.search.IndexingOperation.execute(IndexingOperation.java:106)
+	at org.eclipse.help.internal.search.LocalSearchManager.updateIndex(LocalSearchManager.java:630)
+	at org.eclipse.help.internal.search.LocalSearchManager.ensureIndexUpdated(LocalSearchManager.java:604)
+	at org.eclipse.help.internal.search.federated.IndexerJob.run(IndexerJob.java:32)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.288
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_common_ui_services_dnd_dragDropListenerProviders.html cannot be opened.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2020-05-04 13:00:07.288
+!MESSAGE Help document /org.eclipse.gmf.doc/reference/extension-points/org_eclipse_gmf_runtime_common_ui_services_properties_propertyModifiers.html cannot be opened.
+
+!ENTRY org.eclipse.ui 4 0 2020-05-04 13:27:46.884
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.ArithmeticException: / by zero)
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4211)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3827)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+Caused by: java.lang.ArithmeticException: / by zero
+	at java.math.BigDecimal.divideAndRound(Unknown Source)
+	at java.math.BigDecimal.divide(Unknown Source)
+	at java.math.BigDecimal.divide(Unknown Source)
+	at org.eclipse.draw2d.geometry.PrecisionGeometry.preciseDivide(PrecisionGeometry.java:48)
+	at org.eclipse.draw2d.geometry.Vector.getAngle(Vector.java:168)
+	at org.eclipse.sirius.diagram.ui.internal.edit.parts.locator.EdgeLabelQuery.getVectorForSegmentMoveCase(EdgeLabelQuery.java:414)
+	at org.eclipse.sirius.diagram.ui.internal.edit.parts.locator.EdgeLabelQuery.calculateNewCenterLocation(EdgeLabelQuery.java:350)
+	at org.eclipse.sirius.diagram.ui.internal.edit.parts.locator.EdgeLabelQuery.calculateGMFLabelOffset(EdgeLabelQuery.java:243)
+	at org.eclipse.sirius.diagram.ui.internal.edit.parts.locator.EdgeLabelLocator.computeOffSet(EdgeLabelLocator.java:125)
+	at org.eclipse.sirius.diagram.ui.internal.edit.parts.locator.EdgeLabelLocator.relocate(EdgeLabelLocator.java:111)
+	at org.eclipse.gmf.runtime.draw2d.ui.internal.figures.DelegatingLayout.layout(DelegatingLayout.java:43)
+	at org.eclipse.draw2d.Figure.layout(Figure.java:1096)
+	at org.eclipse.draw2d.PolylineConnection.layout(PolylineConnection.java:179)
+	at org.eclipse.sirius.diagram.ui.edit.api.part.AbstractDiagramEdgeEditPart$ViewEdgeFigure.layout(AbstractDiagramEdgeEditPart.java:619)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:1899)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:1901)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:1901)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:1901)
+	at org.eclipse.draw2d.Figure.validate(Figure.java:1901)
+	at org.eclipse.draw2d.FreeformViewport$FreeformViewportLayout.calculatePreferredSize(FreeformViewport.java:25)
+	at org.eclipse.draw2d.AbstractLayout.getPreferredSize(AbstractLayout.java:110)
+	at org.eclipse.draw2d.AbstractHintLayout.getPreferredSize(AbstractHintLayout.java:90)
+	at org.eclipse.draw2d.Figure.getPreferredSize(Figure.java:810)
+	at org.eclipse.draw2d.ScrollPaneSolver.solve(ScrollPaneSolver.java:82)
+	at org.eclipse.draw2d.FigureCanvas.layoutViewport(FigureCanvas.java:325)
+	at org.eclipse.draw2d.FigureCanvas.access$4(FigureCanvas.java:323)
+	at org.eclipse.draw2d.FigureCanvas$3.notifyValidating(FigureCanvas.java:292)
+	at org.eclipse.draw2d.UpdateManager.fireValidating(UpdateManager.java:143)
+	at org.eclipse.sirius.diagram.ui.tools.internal.part.SiriusDiagramGraphicalViewer$ToggleUpdateManager.performValidation(SiriusDiagramGraphicalViewer.java:215)
+	at org.eclipse.draw2d.DeferredUpdateManager.performUpdate(DeferredUpdateManager.java:193)
+	at org.eclipse.sirius.diagram.ui.tools.internal.part.SiriusDiagramGraphicalViewer$ToggleUpdateManager.performUpdate(SiriusDiagramGraphicalViewer.java:199)
+	at org.eclipse.draw2d.DeferredUpdateManager$UpdateRequest.run(DeferredUpdateManager.java:44)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	... 23 more

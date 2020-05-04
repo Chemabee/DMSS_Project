@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="">
+  <eClassifiers xsi:type="ecore:EClass" name="Role"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WebSite"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WebPage" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SocialNetworkContent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CRUDPage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RegularContentPage" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Forms" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Question" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Survey"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Questionnaire"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NewQuestion"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QuestionFromRepo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QuestionsRepo"/>
+  <eClassifiers xsi:type="ecore:EClass" name="QuestionDefinition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PossibleAsnwer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NewOptions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Elements" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DetailPage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CreationPage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DeletionPage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IndexPage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AllCRUDPages"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Video"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Image"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Text"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Database"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="QuestionType">
+    <eLiterals name="MULTIPLE_CHOICE"/>
+    <eLiterals name="TRUE/FALSE" value="1"/>
+    <eLiterals name="SHORT_QUESTION" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AttributePrimitiveData_Type">
+    <eLiterals name="REAL"/>
+    <eLiterals name="INTEGER" value="1"/>
+    <eLiterals name="BOOLEAN" value="2"/>
+    <eLiterals name="STRING" value="3"/>
+  </eClassifiers>
+</ecore:EPackage>
