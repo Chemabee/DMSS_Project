@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="WebDevProjectMM" nsURI="https://www.WebDevProjectMM.com" nsPrefix="WebDevProjectMM">
   <eClassifiers xsi:type="ecore:EClass" name="Role">
     <eStructuralFeatures xsi:type="ecore:EReference" name="webPages" lowerBound="1"
         upperBound="-1" eType="#//WebPage"/>
@@ -24,8 +24,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="WebPage" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="linkTo" upperBound="-1"
         eType="#//WebPage"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="socialnetworkcontent" upperBound="-1"
-        eType="#//SocialNetworkContent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="socialnetworkcontent" lowerBound="1"
+        upperBound="-1" eType="#//SocialNetworkContent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" unique="false" lowerBound="1"
@@ -36,6 +36,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="SocialNetworkContent"/>
   <eClassifiers xsi:type="ecore:EClass" name="CRUDPage" eSuperTypes="#//WebPage">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRUDType" eType="#//CRUD_Type"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
+        eType="#//Entity"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RegularContentPage" abstract="true"
       eSuperTypes="#//WebPage">
@@ -49,6 +51,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Question" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" unique="false"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" unique="false" lowerBound="1"
+        eType="#//QuestionType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Survey" eSuperTypes="#//Forms"/>
   <eClassifiers xsi:type="ecore:EClass" name="Questionnaire" eSuperTypes="#//Forms"/>
@@ -58,7 +62,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="correctAnswer" eType="#//NewAnswer"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StoredQuestion" eSuperTypes="#//Question">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="possibleAsnwer" eType="#//PossibleAsnwer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="correctAsnwer" eType="#//PossibleAsnwer"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="definition" lowerBound="1"
         eType="#//QuestionDefinition"/>
   </eClassifiers>
@@ -112,7 +116,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="QuestionType">
     <eLiterals name="MULTIPLE_CHOICE"/>
-    <eLiterals name="TRUE/FALSE" value="1"/>
+    <eLiterals name="TRUE_FALSE" value="1"/>
     <eLiterals name="SHORT_QUESTION" value="2"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="AttributePrimitiveData_Type">

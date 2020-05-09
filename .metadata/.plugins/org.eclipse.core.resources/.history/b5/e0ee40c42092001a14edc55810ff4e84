@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="WebDevProjectMM" nsURI="https://www.WebDevProjectMM.com" nsPrefix="WebDevProjectMM">
+  <eClassifiers xsi:type="ecore:EClass" name="Role">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="webPages" lowerBound="1"
+        upperBound="-1" eType="#//WebPage"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WebSite">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roles" lowerBound="1" upperBound="-1"
+        eType="#//Role" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="webPages" lowerBound="1"
+        upperBound="-1" eType="#//WebPage" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" unique="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="URL" unique="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WebPage" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="linkTo" upperBound="-1"
+        eType="#//WebPage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="socialnetworkcontent" upperBound="-1"
+        eType="#//SocialNetworkContent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" unique="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SocialNetworkContent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CRUDPage" eSuperTypes="#//WebPage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRUDType" eType="#//CRUD_Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RegularContentPage" abstract="true"
+      eSuperTypes="#//WebPage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//Elements" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Forms" abstract="true" eSuperTypes="#//WebPage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questions" lowerBound="1"
+        upperBound="-1" eType="#//Question" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Question" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Survey" eSuperTypes="#//Forms"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Questionnaire" eSuperTypes="#//Forms"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NewQuestion" eSuperTypes="#//Question">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="newAnswer" upperBound="-1"
+        eType="#//NewAnswer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="correctAnswer" eType="#//NewAnswer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StoredQuestion" eSuperTypes="#//Question">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="possibleAsnwer" eType="#//PossibleAsnwer"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="definition" lowerBound="1"
+        eType="#//QuestionDefinition"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QuestionsRepo">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questionDefinitions" upperBound="-1"
+        eType="#//QuestionDefinition" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QuestionDefinition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="possibleAsnwer" upperBound="-1"
+        eType="#//PossibleAsnwer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" unique="false" lowerBound="1"
+        eType="#//QuestionType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PossibleAsnwer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="answerText" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NewAnswer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="answerText" unique="false"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Elements" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Multimedia" eSuperTypes="#//Elements">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="href" unique="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//Elements">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" unique="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Database">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//Entity" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" lowerBound="1"
+        upperBound="-1" eType="#//Attribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refersTo" eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" unique="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unique="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attributePrimitiveData_Type"
+        unique="false" lowerBound="1" eType="#//AttributePrimitiveData_Type"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" unique="false" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="QuestionType">
+    <eLiterals name="MULTIPLE_CHOICE"/>
+    <eLiterals name="TRUE_FALSE" value="1"/>
+    <eLiterals name="SHORT_QUESTION" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AttributePrimitiveData_Type">
+    <eLiterals name="REAL"/>
+    <eLiterals name="INTEGER" value="1"/>
+    <eLiterals name="BOOLEAN" value="2"/>
+    <eLiterals name="STRING" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CRUD_Type">
+    <eLiterals name="Detail_Page"/>
+    <eLiterals name="Creation_Page" value="1"/>
+    <eLiterals name="Delition_Page" value="2"/>
+    <eLiterals name="Index_Page" value="3"/>
+    <eLiterals name="All_CRUD_Type" value="4"/>
+  </eClassifiers>
+</ecore:EPackage>
