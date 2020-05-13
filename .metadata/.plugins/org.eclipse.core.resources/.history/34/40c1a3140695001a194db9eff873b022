@@ -53,7 +53,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="SocialNetworkContent"/>
   <eClassifiers xsi:type="ecore:EClass" name="CRUDPage" eSuperTypes="#//WebPage">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRUDType" eType="#//CRUD_Type"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" eType="#//Entity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
+        eType="#//Entity" eOpposite="#//Entity/crudpage"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RegularContentPage" eSuperTypes="#//WebPage"/>
   <eClassifiers xsi:type="ecore:EClass" name="Form" eSuperTypes="#//WebPage">
@@ -140,6 +141,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="refersTo" eType="#//Entity"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" unique="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="crudpage" lowerBound="1"
+        upperBound="-1" eType="#//CRUDPage" eOpposite="#//CRUDPage/entity"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="primary_key" lowerBound="1"
         eType="#//Attribute"/>
   </eClassifiers>
