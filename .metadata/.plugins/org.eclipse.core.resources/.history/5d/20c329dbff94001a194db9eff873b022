@@ -70,20 +70,6 @@
         upperBound="-1" eType="#//Question" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="formType" lowerBound="1"
         eType="#//Form_Type"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numTFQuestions" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" volatile="true"
-        transient="true" derived="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="derivation" value="self.questions->select(q:Question|q.type = QuestionType::TRUE_FALSE)->size()"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numMCQuestions" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" volatile="true"
-        transient="true" derived="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="derivation" value="self.questions->select(q:Question|q.type = QuestionType::MULTIPLE_CHOICE)->size()"/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Question" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"

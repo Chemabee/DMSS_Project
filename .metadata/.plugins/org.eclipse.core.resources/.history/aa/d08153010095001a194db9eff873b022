@@ -68,12 +68,6 @@
             <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
           </endLabelStyleDescription>
         </computedStyleDescriptions>
-        <computedStyleDescriptions xmi:type="style:BundledImageDescription" xmi:id="_oGa7gJT_EeqAqb23jnknpA" labelExpression="service:render" labelAlignment="LEFT" tooltipExpression="service:renderTooltip" sizeComputationExpression="1">
-          <borderColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-          <labelFormat>bold</labelFormat>
-          <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
-          <color xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-        </computedStyleDescriptions>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_CcoiBI30EeqNuKnmsSBCtg" source="GMF_DIAGRAMS">
@@ -84,10 +78,6 @@
             <children xmi:type="notation:Node" xmi:id="_VQQGAI-JEeq0UobCCmHghg" type="3010" element="_VPU48I-JEeq0UobCCmHghg">
               <styles xmi:type="notation:FontStyle" xmi:id="_VQQGAY-JEeq0UobCCmHghg" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_VQQGAo-JEeq0UobCCmHghg"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_oG5coJT_EeqAqb23jnknpA" type="3010" element="_oGaUcJT_EeqAqb23jnknpA">
-              <styles xmi:type="notation:FontStyle" xmi:id="_oG5coZT_EeqAqb23jnknpA" fontColor="7490599" fontName="Segoe UI" fontHeight="8" bold="true"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_oG5copT_EeqAqb23jnknpA"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_aMVRgY30EeqNuKnmsSBCtg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_aMVRgo30EeqNuKnmsSBCtg"/>
@@ -178,14 +168,6 @@
             <children xmi:type="notation:Node" xmi:id="_DsNnUJRGEeqYlNd9r5xHIw" type="3010" element="_Dr2a8JRGEeqYlNd9r5xHIw">
               <styles xmi:type="notation:FontStyle" xmi:id="_DsNnUZRGEeqYlNd9r5xHIw" fontName="Segoe UI" fontHeight="8" bold="true"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_DsNnUpRGEeqYlNd9r5xHIw"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_21Bd8JT_EeqAqb23jnknpA" type="3010" element="_20qRkJT_EeqAqb23jnknpA">
-              <styles xmi:type="notation:FontStyle" xmi:id="_21Bd8ZT_EeqAqb23jnknpA" fontColor="7490599" fontName="Segoe UI" fontHeight="8" bold="true"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_21Bd8pT_EeqAqb23jnknpA"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_9wQxwJT_EeqAqb23jnknpA" type="3010" element="_9v8BoJT_EeqAqb23jnknpA">
-              <styles xmi:type="notation:FontStyle" xmi:id="_9wQxwZT_EeqAqb23jnknpA" fontColor="7490599" fontName="Segoe UI" fontHeight="8" bold="true"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_9wQxwpT_EeqAqb23jnknpA"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_1l2nYo30EeqNuKnmsSBCtg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_1l2nY430EeqNuKnmsSBCtg"/>
@@ -836,14 +818,6 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oGaUcJT_EeqAqb23jnknpA" name="/numAccesiblePages : EInt" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="WebDevProject.ecore#//Role/numAccesiblePages"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="WebDevProject.ecore#//Role/numAccesiblePages"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_oGbikJT_EeqAqb23jnknpA" labelColor="39,76,114" labelAlignment="LEFT" description="_oGa7gJT_EeqAqb23jnknpA">
-          <labelFormat>bold</labelFormat>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
-      </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_jSIYYI30EeqNuKnmsSBCtg" name="WebSite" tooltipText="" outgoingEdges="_sgk9kI33EeqNuKnmsSBCtg _8PWjkI33EeqNuKnmsSBCtg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="WebDevProject.ecore#//WebSite"/>
@@ -980,22 +954,6 @@
         <target xmi:type="ecore:EAttribute" href="WebDevProject.ecore#//Form/formType"/>
         <semanticElements xmi:type="ecore:EAttribute" href="WebDevProject.ecore#//Form/formType"/>
         <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_Dr3CAJRGEeqYlNd9r5xHIw" labelAlignment="LEFT" description="_ami1QI-JEeq0UobCCmHghg">
-          <labelFormat>bold</labelFormat>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
-      </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_20qRkJT_EeqAqb23jnknpA" name="/numTFQuestions : EInt" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="WebDevProject.ecore#//Form/numTFQuestions"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="WebDevProject.ecore#//Form/numTFQuestions"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_20q4oJT_EeqAqb23jnknpA" labelColor="39,76,114" labelAlignment="LEFT" description="_oGa7gJT_EeqAqb23jnknpA">
-          <labelFormat>bold</labelFormat>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
-      </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9v8BoJT_EeqAqb23jnknpA" name="/numMCQuestions : EInt" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="WebDevProject.ecore#//Form/numMCQuestions"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="WebDevProject.ecore#//Form/numMCQuestions"/>
-        <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_9v8osJT_EeqAqb23jnknpA" labelColor="39,76,114" labelAlignment="LEFT" description="_oGa7gJT_EeqAqb23jnknpA">
           <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
