@@ -62,7 +62,7 @@
       <details key="constraints" value="R3"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="R3" value="(oclContainer().oclAsType(WebSite).webPages->collect(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType=CRUD_Type::All_CRUD_Type)->size() > 0)&#xA;&#x9;&#x9;&#x9;and&#xA;&#x9;&#x9;&#x9;(oclContainer().oclAsType(WebSite).webPages->collect(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType=CRUD_Type::All_CRUD_Type)->size() > 0)"/>
+      <details key="R3" value="oclContainer().oclAsType(WebSite).webPages->collect(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRUDType" eType="#//CRUD_Type"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
