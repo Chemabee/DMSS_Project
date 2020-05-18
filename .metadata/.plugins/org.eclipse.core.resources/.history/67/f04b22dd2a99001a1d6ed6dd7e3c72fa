@@ -23,11 +23,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WebSite">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="R6MustInclude1QuestionnaireAnd1Survey R5atLeastOneSocialNetwork"/>
+      <details key="constraints" value="R6MustInclude1QuestionnaireAnd1Survey"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="R6MustInclude1QuestionnaireAnd1Survey" value="&#xA;&#x9;&#x9;&#x9;(self.webPages->select(p:WebPage|p.oclIsKindOf(Form) and p.oclAsType(Form).formType = Form_Type::Survey)->size() > 0)&#xA;&#x9;&#x9;&#x9;and&#xA;&#x9;&#x9;&#x9;(self.webPages->select(p:WebPage|p.oclIsKindOf(Form) and p.oclAsType(Form).formType = Form_Type::Questionnaire)->size() > 0)"/>
-      <details key="R5atLeastOneSocialNetwork" value="self.webPages.socialnetworkcontent->size() > 0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="roles" lowerBound="1" upperBound="-1"
         eType="#//Role" containment="true"/>
@@ -42,12 +41,6 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WebPage" abstract="true">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="R2isolatedWebPage"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="R2isolatedWebPage" value="self.role->size() > 0 or self.incoming->size() > 0"/>
-    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="socialnetworkcontent" upperBound="-1"
         eType="#//SocialNetworkContent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -69,7 +62,7 @@
       <details key="constraints" value="R3"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="R3" value="((oclContainer().oclAsType(WebSite).webPages->collect(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType=CRUD_Type::All_CRUD_Type)->size() = 1)&#xA;&#x9;&#x9;&#x9;and&#xA;&#x9;&#x9;&#x9;(oclContainer().oclAsType(WebSite).webPages->collect(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType&lt;>CRUD_Type::All_CRUD_Type)->size() = 0))&#xA;&#x9;&#x9;&#x9;or&#xA;&#x9;&#x9;&#x9;((oclContainer().oclAsType(WebSite).webPages->collect(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType=CRUD_Type::All_CRUD_Type)->size() = 0)&#xA;&#x9;&#x9;&#x9;and&#xA;&#x9;&#x9;&#x9;(oclContainer().oclAsType(WebSite).webPages->collect(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType&lt;>CRUD_Type::All_CRUD_Type)->size() > 0))"/>
+      <details key="R3" value="(oclContainer().oclAsType(WebSite).webPages->collect(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType=CRUD_Type::All_CRUD_Type)->size() > 0)&#xA;&#x9;&#x9;&#x9;and&#xA;&#x9;&#x9;&#x9;(oclContainer().oclAsType(WebSite).webPages->collect(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType=CRUD_Type::All_CRUD_Type)->size() > 0)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRUDType" eType="#//CRUD_Type"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"

@@ -23,11 +23,10 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WebSite">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="R6MustInclude1QuestionnaireAnd1Survey R5atLeastOneSocialNetwork"/>
+      <details key="constraints" value="R6MustInclude1QuestionnaireAnd1Survey"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="R6MustInclude1QuestionnaireAnd1Survey" value="&#xA;&#x9;&#x9;&#x9;(self.webPages->select(p:WebPage|p.oclIsKindOf(Form) and p.oclAsType(Form).formType = Form_Type::Survey)->size() > 0)&#xA;&#x9;&#x9;&#x9;and&#xA;&#x9;&#x9;&#x9;(self.webPages->select(p:WebPage|p.oclIsKindOf(Form) and p.oclAsType(Form).formType = Form_Type::Questionnaire)->size() > 0)"/>
-      <details key="R5atLeastOneSocialNetwork" value="self.webPages.socialnetworkcontent->size() > 0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="roles" lowerBound="1" upperBound="-1"
         eType="#//Role" containment="true"/>
