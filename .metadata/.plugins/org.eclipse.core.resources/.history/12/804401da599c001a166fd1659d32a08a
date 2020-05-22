@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebDevProjectMM:WebSite
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:WebDevProjectMM="https://www.WebDevProjectMM.com"
+    xsi:schemaLocation="https://www.WebDevProjectMM.com ../metamodel/WebDevProject.ecore"
+    name="WebDevExample"
+    title="WebDevExample"
+    description="An Example WebSite"
+    URL="https://www.WebDevExample.com/">
+  <webPages
+      xsi:type="WebDevProjectMM:CRUDPage"
+      name="ALLCRUD_Person"
+      title="Person CRUD "
+      description="Person CRUD Page"
+      CRUDType="ALL_CRUD">
+    <socialnetworkcontent/>
+    <entity
+        href="DatabaseGood.xmi#Person"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:CRUDPage"
+      name="INDEX_Car"
+      title="Car INDEX"
+      description="Car INDEX"
+      CRUDType="INDEX">
+    <entity
+        href="DatabaseGood.xmi#Car"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:CRUDPage"
+      name="DETAIL_Car"
+      title="Car DETAIL"
+      description="Car DETAIL">
+    <entity
+        href="DatabaseGood.xmi#Car"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:CRUDPage"
+      name="CREATION_Car"
+      title="Car CREATION"
+      description="Car CREATION"
+      CRUDType="CREATION">
+    <entity
+        href="DatabaseGood.xmi#Car"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:CRUDPage"
+      name="INDEX_Speaker"
+      title="Speaker INDEX"
+      description="Speaker INDEX"
+      CRUDType="INDEX">
+    <entity
+        href="DatabaseGood.xmi#Speaker"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:CRUDPage"
+      name="DETAIL_Speaker"
+      title="Speaker DETAIL"
+      description="Speaker DETAIL">
+    <entity
+        href="DatabaseGood.xmi#Speaker"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:RegularContentPage"
+      name="PageWithElements"
+      title="Page with Elements"
+      description="PageWithElements">
+    <elements
+        xsi:type="WebDevProjectMM:Multimedia"
+        href="https://www.youtube.com/watch?v=FNJq6OgXlrU"/>
+    <elements
+        xsi:type="WebDevProjectMM:Multimedia"
+        href="https://image.shutterstock.com/image-photo/white-transparent-leaf-on-mirror-260nw-1029171697.jpg"/>
+    <elements
+        xsi:type="WebDevProjectMM:Text"
+        text="This is a text"/>
+  </webPages>
+</WebDevProjectMM:WebSite>

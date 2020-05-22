@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebDevProjectMM:WebSite
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:WebDevProjectMM="https://www.WebDevProjectMM.com"
+    xsi:schemaLocation="https://www.WebDevProjectMM.com ../metamodel/WebDevProject.ecore"
+    name="WebDevExample"
+    title="WebDevExample"
+    description="An Example WebSite"
+    URL="https://www.WebDevExample.com/">
+  <roles name="Admin"
+      webpage="//@webPages.0 //@webPages.1 //@webPages.2 //@webPages.3 //@webPages.4 //@webPages.5 //@webPages.6 //@webPages.7 //@webPages.8"/>
+  <roles name="RegularUser"
+      webpage="//@webPages.0 //@webPages.1 //@webPages.2 //@webPages.3 //@webPages.4"/>
+  <roles name="Guest"
+      webpage="//@webPages.5 //@webPages.6"/>
+  <webPages
+      xsi:type="WebDevProjectMM:CRUDPage"
+      name="ALLCRUD_Person"
+      title="Person CRUD "
+      description="Person CRUD Page"
+      role="//@roles.0 //@roles.1"
+      CRUDType="ALL_CRUD">
+    <socialnetworkcontent/>
+    <externalLink>https://www.3djuegos.com/</externalLink>
+    <entity
+        href="DatabaseGood.xmi#Person"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:CRUDPage"
+      name="INDEX_Car"
+      title="Car INDEX"
+      description="Car INDEX"
+      outgoing="//@link.0 //@link.1"
+      role="//@roles.0 //@roles.1"
+      CRUDType="INDEX">
+    <entity
+        href="DatabaseGood.xmi#Car"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:CRUDPage"
+      name="DETAIL_Car"
+      title="Car DETAIL"
+      description="Car DETAIL"
+      role="//@roles.0 //@roles.1">
+    <entity
+        href="DatabaseGood.xmi#Car"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:CRUDPage"
+      name="DELITION_Car"
+      title="Car DELITION"
+      description="Car DELITION"
+      incoming="//@link.0"
+      role="//@roles.0 //@roles.1"
+      CRUDType="DELITION">
+    <entity
+        href="DatabaseGood.xmi#Car"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:CRUDPage"
+      name="CREATION_Car"
+      title="Car CREATION"
+      description="Car CREATION"
+      incoming="//@link.1"
+      role="//@roles.0 //@roles.1"
+      CRUDType="CREATION">
+    <entity
+        href="DatabaseGood.xmi#Car"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:CRUDPage"
+      name="INDEX_Speaker"
+      title="Speaker INDEX"
+      description="Speaker INDEX"
+      role="//@roles.0 //@roles.2"
+      CRUDType="INDEX">
+    <entity
+        href="DatabaseGood.xmi#Speaker"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:CRUDPage"
+      name="DETAIL_Speaker"
+      title="Speaker DETAIL"
+      description="Speaker DETAIL"
+      role="//@roles.0 //@roles.2">
+    <entity
+        href="DatabaseGood.xmi#Speaker"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:RegularContentPage"
+      name="PageWithElements"
+      title="Page with Elements"
+      description="PageWithElements"
+      role="//@roles.0">
+    <elements
+        xsi:type="WebDevProjectMM:Multimedia"
+        href="https://www.youtube.com/watch?v=FNJq6OgXlrU"/>
+    <elements
+        xsi:type="WebDevProjectMM:Multimedia"
+        href="https://image.shutterstock.com/image-photo/white-transparent-leaf-on-mirror-260nw-1029171697.jpg"/>
+    <elements
+        xsi:type="WebDevProjectMM:Text"
+        text="This is a text"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:Form"
+      name="Survey1"
+      title="Survey1"
+      description="First Form_Survey"
+      role="//@roles.0">
+    <questions
+        xsi:type="WebDevProjectMM:QuestionDefinition"
+        description="Is this a question?"
+        correctAnswer="//@webPages.8/@questions.0/@possibleAsnwer.0">
+      <possibleAsnwer
+          answerText="True"/>
+      <possibleAsnwer
+          answerText="False"/>
+    </questions>
+    <questions
+        xsi:type="WebDevProjectMM:QuestionDefinition"
+        description="What's 2+1?"
+        correctAnswer="//@webPages.8/@questions.1/@possibleAsnwer.2">
+      <possibleAsnwer
+          answerText="1"/>
+      <possibleAsnwer
+          answerText="2"/>
+      <possibleAsnwer
+          answerText="3"/>
+    </questions>
+    <questions
+        xsi:type="WebDevProjectMM:StoredQuestion"/>
+  </webPages>
+  <link source="//@webPages.1"
+      target="//@webPages.3"/>
+  <link source="//@webPages.1"
+      target="//@webPages.4"/>
+</WebDevProjectMM:WebSite>
