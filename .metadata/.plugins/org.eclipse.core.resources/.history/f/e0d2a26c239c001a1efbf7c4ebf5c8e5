@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebDevProjectMM:Database
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:WebDevProjectMM="https://www.WebDevProjectMM.com"
+    xsi:schemaLocation="https://www.WebDevProjectMM.com ../metamodel/WebDevProject.ecore">
+  <entities
+      id="Person"
+      primary_key="//@entities.0/@attribute.0">
+    <attribute
+        name="Person_Name"
+        attributePrimitiveData_Type="STRING"/>
+    <attribute
+        name="Person_Age"
+        attributePrimitiveData_Type="INTEGER"/>
+    <attribute
+        name="Person_Height"/>
+    <attribute
+        name="Person_Bold"
+        attributePrimitiveData_Type="BOOLEAN"/>
+  </entities>
+  <entities
+      id="Car">
+    <attribute
+        name="Car_NumOfWheels"/>
+    <attribute
+        name="Car_Brand"
+        attributePrimitiveData_Type="STRING"/>
+    <attribute
+        name="Car_Broken"
+        attributePrimitiveData_Type="BOOLEAN"/>
+  </entities>
+  <entities
+      id="Speaker">
+    <attribute
+        name="Speaker_Brand"
+        attributePrimitiveData_Type="STRING"/>
+    <attribute
+        name="Speaker_Power"/>
+    <attribute
+        name="Speaker_NumOfSpeakers"
+        attributePrimitiveData_Type="INTEGER"/>
+  </entities>
+</WebDevProjectMM:Database>

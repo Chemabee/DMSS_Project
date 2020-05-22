@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebDevProjectMM:Database
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:WebDevProjectMM="https://www.WebDevProjectMM.com"
+    xsi:schemaLocation="https://www.WebDevProjectMM.com ../metamodel/WebDevProject.ecore">
+  <entities
+      id="Person">
+    <attribute
+        name="Name"
+        attributePrimitiveData_Type="STRING"/>
+    <attribute
+        name="Age"
+        attributePrimitiveData_Type="INTEGER"/>
+    <attribute
+        name="Height"/>
+    <attribute
+        name="Bold"
+        attributePrimitiveData_Type="BOOLEAN"/>
+  </entities>
+  <entities
+      id="Car"/>
+  <entities
+      id="Speaker"/>
+</WebDevProjectMM:Database>

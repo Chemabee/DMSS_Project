@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pivot:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pivot="http://www.eclipse.org/ocl/2015/Pivot"
+    xsi:schemaLocation="http://www.eclipse.org/ocl/2015/Pivot java://org.eclipse.ocl.pivot.PivotPackage" name="WebDevProject.ecore.oclas" externalURI="platform:/resource/Project/metamodel/WebDevProject.ecore.oclas">
+  <ownedImports name="ecore" importedNamespace="pivot:Package http://www.eclipse.org/emf/2002/Ecore.oclas#P.ecore"/>
+  <ownedPackages xmi:id="P.WebDevProjectMM" name="WebDevProjectMM" URI="https://www.WebDevProjectMM.com" nsPrefix="WebDevProjectMM">
+    <ownedClasses xmi:id="T.WebDevProjectMM.Role" name="Role" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclElement">
+      <ownedProperties xmi:id="p.WebDevProjectMM.Role.name" name="name" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.Role.numAccesiblePages" name="numAccesiblePages" type="pivot:DataType http://www.eclipse.org/emf/2002/Ecore.oclas#T.ecore.EInt"
+          isDerived="true" isTransient="true" isVolatile="true">
+        <ownedExpression xsi:type="pivot:ExpressionInOCL" body="self.webpage->size()"/>
+      </ownedProperties>
+      <ownedProperties xmi:id="p.WebDevProjectMM.Role.webpage" name="webpage" type="#//@ownedPackages.1/@ownedClasses.0" opposite="#p.WebDevProjectMM.WebPage.role"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.Role.WebSite" name="WebSite" isRequired="false" type="#T.WebDevProjectMM.WebSite" isImplicit="true"
+          opposite="#p.WebDevProjectMM.WebSite.roles"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.WebSite" name="WebSite" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclElement">
+      <ownedInvariants xmi:id="ciWebDevProjectMM.WebSite.R6MustInclude1QuestionnaireAnd1Survey" name="R6MustInclude1QuestionnaireAnd1Survey">
+        <ownedSpecification xsi:type="pivot:ExpressionInOCL" body="&#xA;&#x9;&#x9;&#x9;(self.webPages->select(p:WebPage|p.oclIsKindOf(Form) and p.oclAsType(Form).formType = Form_Type::Survey)->size() > 0)&#xA;&#x9;&#x9;&#x9;and&#xA;&#x9;&#x9;&#x9;(self.webPages->select(p:WebPage|p.oclIsKindOf(Form) and p.oclAsType(Form).formType = Form_Type::Questionnaire)->size() > 0)"/>
+      </ownedInvariants>
+      <ownedInvariants xmi:id="ciWebDevProjectMM.WebSite.R5atLeastOneSocialNetwork" name="R5atLeastOneSocialNetwork">
+        <ownedSpecification xsi:type="pivot:ExpressionInOCL" body="self.webPages.socialnetworkcontent->size() > 0"/>
+      </ownedInvariants>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebSite.roles" name="roles" type="#//@ownedPackages.1/@ownedClasses.1" isComposite="true"
+          opposite="#p.WebDevProjectMM.Role.WebSite"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebSite.webPages" name="webPages" type="#//@ownedPackages.1/@ownedClasses.0" isComposite="true"
+          opposite="#p.WebDevProjectMM.WebPage.WebSite"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebSite.name" name="name" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebSite.title" name="title" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebSite.description" name="description" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebSite.URL" name="URL" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebSite.link" name="link" type="#//@ownedPackages.1/@ownedClasses.2" isComposite="true"
+          opposite="#p.WebDevProjectMM.PageLink.WebSite"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.WebPage" name="WebPage" isAbstract="true" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclElement">
+      <ownedInvariants xmi:id="ciWebDevProjectMM.WebPage.R2isolatedWebPage" name="R2isolatedWebPage">
+        <ownedSpecification xsi:type="pivot:ExpressionInOCL" body="self.role->size() > 0 or self.incoming->size() > 0"/>
+      </ownedInvariants>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebPage.socialnetworkcontent" name="socialnetworkcontent" type="#//@ownedPackages.1/@ownedClasses.3"
+          isComposite="true" opposite="#p.WebDevProjectMM.SocialNetworkContent.WebPage"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebPage.name" name="name" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebPage.title" name="title" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebPage.description" name="description" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebPage.elements" name="elements" type="#//@ownedPackages.1/@ownedClasses.4" isComposite="true"
+          opposite="#p.WebDevProjectMM.Elements.WebPage"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebPage.outgoing" name="outgoing" type="#//@ownedPackages.1/@ownedClasses.2" opposite="#p.WebDevProjectMM.PageLink.source"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebPage.incoming" name="incoming" type="#//@ownedPackages.1/@ownedClasses.2" opposite="#p.WebDevProjectMM.PageLink.target"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebPage.role" name="role" type="#//@ownedPackages.1/@ownedClasses.5" opposite="#p.WebDevProjectMM.Role.webpage"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.WebPage.WebSite" name="WebSite" isRequired="false" type="#T.WebDevProjectMM.WebSite"
+          isImplicit="true" opposite="#p.WebDevProjectMM.WebSite.webPages"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.SocialNetworkContent" name="SocialNetworkContent" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclElement">
+      <ownedProperties xmi:id="p.WebDevProjectMM.SocialNetworkContent.WebPage" name="WebPage" isRequired="false" type="#T.WebDevProjectMM.WebPage"
+          isImplicit="true" opposite="#p.WebDevProjectMM.WebPage.socialnetworkcontent"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.CRUDPage" name="CRUDPage" superClasses="#T.WebDevProjectMM.WebPage">
+      <ownedInvariants xmi:id="ciWebDevProjectMM.CRUDPage.R3" name="R3">
+        <ownedSpecification xsi:type="pivot:ExpressionInOCL" body="((oclContainer().oclAsType(WebSite).webPages->collect(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType=CRUD_Type::All_CRUD_Type)->size() = 1)&#xA;&#x9;&#x9;&#x9;and&#xA;&#x9;&#x9;&#x9;(oclContainer().oclAsType(WebSite).webPages->collect(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType&lt;>CRUD_Type::All_CRUD_Type)->size() = 0))&#xA;&#x9;&#x9;&#x9;or&#xA;&#x9;&#x9;&#x9;((oclContainer().oclAsType(WebSite).webPages->collect(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType=CRUD_Type::All_CRUD_Type)->size() = 0)&#xA;&#x9;&#x9;&#x9;and&#xA;&#x9;&#x9;&#x9;(oclContainer().oclAsType(WebSite).webPages->collect(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType&lt;>CRUD_Type::All_CRUD_Type)->size() > 0))"/>
+      </ownedInvariants>
+      <ownedProperties xmi:id="p.WebDevProjectMM.CRUDPage.CRUDType" name="CRUDType" isRequired="false" type="#T.WebDevProjectMM.CRUD_Type"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.CRUDPage.entity" name="entity" type="#T.WebDevProjectMM.Entity" opposite="#p.WebDevProjectMM.Entity.CRUDPage"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.RegularContentPage" name="RegularContentPage" superClasses="#T.WebDevProjectMM.WebPage"/>
+    <ownedClasses xmi:id="T.WebDevProjectMM.Form" name="Form" superClasses="#T.WebDevProjectMM.WebPage">
+      <ownedInvariants xmi:id="ciWebDevProjectMM.Form.R7" name="R7">
+        <ownedSpecification xsi:type="pivot:ExpressionInOCL" body="&#xA;&#x9;&#x9;&#x9;formType = Form_Type::Questionnaire and questions->forAll(q:Question|&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;q.oclIsKindOf(NewQuestion) and (not q.oclAsType(NewQuestion).correctAnswer->oclIsUndefined())&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;or&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;q.oclIsKindOf(StoredQuestion) and (not q.oclAsType(StoredQuestion).correctAnswer->oclIsUndefined())&#xA;&#x9;&#x9;&#x9;)"/>
+      </ownedInvariants>
+      <ownedProperties xmi:id="p.WebDevProjectMM.Form.questions" name="questions" type="#//@ownedPackages.1/@ownedClasses.6" isComposite="true"
+          opposite="#p.WebDevProjectMM.Question.Form"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.Form.formType" name="formType" type="#T.WebDevProjectMM.Form_Type"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.Form.numTFQuestions" name="numTFQuestions" type="pivot:DataType http://www.eclipse.org/emf/2002/Ecore.oclas#T.ecore.EInt"
+          isDerived="true" isTransient="true" isVolatile="true">
+        <ownedExpression xsi:type="pivot:ExpressionInOCL" body="self.questions->select(q:Question|q.type = QuestionType::TRUE_FALSE)->size()"/>
+      </ownedProperties>
+      <ownedProperties xmi:id="p.WebDevProjectMM.Form.numMCQuestions" name="numMCQuestions" type="pivot:DataType http://www.eclipse.org/emf/2002/Ecore.oclas#T.ecore.EInt"
+          isDerived="true" isTransient="true" isVolatile="true">
+        <ownedExpression xsi:type="pivot:ExpressionInOCL" body="self.questions->select(q:Question|q.type = QuestionType::MULTIPLE_CHOICE)->size()"/>
+      </ownedProperties>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.Question" name="Question" isAbstract="true" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclElement">
+      <ownedProperties xmi:id="p.WebDevProjectMM.Question.Form" name="Form" isRequired="false" type="#T.WebDevProjectMM.Form" isImplicit="true"
+          opposite="#p.WebDevProjectMM.Form.questions"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.NewQuestion" name="NewQuestion" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclElement">
+      <ownedProperties xmi:id="p.WebDevProjectMM.NewQuestion.newAnswer" name="newAnswer" type="#//@ownedPackages.1/@ownedClasses.7" isComposite="true"
+          opposite="#//@ownedPackages.0/@ownedClasses.13/@ownedProperties.1"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.NewQuestion.correctAnswer" name="correctAnswer" isRequired="false" type="#T.WebDevProjectMM.NewAnswer"
+          opposite="#//@ownedPackages.0/@ownedClasses.13/@ownedProperties.2"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.NewQuestion.description" name="description" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.NewQuestion.type" name="type" type="#T.WebDevProjectMM.QuestionType"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.StoredQuestion" name="StoredQuestion" superClasses="#T.WebDevProjectMM.Question">
+      <ownedProperties xmi:id="p.WebDevProjectMM.StoredQuestion.definition" name="definition" type="#T.WebDevProjectMM.QuestionDefinition"
+          opposite="#p.WebDevProjectMM.QuestionDefinition.StoredQuestion"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.QuestionsRepo" name="QuestionsRepo" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclElement">
+      <ownedProperties xmi:id="p.WebDevProjectMM.QuestionsRepo.questionDefinitions" name="questionDefinitions" type="#//@ownedPackages.1/@ownedClasses.8"
+          isComposite="true" opposite="#p.WebDevProjectMM.QuestionDefinition.QuestionsRepo"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.QuestionDefinition" name="QuestionDefinition" superClasses="#T.WebDevProjectMM.Question">
+      <ownedProperties xmi:id="p.WebDevProjectMM.QuestionDefinition.possibleAsnwer" name="possibleAsnwer" type="#//@ownedPackages.1/@ownedClasses.9"
+          isComposite="true" opposite="#//@ownedPackages.0/@ownedClasses.12/@ownedProperties.2"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.QuestionDefinition.description" name="description" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.QuestionDefinition.type" name="type" type="#T.WebDevProjectMM.QuestionType"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.QuestionDefinition.correctAnswer" name="correctAnswer" isRequired="false" type="#T.WebDevProjectMM.PossibleAsnwer"
+          opposite="#//@ownedPackages.0/@ownedClasses.12/@ownedProperties.1"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.QuestionDefinition.QuestionsRepo" name="QuestionsRepo" isRequired="false" type="#T.WebDevProjectMM.QuestionsRepo"
+          isImplicit="true" opposite="#p.WebDevProjectMM.QuestionsRepo.questionDefinitions"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.QuestionDefinition.StoredQuestion" name="StoredQuestion" type="#//@ownedPackages.1/@ownedClasses.10"
+          isImplicit="true" opposite="#p.WebDevProjectMM.StoredQuestion.definition"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.PossibleAsnwer" name="PossibleAsnwer" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclElement">
+      <ownedProperties xmi:id="p.WebDevProjectMM.PossibleAsnwer.answerText" name="answerText" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+      <ownedProperties name="QuestionDefinition" type="#//@ownedPackages.1/@ownedClasses.11" isImplicit="true" opposite="#p.WebDevProjectMM.QuestionDefinition.correctAnswer"/>
+      <ownedProperties name="QuestionDefinition" isRequired="false" type="#T.WebDevProjectMM.QuestionDefinition" isImplicit="true" opposite="#p.WebDevProjectMM.QuestionDefinition.possibleAsnwer"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.NewAnswer" name="NewAnswer" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclElement">
+      <ownedProperties xmi:id="p.WebDevProjectMM.NewAnswer.answerText" name="answerText" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+      <ownedProperties name="NewQuestion" isRequired="false" type="#T.WebDevProjectMM.NewQuestion" isImplicit="true" opposite="#p.WebDevProjectMM.NewQuestion.newAnswer"/>
+      <ownedProperties name="NewQuestion" type="#//@ownedPackages.1/@ownedClasses.12" isImplicit="true" opposite="#p.WebDevProjectMM.NewQuestion.correctAnswer"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.Elements" name="Elements" isAbstract="true" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclElement">
+      <ownedProperties xmi:id="p.WebDevProjectMM.Elements.WebPage" name="WebPage" isRequired="false" type="#T.WebDevProjectMM.WebPage"
+          isImplicit="true" opposite="#p.WebDevProjectMM.WebPage.elements"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.Multimedia" name="Multimedia" superClasses="#T.WebDevProjectMM.Elements">
+      <ownedProperties xmi:id="p.WebDevProjectMM.Multimedia.href" name="href" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.Text" name="Text" superClasses="#T.WebDevProjectMM.Elements">
+      <ownedProperties xmi:id="p.WebDevProjectMM.Text.text" name="text" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.Database" name="Database" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclElement">
+      <ownedProperties xmi:id="p.WebDevProjectMM.Database.entities" name="entities" type="#//@ownedPackages.1/@ownedClasses.13" isComposite="true"
+          opposite="#p.WebDevProjectMM.Entity.Database"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.Entity" name="Entity" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclElement">
+      <ownedProperties xmi:id="p.WebDevProjectMM.Entity.attribute" name="attribute" type="#//@ownedPackages.1/@ownedClasses.14" isComposite="true"
+          opposite="#//@ownedPackages.0/@ownedClasses.19/@ownedProperties.4"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.Entity.refersTo" name="refersTo" isRequired="false" type="#T.WebDevProjectMM.Entity"
+          opposite="#p.WebDevProjectMM.Entity.Entity"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.Entity.id" name="id" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"
+          isID="true"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.Entity.primary_key" name="primary_key" type="#T.WebDevProjectMM.Attribute" opposite="#//@ownedPackages.0/@ownedClasses.19/@ownedProperties.3"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.Entity.Entity" name="Entity" type="#//@ownedPackages.1/@ownedClasses.15" isImplicit="true"
+          opposite="#p.WebDevProjectMM.Entity.refersTo"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.Entity.Database" name="Database" isRequired="false" type="#T.WebDevProjectMM.Database"
+          isImplicit="true" opposite="#p.WebDevProjectMM.Database.entities"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.Entity.CRUDPage" name="CRUDPage" type="#//@ownedPackages.1/@ownedClasses.16" isImplicit="true"
+          opposite="#p.WebDevProjectMM.CRUDPage.entity"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.Attribute" name="Attribute" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclElement">
+      <ownedProperties xmi:id="p.WebDevProjectMM.Attribute.name" name="name" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.Attribute.attributePrimitiveData_Type" name="attributePrimitiveData_Type" type="#T.WebDevProjectMM.AttributePrimitiveData_Type"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.Attribute.value" name="value" type="pivot:PrimitiveType http://www.eclipse.org/ocl/2015/Library.oclas#String"/>
+      <ownedProperties name="Entity" type="#//@ownedPackages.1/@ownedClasses.15" isImplicit="true" opposite="#p.WebDevProjectMM.Entity.primary_key"/>
+      <ownedProperties name="Entity" isRequired="false" type="#T.WebDevProjectMM.Entity" isImplicit="true" opposite="#p.WebDevProjectMM.Entity.attribute"/>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:Enumeration" xmi:id="T.WebDevProjectMM.QuestionType" name="QuestionType" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclEnumeration">
+      <ownedLiterals xmi:id="e.WebDevProjectMM.QuestionType.MULTIPLE_CHOICE" name="MULTIPLE_CHOICE"/>
+      <ownedLiterals xmi:id="e.WebDevProjectMM.QuestionType.TRUE_FALSE" name="TRUE_FALSE" value="1"/>
+      <ownedLiterals xmi:id="e.WebDevProjectMM.QuestionType.SHORT_QUESTION" name="SHORT_QUESTION" value="2"/>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:Enumeration" xmi:id="T.WebDevProjectMM.AttributePrimitiveData_Type" name="AttributePrimitiveData_Type"
+        superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclEnumeration">
+      <ownedLiterals xmi:id="e.WebDevProjectMM.AttributePrimitiveData_Type.REAL" name="REAL"/>
+      <ownedLiterals xmi:id="e.WebDevProjectMM.AttributePrimitiveData_Type.INTEGER" name="INTEGER" value="1"/>
+      <ownedLiterals xmi:id="e.WebDevProjectMM.AttributePrimitiveData_Type.BOOLEAN" name="BOOLEAN" value="2"/>
+      <ownedLiterals xmi:id="e.WebDevProjectMM.AttributePrimitiveData_Type.STRING" name="STRING" value="3"/>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:Enumeration" xmi:id="T.WebDevProjectMM.CRUD_Type" name="CRUD_Type" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclEnumeration">
+      <ownedLiterals xmi:id="e.WebDevProjectMM.CRUD_Type.Detail_Page" name="Detail_Page"/>
+      <ownedLiterals xmi:id="e.WebDevProjectMM.CRUD_Type.Creation_Page" name="Creation_Page" value="1"/>
+      <ownedLiterals xmi:id="e.WebDevProjectMM.CRUD_Type.Delition_Page" name="Delition_Page" value="2"/>
+      <ownedLiterals xmi:id="e.WebDevProjectMM.CRUD_Type.Index_Page" name="Index_Page" value="3"/>
+      <ownedLiterals xmi:id="e.WebDevProjectMM.CRUD_Type.All_CRUD_Type" name="All_CRUD_Type" value="4"/>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:Enumeration" xmi:id="T.WebDevProjectMM.Form_Type" name="Form_Type" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclEnumeration">
+      <ownedLiterals xmi:id="e.WebDevProjectMM.Form_Type.Survey" name="Survey"/>
+      <ownedLiterals xmi:id="e.WebDevProjectMM.Form_Type.Questionnaire" name="Questionnaire" value="1"/>
+    </ownedClasses>
+    <ownedClasses xmi:id="T.WebDevProjectMM.PageLink" name="PageLink" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclElement">
+      <ownedProperties xmi:id="p.WebDevProjectMM.PageLink.source" name="source" type="#T.WebDevProjectMM.WebPage" opposite="#p.WebDevProjectMM.WebPage.outgoing"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.PageLink.target" name="target" type="#T.WebDevProjectMM.WebPage" opposite="#p.WebDevProjectMM.WebPage.incoming"/>
+      <ownedProperties xmi:id="p.WebDevProjectMM.PageLink.WebSite" name="WebSite" isRequired="false" type="#T.WebDevProjectMM.WebSite"
+          isImplicit="true" opposite="#p.WebDevProjectMM.WebSite.link"/>
+    </ownedClasses>
+  </ownedPackages>
+  <ownedPackages xmi:id="P.$$" name="$$" URI="http://www.eclipse.org/ocl/2015/Orphanage" nsPrefix="orphanage">
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="#//@ownedPackages.1/@ownedClasses.17 #//@ownedPackages.1/@ownedClasses.18"
+        elementType="#T.WebDevProjectMM.WebPage" isNullFree="true" lower="1">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.WebPage" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="#//@ownedPackages.1/@ownedClasses.19 #//@ownedPackages.1/@ownedClasses.20"
+        elementType="#T.WebDevProjectMM.Role" isNullFree="true" lower="1">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Role" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="#//@ownedPackages.1/@ownedClasses.21 #//@ownedPackages.1/@ownedClasses.22"
+        elementType="#T.WebDevProjectMM.PageLink" isNullFree="true">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.PageLink" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="#//@ownedPackages.1/@ownedClasses.23 #//@ownedPackages.1/@ownedClasses.24"
+        elementType="#T.WebDevProjectMM.SocialNetworkContent" isNullFree="true">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.SocialNetworkContent" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="#//@ownedPackages.1/@ownedClasses.25 #//@ownedPackages.1/@ownedClasses.26"
+        elementType="#T.WebDevProjectMM.Elements" isNullFree="true">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Elements" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="#//@ownedPackages.1/@ownedClasses.19 #//@ownedPackages.1/@ownedClasses.20"
+        elementType="#T.WebDevProjectMM.Role" isNullFree="true">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Role" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="#//@ownedPackages.1/@ownedClasses.27 #//@ownedPackages.1/@ownedClasses.28"
+        elementType="#T.WebDevProjectMM.Question" isNullFree="true" lower="1">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Question" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="#//@ownedPackages.1/@ownedClasses.29 #//@ownedPackages.1/@ownedClasses.30"
+        elementType="#T.WebDevProjectMM.NewAnswer" isNullFree="true">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.NewAnswer" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="#//@ownedPackages.1/@ownedClasses.31 #//@ownedPackages.1/@ownedClasses.32"
+        elementType="#T.WebDevProjectMM.QuestionDefinition" isNullFree="true">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.QuestionDefinition" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="#//@ownedPackages.1/@ownedClasses.33 #//@ownedPackages.1/@ownedClasses.34"
+        elementType="#T.WebDevProjectMM.PossibleAsnwer" isNullFree="true">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.PossibleAsnwer" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:BagType" name="Bag" superClasses="#//@ownedPackages.1/@ownedClasses.35" elementType="#T.WebDevProjectMM.StoredQuestion">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.StoredQuestion" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..BagT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:BagType" name="Bag" superClasses="#//@ownedPackages.1/@ownedClasses.36" elementType="#T.WebDevProjectMM.QuestionDefinition">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.QuestionDefinition" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..BagT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:BagType" name="Bag" superClasses="#//@ownedPackages.1/@ownedClasses.37" elementType="#T.WebDevProjectMM.NewQuestion">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.NewQuestion" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..BagT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="#//@ownedPackages.1/@ownedClasses.38 #//@ownedPackages.1/@ownedClasses.39"
+        elementType="#T.WebDevProjectMM.Entity" isNullFree="true">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Entity" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:OrderedSetType" name="OrderedSet" superClasses="#//@ownedPackages.1/@ownedClasses.40 #//@ownedPackages.1/@ownedClasses.41"
+        elementType="#T.WebDevProjectMM.Attribute" isNullFree="true" lower="1">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Attribute" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedSetT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:BagType" name="Bag" superClasses="#//@ownedPackages.1/@ownedClasses.42" elementType="#T.WebDevProjectMM.Entity">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Entity" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..BagT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:BagType" name="Bag" superClasses="#//@ownedPackages.1/@ownedClasses.43" elementType="#T.WebDevProjectMM.CRUDPage">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.CRUDPage" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..BagT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="#//@ownedPackages.1/@ownedClasses.44" elementType="#T.WebDevProjectMM.WebPage">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.WebPage" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="#//@ownedPackages.1/@ownedClasses.44" elementType="#T.WebDevProjectMM.WebPage">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.WebPage" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="#//@ownedPackages.1/@ownedClasses.45" elementType="#T.WebDevProjectMM.Role">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Role" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="#//@ownedPackages.1/@ownedClasses.45" elementType="#T.WebDevProjectMM.Role">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Role" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="#//@ownedPackages.1/@ownedClasses.46" elementType="#T.WebDevProjectMM.PageLink">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.PageLink" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="#//@ownedPackages.1/@ownedClasses.46" elementType="#T.WebDevProjectMM.PageLink">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.PageLink" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="#//@ownedPackages.1/@ownedClasses.47" elementType="#T.WebDevProjectMM.SocialNetworkContent">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.SocialNetworkContent" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="#//@ownedPackages.1/@ownedClasses.47" elementType="#T.WebDevProjectMM.SocialNetworkContent">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.SocialNetworkContent" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="#//@ownedPackages.1/@ownedClasses.48" elementType="#T.WebDevProjectMM.Elements">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Elements" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="#//@ownedPackages.1/@ownedClasses.48" elementType="#T.WebDevProjectMM.Elements">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Elements" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="#//@ownedPackages.1/@ownedClasses.49" elementType="#T.WebDevProjectMM.Question">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Question" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="#//@ownedPackages.1/@ownedClasses.49" elementType="#T.WebDevProjectMM.Question">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Question" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="#//@ownedPackages.1/@ownedClasses.50" elementType="#T.WebDevProjectMM.NewAnswer">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.NewAnswer" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="#//@ownedPackages.1/@ownedClasses.50" elementType="#T.WebDevProjectMM.NewAnswer">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.NewAnswer" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="#//@ownedPackages.1/@ownedClasses.36" elementType="#T.WebDevProjectMM.QuestionDefinition">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.QuestionDefinition" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="#//@ownedPackages.1/@ownedClasses.36" elementType="#T.WebDevProjectMM.QuestionDefinition">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.QuestionDefinition" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="#//@ownedPackages.1/@ownedClasses.51" elementType="#T.WebDevProjectMM.PossibleAsnwer">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.PossibleAsnwer" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="#//@ownedPackages.1/@ownedClasses.51" elementType="#T.WebDevProjectMM.PossibleAsnwer">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.PossibleAsnwer" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="#T.WebDevProjectMM.StoredQuestion">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.StoredQuestion" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="#T.WebDevProjectMM.QuestionDefinition">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.QuestionDefinition" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="#T.WebDevProjectMM.NewQuestion">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.NewQuestion" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="#//@ownedPackages.1/@ownedClasses.42" elementType="#T.WebDevProjectMM.Entity">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Entity" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="#//@ownedPackages.1/@ownedClasses.42" elementType="#T.WebDevProjectMM.Entity">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Entity" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="OrderedCollection" superClasses="#//@ownedPackages.1/@ownedClasses.52" elementType="#T.WebDevProjectMM.Attribute">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Attribute" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..OrderedCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="UniqueCollection" superClasses="#//@ownedPackages.1/@ownedClasses.52" elementType="#T.WebDevProjectMM.Attribute">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Attribute" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..UniqueCollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="#T.WebDevProjectMM.Entity">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Entity" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="#T.WebDevProjectMM.CRUDPage">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.CRUDPage" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="#T.WebDevProjectMM.WebPage">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.WebPage" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="#T.WebDevProjectMM.Role">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Role" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="#T.WebDevProjectMM.PageLink">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.PageLink" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="#T.WebDevProjectMM.SocialNetworkContent">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.SocialNetworkContent" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="#T.WebDevProjectMM.Elements">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Elements" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="#T.WebDevProjectMM.Question">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Question" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="#T.WebDevProjectMM.NewAnswer">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.NewAnswer" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="#T.WebDevProjectMM.PossibleAsnwer">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.PossibleAsnwer" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+    <ownedClasses xsi:type="pivot:CollectionType" name="Collection" superClasses="http://www.eclipse.org/ocl/2015/Library.oclas#T.ocl.OclAny"
+        elementType="#T.WebDevProjectMM.Attribute">
+      <ownedBindings>
+        <ownedSubstitutions actual="#T.WebDevProjectMM.Attribute" formal="http://www.eclipse.org/ocl/2015/Library.oclas#t.ocl..CollectionT"/>
+      </ownedBindings>
+    </ownedClasses>
+  </ownedPackages>
+</pivot:Model>
