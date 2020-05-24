@@ -4,6 +4,7 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:WebDevProjectMM="https://www.WebDevProjectMM.com"
+    xsi:schemaLocation="https://www.WebDevProjectMM.com ../metamodel/WebDevProject.ecore"
     name="WebDevExample"
     title="WebDevExample"
     description="An Example WebSite"
@@ -112,7 +113,6 @@
     <questions
         xsi:type="WebDevProjectMM:QuestionDefinition"
         description="Is this a question?"
-        type="TRUE_FALSE"
         correctAnswer="//@webPages.8/@questions.0/@possibleAsnwer.0">
       <possibleAsnwer
           answerText="True"/>
@@ -122,7 +122,6 @@
     <questions
         xsi:type="WebDevProjectMM:QuestionDefinition"
         description="What's 2+1?"
-        type="SHORT_QUESTION"
         correctAnswer="//@webPages.8/@questions.1/@possibleAsnwer.2">
       <possibleAsnwer
           answerText="1"/>
@@ -132,10 +131,7 @@
           answerText="3"/>
     </questions>
     <questions
-        xsi:type="WebDevProjectMM:StoredQuestion">
-      <definitionOfQuestion
-          href="QuestionsRepo.xmi#//@questionDefinitions.0"/>
-    </questions>
+        xsi:type="WebDevProjectMM:StoredQuestion"/>
   </webPages>
   <link source="//@webPages.1"
       target="//@webPages.3"/>

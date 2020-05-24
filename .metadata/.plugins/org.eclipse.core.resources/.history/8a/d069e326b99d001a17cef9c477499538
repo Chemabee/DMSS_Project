@@ -133,7 +133,7 @@
     </questions>
     <questions
         xsi:type="WebDevProjectMM:StoredQuestion">
-      <definitionOfQuestion
+      <definition
           href="QuestionsRepo.xmi#//@questionDefinitions.0"/>
     </questions>
   </webPages>

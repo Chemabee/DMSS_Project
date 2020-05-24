@@ -112,7 +112,6 @@
     <questions
         xsi:type="WebDevProjectMM:QuestionDefinition"
         description="Is this a question?"
-        type="TRUE_FALSE"
         correctAnswer="//@webPages.8/@questions.0/@possibleAsnwer.0">
       <possibleAsnwer
           answerText="True"/>
@@ -122,7 +121,6 @@
     <questions
         xsi:type="WebDevProjectMM:QuestionDefinition"
         description="What's 2+1?"
-        type="SHORT_QUESTION"
         correctAnswer="//@webPages.8/@questions.1/@possibleAsnwer.2">
       <possibleAsnwer
           answerText="1"/>
@@ -133,8 +131,8 @@
     </questions>
     <questions
         xsi:type="WebDevProjectMM:StoredQuestion">
-      <definitionOfQuestion
-          href="QuestionsRepo.xmi#//@questionDefinitions.0"/>
+      <definition
+          href="QuestionsRepo.xmi#//@questionDefinitions.1"/>
     </questions>
   </webPages>
   <link source="//@webPages.1"

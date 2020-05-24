@@ -84,7 +84,7 @@
       <details key="constraints" value="R7"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="R7" value="&#xA;&#x9;&#x9;&#x9;self.formType = Form_Type::Questionnaire implies self.questions->forAll(q:Question|&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;(q.oclIsKindOf(QuestionDefinition) and (not q.oclAsType(QuestionDefinition).correctAnswer->oclIsUndefined()))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;or&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;(q.oclIsKindOf(StoredQuestion) and (not q.oclAsType(StoredQuestion).definitionOfQuestion.oclAsType(QuestionDefinition).correctAnswer->oclIsUndefined()))&#xA;&#x9;&#x9;&#x9;)"/>
+      <details key="R7" value="&#xA;&#x9;&#x9;&#x9;formType = Form_Type::Questionnaire and questions->forAll(q:Question|&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;q.oclIsKindOf(QuestionDefinition) and (not q.oclAsType(QuestionDefinition).correctAnswer->oclIsUndefined())&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;or&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;q.oclIsKindOf(StoredQuestion) and (not q.oclAsType(StoredQuestion).definition.correctAnswer->oclIsUndefined())&#xA;&#x9;&#x9;&#x9;)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="questions" lowerBound="1"
         upperBound="-1" eType="#//Question" containment="true"/>
@@ -94,20 +94,20 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" volatile="true"
         transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="derivation" value="self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::TRUE_FALSE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definitionOfQuestion.type = QuestionType::TRUE_FALSE) )->size()"/>
+        <details key="derivation" value="self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::TRUE_FALSE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definition.type = QuestionType::TRUE_FALSE) )->size()"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numMCQuestions" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" volatile="true"
         transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="derivation" value="self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::MULTIPLE_CHOICE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definitionOfQuestion.type = QuestionType::MULTIPLE_CHOICE) )->size()"/>
+        <details key="derivation" value="self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::MULTIPLE_CHOICE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definition.type = QuestionType::MULTIPLE_CHOICE) )->size()"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Question" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="StoredQuestion" eSuperTypes="#//Question">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="definitionOfQuestion" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="definition" lowerBound="1"
         eType="#//QuestionDefinition"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QuestionsRepo">

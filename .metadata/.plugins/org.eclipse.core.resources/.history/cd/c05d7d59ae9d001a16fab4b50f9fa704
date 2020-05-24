@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebDevProjectMM:QuestionsRepo
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:WebDevProjectMM="https://www.WebDevProjectMM.com"
+    xsi:schemaLocation="https://www.WebDevProjectMM.com ../metamodel/WebDevProject.ecore">
+  <questionDefinitions
+      description="Numbers &lt; 5"
+      correctAnswer="//@questionDefinitions.0/@possibleAsnwer.0 //@questionDefinitions.0/@possibleAsnwer.2">
+    <possibleAsnwer
+        answerText="4"/>
+    <possibleAsnwer
+        answerText="6"/>
+    <possibleAsnwer
+        answerText="3"/>
+  </questionDefinitions>
+</WebDevProjectMM:QuestionsRepo>
