@@ -9,7 +9,7 @@
     description="An Example WebSite"
     URL="https://www.WebDevExample.com/">
   <roles name="Admin"
-      webpage="//@webPages.0 //@webPages.1 //@webPages.2 //@webPages.3 //@webPages.4 //@webPages.5 //@webPages.6 //@webPages.8 //@webPages.9 //@webPages.7"/>
+      webpage="//@webPages.0 //@webPages.1 //@webPages.2 //@webPages.3 //@webPages.4 //@webPages.5 //@webPages.6 //@webPages.7 //@webPages.8 //@webPages.9"/>
   <roles name="RegularUser"
       webpage="//@webPages.0 //@webPages.1 //@webPages.2 //@webPages.3 //@webPages.4"/>
   <roles name="Guest"
@@ -90,7 +90,7 @@
   <webPages
       xsi:type="WebDevProjectMM:RegularContentPage"
       name="PageWithElements"
-      title="Page With Elements"
+      title="Page with Elements"
       description="PageWithElements"
       role="//@roles.0">
     <elements
@@ -101,7 +101,7 @@
         href=""/>
     <elements
         xsi:type="WebDevProjectMM:Text"
-        text="Lorem Ipsum"/>
+        text="This is a text"/>
   </webPages>
   <webPages
       xsi:type="WebDevProjectMM:Form"
