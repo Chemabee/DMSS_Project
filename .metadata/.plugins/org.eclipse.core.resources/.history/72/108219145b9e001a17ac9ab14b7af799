@@ -21,8 +21,7 @@
       description="Person CRUD Page"
       role="//@roles.0 //@roles.1"
       CRUDType="ALL_CRUD">
-    <socialnetworkcontent
-        parameters="https://twitter.com/IbaiLlanos"/>
+    <socialnetworkcontent/>
     <externalLink>https://www.3djuegos.com/</externalLink>
     <entity
         href="DatabaseGood.xmi#Person"/>
@@ -95,14 +94,14 @@
       description="PageWithElements"
       role="//@roles.0">
     <elements
+        xsi:type="WebDevProjectMM:Multimedia"
+        href=""/>
+    <elements
+        xsi:type="WebDevProjectMM:Multimedia"
+        href=""/>
+    <elements
         xsi:type="WebDevProjectMM:Text"
         text="Lorem Ipsum"/>
-    <elements
-        xsi:type="WebDevProjectMM:MediaContent"
-        link="https://image.shutterstock.com/z/stock-photo-beautiful-water-drop-on-a-dandelion-flower-seed-macro-in-nature-beautiful-deep-saturated-blue-and-789676552.jpg"/>
-    <elements
-        xsi:type="WebDevProjectMM:MediaContent"
-        link="https://www.youtube.com/watch?v=9bZkp7q19f0"/>
   </webPages>
   <webPages
       xsi:type="WebDevProjectMM:Form"

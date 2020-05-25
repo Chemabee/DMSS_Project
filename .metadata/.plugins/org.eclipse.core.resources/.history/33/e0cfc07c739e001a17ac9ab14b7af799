@@ -21,8 +21,7 @@
       description="Person CRUD Page"
       role="//@roles.0 //@roles.1"
       CRUDType="ALL_CRUD">
-    <socialnetworkcontent
-        parameters="https://twitter.com/IbaiLlanos"/>
+    <socialnetworkcontent/>
     <externalLink>https://www.3djuegos.com/</externalLink>
     <entity
         href="DatabaseGood.xmi#Person"/>

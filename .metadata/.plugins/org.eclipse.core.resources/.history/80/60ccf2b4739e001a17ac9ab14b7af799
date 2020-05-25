@@ -73,12 +73,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CRUDPage" eSuperTypes="#//WebPage">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="R4IndexAndDetailDefinedAtTheSameTime R3AllCRUDMustBeTheOnlyCRUDPage onlyOneCRUDOfEachTypeMax"/>
+      <details key="constraints" value="R4IndexAndDetailDefinedAtTheSameTime R3AllCRUDMustBeTheOnlyCRUDPage"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="R4IndexAndDetailDefinedAtTheSameTime" value="&#xA;&#x9;&#x9;&#x9;--let x : Sequence(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->select(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id)&#xA;&#x9;&#x9;&#x9;--in&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;let numOfIndexPages : Integer = oclContainer().oclAsType(WebSite).webPages->select(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType = CRUD_Type::INDEX)->size(),&#xA;&#x9;&#x9;&#x9;&#x9;numOfDetailPages : Integer = oclContainer().oclAsType(WebSite).webPages->select(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType = CRUD_Type::DETAIL)->size()&#xA;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;--Esto hay que cambiarlo a LET IN tanto R4 como R3, pero no se como hacer para definir una coleccion, Collection o Bag&#xA;&#x9;&#x9;&#x9;&#x9;(numOfIndexPages = 1 &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;implies numOfDetailPages = 1)&#xA;&#x9;&#x9;&#x9;&#x9;and&#xA;&#x9;&#x9;&#x9;&#x9;(numOfDetailPages = 1&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;implies numOfIndexPages = 1)"/>
       <details key="R3AllCRUDMustBeTheOnlyCRUDPage" value="&#xA;&#x9;&#x9;&#x9;let numOfALLCRUDPages : Integer = oclContainer().oclAsType(WebSite).webPages->select(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType=CRUD_Type::ALL_CRUD)->size(),&#xA;&#x9;&#x9;&#x9;&#x9;numOfPagesNotALLCRUD : Integer = oclContainer().oclAsType(WebSite).webPages->select(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType&lt;>CRUD_Type::ALL_CRUD)->size()&#xA;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;((numOfALLCRUDPages = 1) and (numOfPagesNotALLCRUD = 0))&#xA;&#x9;&#x9;&#x9;or&#xA;&#x9;&#x9;&#x9;((numOfALLCRUDPages = 0) and (numOfPagesNotALLCRUD > 0))"/>
-      <details key="onlyOneCRUDOfEachTypeMax" value="true"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRUDType" lowerBound="1"
         eType="#//CRUD_Type"/>
