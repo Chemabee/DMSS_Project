@@ -71,6 +71,20 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="socialNetworkType" lowerBound="1"
         eType="#//SocialNetwork_Type"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CRUDPage" eSuperTypes="#//WebPage">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="R4IndexAndDetailDefinedAtTheSameTime R3AllCRUDMustBeTheOnlyCRUDPage onlyOneCRUDOfEachTypeMax"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="R4IndexAndDetailDefinedAtTheSameTime" value="&#xA;&#x9;&#x9;&#x9;--let x : Sequence(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->select(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id)&#xA;&#x9;&#x9;&#x9;--in&#xA;&#x9;&#x9;&#x9;&#xA;&#x9;&#x9;&#x9;let numOfIndexPages : Integer = oclContainer().oclAsType(WebSite).webPages->select(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType = CRUD_Type::INDEX)->size(),&#xA;&#x9;&#x9;&#x9;&#x9;numOfDetailPages : Integer = oclContainer().oclAsType(WebSite).webPages->select(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType = CRUD_Type::DETAIL)->size()&#xA;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;--Esto hay que cambiarlo a LET IN tanto R4 como R3, pero no se como hacer para definir una coleccion, Collection o Bag&#xA;&#x9;&#x9;&#x9;&#x9;(numOfIndexPages = 1 &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;implies numOfDetailPages = 1)&#xA;&#x9;&#x9;&#x9;&#x9;and&#xA;&#x9;&#x9;&#x9;&#x9;(numOfDetailPages = 1&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;implies numOfIndexPages = 1)"/>
+      <details key="R3AllCRUDMustBeTheOnlyCRUDPage" value="&#xA;&#x9;&#x9;&#x9;let numOfALLCRUDPages : Integer = oclContainer().oclAsType(WebSite).webPages->select(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType=CRUD_Type::ALL_CRUD)->size(),&#xA;&#x9;&#x9;&#x9;&#x9;numOfPagesNotALLCRUD : Integer = oclContainer().oclAsType(WebSite).webPages->select(w:WebPage|w.oclIsKindOf(CRUDPage) and w.oclAsType(CRUDPage).entity.id = self.entity.id and w.oclAsType(CRUDPage).CRUDType&lt;>CRUD_Type::ALL_CRUD)->size()&#xA;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;((numOfALLCRUDPages = 1) and (numOfPagesNotALLCRUD = 0))&#xA;&#x9;&#x9;&#x9;or&#xA;&#x9;&#x9;&#x9;((numOfALLCRUDPages = 0) and (numOfPagesNotALLCRUD > 0))"/>
+      <details key="onlyOneCRUDOfEachTypeMax" value="true"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CRUDType" lowerBound="1"
+        eType="#//CRUD_Type"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
+        eType="#//Entity"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RegularContentPage" eSuperTypes="#//WebPage"/>
   <eClassifiers xsi:type="ecore:EClass" name="Form" eSuperTypes="#//WebPage">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -166,6 +180,13 @@
     <eLiterals name="BOOLEAN" value="2"/>
     <eLiterals name="STRING" value="3"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CRUD_Type">
+    <eLiterals name="DETAIL"/>
+    <eLiterals name="CREATION" value="1"/>
+    <eLiterals name="DELITION" value="2"/>
+    <eLiterals name="INDEX" value="3"/>
+    <eLiterals name="ALL_CRUD" value="4"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PageLink">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="linkCanNotBeToItself"/>
@@ -188,36 +209,5 @@
   <eClassifiers xsi:type="ecore:EEnum" name="Form_Type">
     <eLiterals name="SURVEY"/>
     <eLiterals name="QUESTIONNAIRE" value="1"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CRUDPage" abstract="true" eSuperTypes="#//WebPage">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
-        eType="#//Entity"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CreationCRUD" eSuperTypes="#//CRUDPage"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DelitionCRUD" eSuperTypes="#//CRUDPage"/>
-  <eClassifiers xsi:type="ecore:EClass" name="IndexCRUD" eSuperTypes="#//CRUDPage">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="R4IndexImpliesDetail"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="R4IndexImpliesDetail" value="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;let allDetailPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByType(DetailCRUD)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;allDetailPages->exists(p : CRUDPage | p.entity = self.entity)"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AllCRUD" eSuperTypes="#//CRUDPage">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="R3ALLCRUDImpliesNoOtherCRUD onlyOneCRUDOfEachTypeMax"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="R3ALLCRUDImpliesNoOtherCRUD" value="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;let allCRUDPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByType(CRUDPage),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;entityCRUDPages : Collection(CRUDPage) = allCRUDPages->select(p : CRUDPage | p.entity = self.entity),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;notALLCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->select(p : CRUDPage | not p.oclIsKindOf(AllCRUD))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;notALLCRUDTypePages->size() = 0"/>
-      <details key="onlyOneCRUDOfEachTypeMax" value="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;let allCRUDPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByType(CRUDPage),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;entityCRUDPages : Collection(CRUDPage) = allCRUDPages->select(p : CRUDPage | p.entity = self.entity),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AllCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByType(AllCRUD),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DetailCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByType(DetailCRUD),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;IndexCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByType(IndexCRUD),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;CreationCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByType(CreationCRUD),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DelitionCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByType(DelitionCRUD)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AllCRUDTypePages->size() &lt; 2 and&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DetailCRUDTypePages->size() &lt; 2 and&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;IndexCRUDTypePages->size() &lt; 2 and&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;CreationCRUDTypePages->size() &lt; 2 and&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DelitionCRUDTypePages->size() &lt; 2&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;"/>
-    </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DetailCRUD" eSuperTypes="#//CRUDPage">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="R4DetailImpliesIndex"/>
-    </eAnnotations>
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="R4DetailImpliesIndex" value="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;let allIndexPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByType(IndexCRUD)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;allIndexPages->exists(p : CRUDPage | p.entity = self.entity)"/>
-    </eAnnotations>
   </eClassifiers>
 </ecore:EPackage>

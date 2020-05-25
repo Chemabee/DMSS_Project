@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="formType=&quot;QUESTIONNAIRE&quot;" key="selection"/>
+		<item value="WebDevProjectMM:CRUDPage" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="WebDevProjectMM:CRUDPage"/>
+			<item value="CRUD"/>
 			<item value="formType=&quot;Questionnaire&quot;"/>
 			<item value="formType=&quot;Survey&quot;"/>
 			<item value="Questionnaire"/>
 			<item value="Form_Type"/>
 			<item value="Multimedia"/>
 			<item value="collect"/>
-			<item value="definition"/>
-			<item value="@attribute"/>
 		</list>
 		<list key="replacehistory">
 			<item value="formType=&quot;QUESTIONNAIRE&quot;"/>
