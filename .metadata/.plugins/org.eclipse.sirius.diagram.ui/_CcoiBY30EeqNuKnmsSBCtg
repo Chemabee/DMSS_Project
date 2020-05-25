@@ -1,7 +1,7 @@
-#Mon May 25 12:42:13 CEST 2020
+#Mon May 25 17:41:01 CEST 2020
 rulergrid.snaptogeometry=true
-viewport.x=0
-zoom=1.0
+viewport.x=-81
+zoom=0.75
 print.margin.right=0.5
 rulergrid.rulerunit=1
 rulergrid.snaptogrid=true

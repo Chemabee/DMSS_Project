@@ -11,9 +11,8 @@
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Role">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numAccesiblePages" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"
-        volatile="true" transient="true" derived="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="numAccesiblePages" volatile="true"
+        transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
         <details key="derivation" value="self.webpage->size()"/>
       </eAnnotations>
@@ -97,16 +96,14 @@
         upperBound="-1" eType="#//Question" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="formType" lowerBound="1"
         eType="#//Form_Type"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numTFQuestions" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"
-        volatile="true" transient="true" derived="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="numTFQuestions" volatile="true"
+        transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
         <details key="derivation" value="self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::TRUE_FALSE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definitionOfQuestion.type = QuestionType::TRUE_FALSE) )->size()"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numMCQuestions" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"
-        volatile="true" transient="true" derived="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="numMCQuestions" volatile="true"
+        transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
         <details key="derivation" value="self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::MULTIPLE_CHOICE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definitionOfQuestion.type = QuestionType::MULTIPLE_CHOICE) )->size()"/>
       </eAnnotations>

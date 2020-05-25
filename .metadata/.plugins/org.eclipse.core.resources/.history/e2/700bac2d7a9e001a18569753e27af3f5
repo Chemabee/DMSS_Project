@@ -144,7 +144,7 @@
       title="Questionnaire1"
       description="Questionnaire1"
       role="//@roles.0"
-      formType="QUESTIONNAIRE">
+      formType="Questionnaire">
     <questions
         xsi:type="WebDevProjectMM:StoredQuestion">
       <definitionOfQuestion

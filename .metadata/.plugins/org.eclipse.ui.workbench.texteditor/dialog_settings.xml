@@ -2,22 +2,25 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="MediaContent" key="selection"/>
+		<item value="formType=&quot;QUESTIONNAIRE&quot;" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="formType=&quot;Questionnaire&quot;"/>
+			<item value="formType=&quot;Survey&quot;"/>
+			<item value="Questionnaire"/>
+			<item value="Form_Type"/>
 			<item value="Multimedia"/>
 			<item value="collect"/>
 			<item value="definition"/>
 			<item value="@attribute"/>
-			<item value="@attribute="/>
-			<item value=" attribute="/>
-			<item value=" "/>
-			<item value="R5"/>
 		</list>
 		<list key="replacehistory">
+			<item value="formType=&quot;QUESTIONNAIRE&quot;"/>
+			<item value="formType=&quot;SURVEY&quot;"/>
+			<item value="QUESTIONNAIRE"/>
 			<item value="MediaContent"/>
 			<item value="definitionOfQuestion"/>
 			<item value="@attributes"/>

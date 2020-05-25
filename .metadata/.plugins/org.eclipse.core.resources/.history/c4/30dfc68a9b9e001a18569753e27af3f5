@@ -12,8 +12,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Role">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numAccesiblePages" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"
-        volatile="true" transient="true" derived="true">
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" volatile="true"
+        transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
         <details key="derivation" value="self.webpage->size()"/>
       </eAnnotations>
@@ -26,7 +26,7 @@
       <details key="constraints" value="R6MustInclude1QuestionnaireAnd1Survey R5atLeastOneSocialNetwork"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="R6MustInclude1QuestionnaireAnd1Survey" value="&#xA;&#x9;&#x9;&#x9;(self.webPages->select(p:WebPage|p.oclIsKindOf(Form) and p.oclAsType(Form).formType = Form_Type::SURVEY)->size() > 0)&#xA;&#x9;&#x9;&#x9;and&#xA;&#x9;&#x9;&#x9;(self.webPages->select(p:WebPage|p.oclIsKindOf(Form) and p.oclAsType(Form).formType = Form_Type::QUESTIONNAIRE)->size() > 0)"/>
+      <details key="R6MustInclude1QuestionnaireAnd1Survey" value="&#xA;&#x9;&#x9;&#x9;(self.webPages->select(p:WebPage|p.oclIsKindOf(Form) and p.oclAsType(Form).formType = Form_Type::Survey)->size() > 0)&#xA;&#x9;&#x9;&#x9;and&#xA;&#x9;&#x9;&#x9;(self.webPages->select(p:WebPage|p.oclIsKindOf(Form) and p.oclAsType(Form).formType = Form_Type::Questionnaire)->size() > 0)"/>
       <details key="R5atLeastOneSocialNetwork" value="self.webPages.socialnetworkcontent->size() > 0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="roles" lowerBound="1" upperBound="-1"
@@ -91,22 +91,22 @@
       <details key="constraints" value="R7"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="R7" value="&#xA;&#x9;&#x9;&#x9;self.formType = Form_Type::QUESTIONNAIRE implies self.questions->forAll(q:Question|&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;(q.oclIsKindOf(QuestionDefinition) and (not q.oclAsType(QuestionDefinition).correctAnswer->oclIsUndefined()))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;or&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;(q.oclIsKindOf(StoredQuestion) and (not q.oclAsType(StoredQuestion).definitionOfQuestion.oclAsType(QuestionDefinition).correctAnswer->oclIsUndefined()))&#xA;&#x9;&#x9;&#x9;)"/>
+      <details key="R7" value="&#xA;&#x9;&#x9;&#x9;self.formType = Form_Type::Questionnaire implies self.questions->forAll(q:Question|&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;(q.oclIsKindOf(QuestionDefinition) and (not q.oclAsType(QuestionDefinition).correctAnswer->oclIsUndefined()))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;or&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;(q.oclIsKindOf(StoredQuestion) and (not q.oclAsType(StoredQuestion).definitionOfQuestion.oclAsType(QuestionDefinition).correctAnswer->oclIsUndefined()))&#xA;&#x9;&#x9;&#x9;)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="questions" lowerBound="1"
         upperBound="-1" eType="#//Question" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="formType" lowerBound="1"
         eType="#//Form_Type"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numTFQuestions" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"
-        volatile="true" transient="true" derived="true">
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" volatile="true"
+        transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
         <details key="derivation" value="self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::TRUE_FALSE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definitionOfQuestion.type = QuestionType::TRUE_FALSE) )->size()"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="numMCQuestions" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"
-        volatile="true" transient="true" derived="true">
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt" volatile="true"
+        transient="true" derived="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
         <details key="derivation" value="self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::MULTIPLE_CHOICE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definitionOfQuestion.type = QuestionType::MULTIPLE_CHOICE) )->size()"/>
       </eAnnotations>
@@ -187,6 +187,10 @@
     <eLiterals name="INDEX" value="3"/>
     <eLiterals name="ALL_CRUD" value="4"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Form_Type">
+    <eLiterals name="Survey"/>
+    <eLiterals name="Questionnaire" value="1"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PageLink">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
       <details key="constraints" value="linkCanNotBeToItself"/>
@@ -205,9 +209,5 @@
   <eClassifiers xsi:type="ecore:EEnum" name="SocialNetwork_Type">
     <eLiterals name="TWITTER"/>
     <eLiterals name="RSS" value="1"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="Form_Type">
-    <eLiterals name="SURVEY"/>
-    <eLiterals name="QUESTIONNAIRE" value="1"/>
   </eClassifiers>
 </ecore:EPackage>

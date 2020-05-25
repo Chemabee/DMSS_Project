@@ -9,11 +9,11 @@
     description="An Example WebSite"
     URL="https://www.WebDevExample.com/">
   <roles name="Admin"
-      webpage="//@webPages.0 //@webPages.1 //@webPages.2 //@webPages.3 //@webPages.4 //@webPages.5 //@webPages.6 //@webPages.8 //@webPages.9 //@webPages.7"/>
+      webpage="//@webPages.0 //@webPages.2 //@webPages.3 //@webPages.5 //@webPages.6 //@webPages.7 //@webPages.9 //@webPages.10 //@webPages.8 //@webPages.4"/>
   <roles name="RegularUser"
-      webpage="//@webPages.0 //@webPages.1 //@webPages.2 //@webPages.3 //@webPages.4"/>
+      webpage="//@webPages.0 //@webPages.2 //@webPages.3 //@webPages.5"/>
   <roles name="Guest"
-      webpage="//@webPages.5 //@webPages.6"/>
+      webpage="//@webPages.6 //@webPages.7"/>
   <webPages
       xsi:type="WebDevProjectMM:CRUDPage"
       name="ALLCRUD_Person"
@@ -24,6 +24,15 @@
     <socialnetworkcontent
         parameters="https://twitter.com/IbaiLlanos"/>
     <externalLink>https://www.3djuegos.com/</externalLink>
+    <entity
+        href="DatabaseGood.xmi#Person"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:CRUDPage"
+      name="INDEX_Person"
+      title="Person INDEX"
+      description="Car INDEX"
+      CRUDType="INDEX">
     <entity
         href="DatabaseGood.xmi#Person"/>
   </webPages>
@@ -40,21 +49,21 @@
   </webPages>
   <webPages
       xsi:type="WebDevProjectMM:CRUDPage"
-      name="DETAIL_Car"
-      title="Car DETAIL"
-      description="Car DETAIL"
-      role="//@roles.0 //@roles.1">
-    <entity
-        href="DatabaseGood.xmi#Car"/>
-  </webPages>
-  <webPages
-      xsi:type="WebDevProjectMM:CRUDPage"
       name="DELITION_Car"
       title="Car DELITION"
       description="Car DELITION"
       incoming="//@link.0"
       role="//@roles.0 //@roles.1"
       CRUDType="DELITION">
+    <entity
+        href="DatabaseGood.xmi#Car"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:CRUDPage"
+      name="DETAIL_Car"
+      title="Car DETAIL"
+      description="Car DETAIL"
+      role="//@roles.0">
     <entity
         href="DatabaseGood.xmi#Car"/>
   </webPages>
@@ -114,7 +123,7 @@
         xsi:type="WebDevProjectMM:QuestionDefinition"
         description="Is this a question?"
         type="TRUE_FALSE"
-        correctAnswer="//@webPages.8/@questions.0/@possibleAsnwer.0">
+        correctAnswer="//@webPages.9/@questions.0/@possibleAsnwer.0">
       <possibleAsnwer
           answerText="True"/>
       <possibleAsnwer
@@ -124,7 +133,7 @@
         xsi:type="WebDevProjectMM:QuestionDefinition"
         description="What's 2+1?"
         type="SHORT_QUESTION"
-        correctAnswer="//@webPages.8/@questions.1/@possibleAsnwer.2">
+        correctAnswer="//@webPages.9/@questions.1/@possibleAsnwer.2">
       <possibleAsnwer
           answerText="1"/>
       <possibleAsnwer
@@ -144,15 +153,15 @@
       title="Questionnaire1"
       description="Questionnaire1"
       role="//@roles.0"
-      formType="QUESTIONNAIRE">
+      formType="Questionnaire">
     <questions
         xsi:type="WebDevProjectMM:StoredQuestion">
       <definitionOfQuestion
           href="QuestionsRepo.xmi#//@questionDefinitions.2"/>
     </questions>
   </webPages>
-  <link source="//@webPages.1"
+  <link source="//@webPages.2"
       target="//@webPages.3"/>
-  <link source="//@webPages.1"
-      target="//@webPages.4"/>
+  <link source="//@webPages.2"
+      target="//@webPages.5"/>
 </WebDevProjectMM:WebSite>
