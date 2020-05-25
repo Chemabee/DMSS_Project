@@ -39,18 +39,16 @@
     <questions
         xsi:type="WebDevProjectMM:QuestionDefinition"
         description="Is this a question?"
-        type="TRUE_FALSE"
-        correctAnswer="//@webPages.1/@questions.0/@possibleAsnwer.0">
+        type="TRUE_FALSE">
       <possibleAsnwer
-          answerText="True, It is"/>
+          answerText="True"/>
       <possibleAsnwer
           answerText="False"/>
     </questions>
     <questions
         xsi:type="WebDevProjectMM:QuestionDefinition"
         description="What's 2+1?"
-        type="SHORT_QUESTION"
-        correctAnswer="//@webPages.1/@questions.1/@possibleAsnwer.2">
+        type="SHORT_QUESTION">
       <possibleAsnwer
           answerText="1"/>
       <possibleAsnwer
@@ -145,10 +143,7 @@
       name="Index Speaker"
       title="Speaker Index"
       description="INDEX_Speaker"
-      role="//@roles.0 //@roles.2">
-    <entity
-        href="DatabaseGood.xmi#Speaker"/>
-  </webPages>
+      role="//@roles.0 //@roles.2"/>
   <link source="//@webPages.5"
       target="//@webPages.6"/>
   <link source="//@webPages.5"

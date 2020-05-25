@@ -23,11 +23,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WebSite">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="R6MustIncludeAtLeastOneQuestionnaire R6MustIncludeAtLeastOneSurvey"/>
+      <details key="constraints" value="R6MustInclude1QuestionnaireAnd1Survey R5atLeastOneSocialNetwork"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="R6MustIncludeAtLeastOneQuestionnaire" value="&#xA;&#x9;&#x9;&#x9;let allForms : Collection(Form) = self.webPages->selectByType(Form),&#xA;&#x9;&#x9;&#x9;&#x9;existsAnyQuestionnaires : Boolean = allForms->exists(f : Form | f.formType = Form_Type::QUESTIONNAIRE)&#xA;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;existsAnyQuestionnaires"/>
-      <details key="R6MustIncludeAtLeastOneSurvey" value="&#xA;&#x9;&#x9;&#x9;let allForms : Collection(Form) = self.webPages->selectByType(Form),&#xA;&#x9;&#x9;&#x9;&#x9;existsAnySurvey : Boolean = allForms->exists(f : Form | f.formType = Form_Type::SURVEY)&#xA;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;existsAnySurvey"/>
+      <details key="R6MustInclude1QuestionnaireAnd1Survey" value="&#xA;&#x9;&#x9;&#x9;(self.webPages->select(p:WebPage|p.oclIsKindOf(Form) and p.oclAsType(Form).formType = Form_Type::SURVEY)->size() > 0)&#xA;&#x9;&#x9;&#x9;and&#xA;&#x9;&#x9;&#x9;(self.webPages->select(p:WebPage|p.oclIsKindOf(Form) and p.oclAsType(Form).formType = Form_Type::QUESTIONNAIRE)->size() > 0)"/>
+      <details key="R5atLeastOneSocialNetwork" value="self.webPages.socialnetworkcontent->size() > 0"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="roles" lowerBound="1" upperBound="-1"
         eType="#//Role" containment="true"/>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebDevProjectMM:WebSite
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:WebDevProjectMM="https://www.WebDevProjectMM.com"
+    name="WebDevExample"
+    title="WebDevExample"
+    description="An Example WebSite"
+    URL="https://www.WebDevExample.com/">
+  <roles name="Admin"
+      webpage=""/>
+  <roles name="RegularUser"
+      webpage=""/>
+  <roles name="Guest"
+      webpage=""/>
+  <webPages
+      xsi:type="WebDevProjectMM:RegularContentPage"
+      name="PageWithElements"
+      title="Page With Elements"
+      description="PageWithElements"
+      role="//@roles.0">
+    <elements
+        xsi:type="WebDevProjectMM:Text"
+        text="Lorem Ipsum"/>
+    <elements
+        xsi:type="WebDevProjectMM:MediaContent"
+        link="https://image.shutterstock.com/z/stock-photo-beautiful-water-drop-on-a-dandelion-flower-seed-macro-in-nature-beautiful-deep-saturated-blue-and-789676552.jpg"/>
+    <elements
+        xsi:type="WebDevProjectMM:MediaContent"
+        link="https://www.youtube.com/watch?v=9bZkp7q19f0"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:Form"
+      name="Survey1"
+      title="Survey1"
+      description="First Form_Survey"
+      role="//@roles.0">
+    <questions
+        xsi:type="WebDevProjectMM:QuestionDefinition"
+        description="Is this a question?"
+        type="TRUE_FALSE"
+        correctAnswer="//@webPages.8/@questions.0/@possibleAsnwer.0">
+      <possibleAsnwer
+          answerText="True"/>
+      <possibleAsnwer
+          answerText="False"/>
+    </questions>
+    <questions
+        xsi:type="WebDevProjectMM:QuestionDefinition"
+        description="What's 2+1?"
+        type="SHORT_QUESTION"
+        correctAnswer="//@webPages.8/@questions.1/@possibleAsnwer.2">
+      <possibleAsnwer
+          answerText="1"/>
+      <possibleAsnwer
+          answerText="2"/>
+      <possibleAsnwer
+          answerText="3"/>
+    </questions>
+    <questions
+        xsi:type="WebDevProjectMM:StoredQuestion">
+      <definitionOfQuestion
+          href="QuestionsRepo.xmi#//@questionDefinitions.0"/>
+    </questions>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:Form"
+      name="Questionnaire1"
+      title="Questionnaire1"
+      description="Questionnaire1"
+      role="//@roles.0"
+      formType="QUESTIONNAIRE">
+    <questions
+        xsi:type="WebDevProjectMM:StoredQuestion">
+      <definitionOfQuestion
+          href="QuestionsRepo.xmi#//@questionDefinitions.2"/>
+    </questions>
+  </webPages>
+  <link source="//@webPages.1"
+      target="//@webPages.3"/>
+  <link source="//@webPages.1"
+      target="//@webPages.4"/>
+</WebDevProjectMM:WebSite>
