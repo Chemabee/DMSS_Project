@@ -2,22 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="WebDevProjectMM:CRUDPage" key="selection"/>
+		<item value="selectByKind" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="selectByType"/>
+			<item value="invariant"/>
 			<item value="WebDevProjectMM:CRUDPage"/>
 			<item value="CRUD"/>
 			<item value="formType=&quot;Questionnaire&quot;"/>
 			<item value="formType=&quot;Survey&quot;"/>
 			<item value="Questionnaire"/>
 			<item value="Form_Type"/>
-			<item value="Multimedia"/>
-			<item value="collect"/>
 		</list>
 		<list key="replacehistory">
+			<item value="selectByKind"/>
 			<item value="formType=&quot;QUESTIONNAIRE&quot;"/>
 			<item value="formType=&quot;SURVEY&quot;"/>
 			<item value="QUESTIONNAIRE"/>
@@ -30,7 +31,7 @@
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="907" key="DIALOG_X_ORIGIN"/>
-		<item value="307" key="DIALOG_Y_ORIGIN"/>
+		<item value="1142" key="DIALOG_X_ORIGIN"/>
+		<item value="231" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

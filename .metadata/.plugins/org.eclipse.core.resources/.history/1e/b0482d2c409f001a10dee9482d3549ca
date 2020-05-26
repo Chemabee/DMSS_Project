@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebDevProjectMM:Database xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:WebDevProjectMM="https://www.WebDevProjectMM.com">
+  <entities id="Person" primary_key="//@entities.1/@attributes.1">
+    <attributes name="Person_Name" attributePrimitiveData_Type="STRING"/>
+    <attributes name="Person_Age" attributePrimitiveData_Type="INTEGER"/>
+    <attributes name="Person_Height"/>
+    <attributes name="Person_Bold" attributePrimitiveData_Type="BOOLEAN"/>
+  </entities>
+  <entities refersTo="Car" id="Speaker" primary_key="//@entities.1/@attributes.0">
+    <attributes name="Speaker_Model" attributePrimitiveData_Type="STRING"/>
+    <attributes name="Speaker_Power"/>
+    <attributes name="Speaker_NumOfSpeakers" attributePrimitiveData_Type="INTEGER"/>
+  </entities>
+  <entities id="Car" primary_key="//@entities.2/@attributes.2">
+    <attributes name="Car_NumOfWheels" attributePrimitiveData_Type="INTEGER"/>
+    <attributes name="Car_Brand" attributePrimitiveData_Type="STRING"/>
+    <attributes name="Car_Plate" attributePrimitiveData_Type="STRING"/>
+  </entities>
+</WebDevProjectMM:Database>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebDevProjectMM:WebSite
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:WebDevProjectMM="https://www.WebDevProjectMM.com"
+    name="WebDevExample"
+    title="WebDevExample"
+    description="An Example WebSite"
+    URL="https://www.WebDevExample.com/">
+  <roles name="Admin"
+      webpage="//@webPages.0 //@webPages.1 //@webPages.2 //@webPages.8 //@webPages.5 //@webPages.6 //@webPages.7 //@webPages.4"/>
+  <roles name="RegularUser"
+      webpage="//@webPages.2 //@webPages.5 //@webPages.6 //@webPages.7"/>
+  <roles name="Guest"
+      webpage="//@webPages.8"/>
+  <webPages
+      xsi:type="WebDevProjectMM:RegularContentPage"
+      name="PageWithElements"
+      title="Page With Elements"
+      description="PageWithElements"
+      role="//@roles.0">
+    <elements
+        xsi:type="WebDevProjectMM:Text"
+        text="Lorem Ipsum"/>
+    <elements
+        xsi:type="WebDevProjectMM:MediaContent"
+        link="https://image.shutterstock.com/z/stock-photo-beautiful-water-drop-on-a-dandelion-flower-seed-macro-in-nature-beautiful-deep-saturated-blue-and-789676552.jpg"/>
+    <elements
+        xsi:type="WebDevProjectMM:MediaContent"
+        link="https://www.youtube.com/watch?v=9bZkp7q19f0"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:Form"
+      name="Questionnaire1"
+      title="Questionnaire1"
+      description="Questionnaire1"
+      role="//@roles.0"
+      formType="QUESTIONNAIRE">
+    <questions
+        xsi:type="WebDevProjectMM:QuestionDefinition"
+        description="Walk of Life"/>
+    <questions
+        xsi:type="WebDevProjectMM:StoredQuestion">
+      <definitionOfQuestion
+          href="QuestionsRepoWithErrors.xmi#//@questionDefinitions.2"/>
+    </questions>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:AllCRUD"
+      name="All CRUD Person"
+      title="Person ALL CRUD"
+      description="AllCRUD_Person"
+      role="//@roles.0 //@roles.1">
+    <socialnetworkcontent
+        parameters="https://twitter.com/IbaiLlanos"/>
+    <socialnetworkcontent
+        parameters="https://www.w3schools.com"
+        socialNetworkType="RSS"/>
+    <externalLink>https://www.hobbyconsolas.com/</externalLink>
+    <entity
+        href="DatabaseWithErrors.xmi#Person_WithErrors"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:DelitionCRUD"
+      name="Delition CRUD Person"
+      title="Person Delition"
+      description="DelitionCRUD_Person">
+    <entity
+        href="DatabaseWithErrors.xmi#Person_WithErrors"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:DelitionCRUD"
+      name="Delition CRUD Person"
+      title="Person Delition"
+      description="DelitionCRUD_Person"
+      role="//@roles.0">
+    <entity
+        href="DatabaseWithErrors.xmi#Person_WithErrors"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:IndexCRUD"
+      name="Index Car"
+      title="Car Index"
+      description="INDEX_Car"
+      outgoing="//@link.0 //@link.1"
+      incoming="//@link.0"
+      role="//@roles.0 //@roles.1">
+    <entity
+        href="DatabaseWithErrors.xmi#Car_WithErrors"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:DelitionCRUD"
+      name="Delition Car"
+      title="Car Delition"
+      description="DELITION_Car"
+      role="//@roles.0 //@roles.1">
+    <entity
+        href="DatabaseWithErrors.xmi#Car_WithErrors"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:CreationCRUD"
+      name="Creation Car"
+      title="Car Creation"
+      description="CREATION_Car"
+      incoming="//@link.1"
+      role="//@roles.0 //@roles.1">
+    <entity
+        href="DatabaseWithErrors.xmi#Car_WithErrors"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:DetailCRUD"
+      name="Detail Speaker"
+      title="Speaker Detail"
+      description="DETAIL_Speaker"
+      role="//@roles.0 //@roles.2">
+    <entity
+        href="DatabaseWithErrors.xmi#Speaker_WithErrors"/>
+  </webPages>
+  <link source="//@webPages.5"
+      target="//@webPages.5"/>
+  <link source="//@webPages.5"
+      target="//@webPages.7"/>
+</WebDevProjectMM:WebSite>
