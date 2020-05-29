@@ -1,0 +1,59 @@
+[comment encoding = UTF-8 /]
+[module generateWebDev('https://www.WebDevProjectMM.com')]
+
+
+[template public generatePackage(aWebSite : WebSite)]
+[comment @main/]
+[for (webPage : WebPage | aWebSite.webPages)]
+
+[if (webPage.oclIsTypeOf(CRUDPage))]
+[file (webPage.name, false, 'UTF-8')]
+[generateCRUDPage(webPage.oclAsType(CRUDPage))/]
+[/file]
+[/if]
+
+[if (webPage.oclIsTypeOf(RegularContentPage))]
+[file (webPage.name, false, 'UTF-8')]
+[generateRegularContentPage(webPage.oclAsType(RegularContentPage))/]
+[/file]
+[/if]
+
+[if (webPage.oclIsTypeOf(Form))]
+[file (webPage.name, false, 'UTF-8')]
+[generateForm(webPage.oclAsType(Form))/]
+[file/]
+[/if]
+
+[/for]
+
+[/template]
+
+
+
+[template public generateCRUDPage(crudPage : CRUDPage)]
+<html>
+	<body>
+		<h1>CRUD</h1>
+	</body>
+</html>	
+[/template]
+
+
+
+[template public generateRegularContentPage(regularContentPage : RegularContentPage)]
+<html>
+	<body>
+		<h1>HOLA</h1>
+	</body>
+</html>	
+[/template]
+
+
+
+[template public generateForm(formPage : Form)]
+<html>
+	<body>
+		<h1>FORM</h1>
+	</body>
+</html>	
+[/template]

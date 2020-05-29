@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module generateWebDev('https://www.WebDevProjectMM.com')]
+
+
+[template public generatePackage(aWebSite : WebSite)]
+[comment @main/]
+[file (aWebSite.name, false, 'UTF-8')]
+
+[/file]
+[/template]
