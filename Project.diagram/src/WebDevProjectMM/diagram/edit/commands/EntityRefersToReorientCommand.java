@@ -106,8 +106,8 @@ public class EntityRefersToReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected CommandResult reorientSource() throws ExecutionException {
-		getOldSource().setRefersTo(null);
-		getNewSource().setRefersTo(getOldTarget());
+		getOldSource().getRefersTo().remove(getOldTarget());
+		getNewSource().getRefersTo().add(getOldTarget());
 		return CommandResult.newOKCommandResult(referenceOwner);
 	}
 
@@ -115,7 +115,8 @@ public class EntityRefersToReorientCommand extends EditElementCommand {
 	* @generated
 	*/
 	protected CommandResult reorientTarget() throws ExecutionException {
-		getOldSource().setRefersTo(getNewTarget());
+		getOldSource().getRefersTo().remove(getOldTarget());
+		getOldSource().getRefersTo().add(getNewTarget());
 		return CommandResult.newOKCommandResult(referenceOwner);
 	}
 

@@ -65,7 +65,7 @@ public class EntityRefersToCreateCommand extends EditElementCommand {
 		}
 
 		if (getSource() != null && getTarget() != null) {
-			getSource().setRefersTo(getTarget());
+			getSource().getRefersTo().add(getTarget());
 		}
 		return CommandResult.newOKCommandResult();
 

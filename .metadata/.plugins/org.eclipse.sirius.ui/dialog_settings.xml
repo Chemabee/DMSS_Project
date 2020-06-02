@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<section name="ExportRepresentationsAsImagesDialog">
 		<item value="JPG" key="ExportRepresentationsAsImagesDialog.imageFormat"/>
+		<list key="ExportRepresentationsAsImagesDialog.folder">
+			<item value="D:\Users\gsb-d\Escritorio"/>
+		</list>
 		<list key="ExportRepresentationsAsImagesDialog.file">
 			<item value="E:\Desktop\NeonDMSS1718\DMSS_Project\Project\metamodel"/>
 			<item value="E:\Desktop\NeonDMSS1718\DMSS_Project\Project\metamodel\ class diagram.jpg"/>

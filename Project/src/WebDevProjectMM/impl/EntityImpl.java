@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -50,14 +51,14 @@ public class EntityImpl extends EObjectImpl implements Entity {
 	protected EList<Attribute> attributes;
 
 	/**
-	 * The cached value of the '{@link #getRefersTo() <em>Refers To</em>}' reference.
+	 * The cached value of the '{@link #getRefersTo() <em>Refers To</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRefersTo()
 	 * @generated
 	 * @ordered
 	 */
-	protected Entity refersTo;
+	protected EList<Entity> refersTo;
 
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
@@ -125,37 +126,11 @@ public class EntityImpl extends EObjectImpl implements Entity {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity getRefersTo() {
-		if (refersTo != null && refersTo.eIsProxy()) {
-			InternalEObject oldRefersTo = (InternalEObject)refersTo;
-			refersTo = (Entity)eResolveProxy(oldRefersTo);
-			if (refersTo != oldRefersTo) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, WebDevProjectMMPackage.ENTITY__REFERS_TO, oldRefersTo, refersTo));
-			}
+	public EList<Entity> getRefersTo() {
+		if (refersTo == null) {
+			refersTo = new EObjectResolvingEList<Entity>(Entity.class, this, WebDevProjectMMPackage.ENTITY__REFERS_TO);
 		}
 		return refersTo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Entity basicGetRefersTo() {
-		return refersTo;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRefersTo(Entity newRefersTo) {
-		Entity oldRefersTo = refersTo;
-		refersTo = newRefersTo;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, WebDevProjectMMPackage.ENTITY__REFERS_TO, oldRefersTo, refersTo));
 	}
 
 	/**
@@ -242,8 +217,7 @@ public class EntityImpl extends EObjectImpl implements Entity {
 			case WebDevProjectMMPackage.ENTITY__ATTRIBUTES:
 				return getAttributes();
 			case WebDevProjectMMPackage.ENTITY__REFERS_TO:
-				if (resolve) return getRefersTo();
-				return basicGetRefersTo();
+				return getRefersTo();
 			case WebDevProjectMMPackage.ENTITY__ID:
 				return getId();
 			case WebDevProjectMMPackage.ENTITY__PRIMARY_KEY:
@@ -267,7 +241,8 @@ public class EntityImpl extends EObjectImpl implements Entity {
 				getAttributes().addAll((Collection<? extends Attribute>)newValue);
 				return;
 			case WebDevProjectMMPackage.ENTITY__REFERS_TO:
-				setRefersTo((Entity)newValue);
+				getRefersTo().clear();
+				getRefersTo().addAll((Collection<? extends Entity>)newValue);
 				return;
 			case WebDevProjectMMPackage.ENTITY__ID:
 				setId((String)newValue);
@@ -291,7 +266,7 @@ public class EntityImpl extends EObjectImpl implements Entity {
 				getAttributes().clear();
 				return;
 			case WebDevProjectMMPackage.ENTITY__REFERS_TO:
-				setRefersTo((Entity)null);
+				getRefersTo().clear();
 				return;
 			case WebDevProjectMMPackage.ENTITY__ID:
 				setId(ID_EDEFAULT);
@@ -314,7 +289,7 @@ public class EntityImpl extends EObjectImpl implements Entity {
 			case WebDevProjectMMPackage.ENTITY__ATTRIBUTES:
 				return attributes != null && !attributes.isEmpty();
 			case WebDevProjectMMPackage.ENTITY__REFERS_TO:
-				return refersTo != null;
+				return refersTo != null && !refersTo.isEmpty();
 			case WebDevProjectMMPackage.ENTITY__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case WebDevProjectMMPackage.ENTITY__PRIMARY_KEY:

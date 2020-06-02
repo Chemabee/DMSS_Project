@@ -45,30 +45,20 @@ public interface Entity extends EObject {
 	EList<Attribute> getAttributes();
 
 	/**
-	 * Returns the value of the '<em><b>Refers To</b></em>' reference.
+	 * Returns the value of the '<em><b>Refers To</b></em>' reference list.
+	 * The list contents are of type {@link WebDevProjectMM.Entity}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Refers To</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Refers To</em>' reference.
-	 * @see #setRefersTo(Entity)
+	 * @return the value of the '<em>Refers To</em>' reference list.
 	 * @see WebDevProjectMM.WebDevProjectMMPackage#getEntity_RefersTo()
 	 * @model
 	 * @generated
 	 */
-	Entity getRefersTo();
-
-	/**
-	 * Sets the value of the '{@link WebDevProjectMM.Entity#getRefersTo <em>Refers To</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Refers To</em>' reference.
-	 * @see #getRefersTo()
-	 * @generated
-	 */
-	void setRefersTo(Entity value);
+	EList<Entity> getRefersTo();
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.

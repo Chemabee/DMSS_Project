@@ -334,7 +334,7 @@ public class WebDevProjectMMBaseItemSemanticEditPolicy extends SemanticEditPolic
 		 */
 		public boolean canCreateEntityRefersTo_4003(WebDevProjectMM.Entity source, WebDevProjectMM.Entity target) {
 			if (source != null) {
-				if (source.getRefersTo() != null) {
+				if (source.getRefersTo().contains(target)) {
 					return false;
 				}
 			}

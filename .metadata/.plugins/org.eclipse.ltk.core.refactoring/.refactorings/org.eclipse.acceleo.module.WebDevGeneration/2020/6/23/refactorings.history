@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;generateWebDev.mtl&apos; to &apos;org.eclipse.acceleo.module.WebDevGeneration/src/org.eclipse.acceleo.module.WebDevGeneration.main&apos;&#x0D;&#x0A;- Original project: &apos;org.eclipse.acceleo.module.WebDevGeneration&apos;&#x0D;&#x0A;- Destination element: &apos;org.eclipse.acceleo.module.WebDevGeneration/src/org.eclipse.acceleo.module.WebDevGeneration.main&apos;&#x0D;&#x0A;- Original element: &apos;generateWebDev.mtl&apos;" description="Copy file" destination="/src&lt;org.eclipse.acceleo.module.WebDevGeneration.main" element1="src/org/eclipse/acceleo/module/WebDevGeneration/main/generateWebDev.mtl" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1591112946383" units="0" version="1.0"/>
+</session>

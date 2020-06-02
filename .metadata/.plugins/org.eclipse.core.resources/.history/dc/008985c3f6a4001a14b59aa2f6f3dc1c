@@ -1,0 +1,251 @@
+@"http://www.eclipse.org/OCL/Import"(ecore="http://www.eclipse.org/emf/2002/Ecore")
+@Ecore(invocationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", settingDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot", validationDelegates="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot")
+@namespace(uri="https://www.WebDevProjectMM.com", prefix="WebDevProjectMM")
+@gmf
+package WebDevProjectMM;
+
+@gmf.node(figure="svg", label = "name", svg.uri="platform:/plugin/Project/figures/user.svg", label.icon="false", label.placement="external")
+class Role {
+  attr String[1] name;
+
+  @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(derivation="self.webpage->size()")
+  volatile transient derived attr EBigInteger[1] numAccesiblePages;
+  @gmf.link(target.decoration="arrow", color="178,178,178",style="dot")
+  ref WebPage[+]#role webpage;
+}
+
+@Ecore(constraints="R6MustIncludeAtLeastOneQuestionnaire R6MustIncludeAtLeastOneSurvey")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R6MustIncludeAtLeastOneQuestionnaire="
+			let allForms : Collection(Form) = self.webPages->selectByKind(Form),
+				existsAnyQuestionnaires : Boolean = allForms->exists(f : Form | f.formType = Form_Type::QUESTIONNAIRE)
+			in
+				existsAnyQuestionnaires", R6MustIncludeAtLeastOneSurvey="
+			let allForms : Collection(Form) = self.webPages->selectByKind(Form),
+				existsAnySurvey : Boolean = allForms->exists(f : Form | f.formType = Form_Type::SURVEY)
+			in
+				existsAnySurvey")
+			
+@gmf.diagram(label = "name")
+class WebSite {
+  @gmf.compartment(layout="list")
+  val Role[+] roles;
+  
+  @gmf.compartment(layout="list")
+  val WebPage[+] webPages;
+  attr String[1] name;
+  attr String[1] title;
+  attr String[1] description;
+  attr String[1] URL;
+  val PageLink[*] link;
+}
+
+@Ecore(constraints="R2isolatedWebPage")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R2isolatedWebPage="self.role->size() > 0 or self.incoming->size() > 0")
+@gmf.node(label = "name")
+abstract class WebPage {
+  @gmf.compartment(layout="list")
+  val SocialNetworkContent[*] socialnetworkcontent;
+  attr String[1] name;
+  attr String[1] title;
+  attr String[1] description;
+  
+  @gmf.compartment(layout="list")
+  val Elements[*] elements;
+  ref PageLink[*]#source outgoing;
+  ref PageLink[*]#target incoming;
+  ref Role[*]#webpage role;
+  !unique attr String[*] externalLink;
+}
+
+@gmf.node(label = "parameters", color="203,223,189")
+class SocialNetworkContent {
+  attr String[1] parameters;
+  attr SocialNetwork_Type[1] socialNetworkType;
+}
+
+@gmf.node(label = "name", color="246,244,210", label.icon="false")
+class RegularContentPage extends WebPage {
+}
+
+@Ecore(constraints="R7AllQustionsInQuestionnaireHasCorrectAnswer")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R7AllQustionsInQuestionnaireHasCorrectAnswer="
+					let isQuestionnaire : Boolean = self.formType = Form_Type::QUESTIONNAIRE,
+						allQuestionDefinitions : Collection(QuestionDefinition) = self.questions->selectByKind(QuestionDefinition),
+						allQuestionDefinitionsHaveAnAnswer : Boolean = allQuestionDefinitions->forAll(q : QuestionDefinition | q.correctAnswer->size() > 0),
+						allStoredQuestions : Collection(StoredQuestion) = self.questions->selectByKind(StoredQuestion),
+						allStoredQuestionsHaveAnAnswer : Boolean = allStoredQuestions->forAll(q : StoredQuestion |  q.definitionOfQuestion.oclAsType(QuestionDefinition).correctAnswer->size() > 0)
+					in
+						isQuestionnaire implies
+						(
+							(allQuestionDefinitions->size() > 0 implies allQuestionDefinitionsHaveAnAnswer)
+							and
+							(allStoredQuestions->size() > 0 implies allStoredQuestionsHaveAnAnswer)
+						)")
+
+@gmf.node(label = "name", color="212,224,155")
+class Form extends WebPage {
+  @gmf.compartment(layout="list")
+  val Question[+] questions;
+  attr Form_Type[1] formType;
+
+  @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(derivation="self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::TRUE_FALSE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definitionOfQuestion.type = QuestionType::TRUE_FALSE) )->size()")
+  volatile transient derived attr EBigInteger[1] numTFQuestions;
+
+  @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(derivation="self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::MULTIPLE_CHOICE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definitionOfQuestion.type = QuestionType::MULTIPLE_CHOICE) )->size()")
+  volatile transient derived attr EBigInteger[1] numMCQuestions;
+}
+
+abstract class Question {
+}
+
+@gmf.node(color="143,192,169", label="descQuestionDefinition")
+class StoredQuestion extends Question {
+
+  @"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(derivation="if self.definitionOfQuestion->size() = 1 then self.definitionOfQuestion.description else '' endif")
+  volatile transient derived attr String[1] descQuestionDefinition;
+
+  @gmf.affixed
+  ref QuestionDefinition[1] definitionOfQuestion;
+}
+
+class QuestionsRepo {
+  @gmf.compartment(layout="list")
+  val QuestionDefinition[*] questionDefinitions;
+}
+
+@Ecore(constraints="onlyItsOwnAnswers trueFalseAndShortQuestionHaveOnlyOneCorrectAnswer")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(onlyItsOwnAnswers="self.correctAnswer->size() > 0 implies self.possibleAsnwer->includesAll(self.correctAnswer)", trueFalseAndShortQuestionHaveOnlyOneCorrectAnswer="(self.type = QuestionType::TRUE_FALSE or self.type = QuestionType::SHORT_QUESTION) implies self.correctAnswer->size() < 2")
+@gmf.node(label = "description",color="104,176,171")
+class QuestionDefinition extends Question {
+  @gmf.compartment(layout="list")
+  val PossibleAsnwer[*] possibleAsnwer;
+  attr String[1] description;
+  attr QuestionType[1] type;
+  ref PossibleAsnwer[*] correctAnswer;
+}
+
+@gmf.node(label = "answerText", label.icon="false")
+class PossibleAsnwer {
+  attr String[1] answerText;
+}
+
+abstract class Elements {
+}
+
+@gmf.node(label = "text",color="241,156,121")
+class Text extends Elements {
+  attr String[1] text;
+}
+
+class Database {
+  @gmf.compartment(layout="list")
+  val Entity[*] entities;
+}
+
+@Ecore(constraints="primaryKeyMustBeOwnAttribute canNotReferToItself")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(primaryKeyMustBeOwnAttribute="self.attributes->includes(self.primary_key)", canNotReferToItself="self <> self.refersTo";)
+class Entity {
+  @gmf.compartment(layout="list")
+  val Attribute[+] attributes;
+  @gmf.link
+  ref Entity[*] refersTo;
+  id attr String[1] ~id;
+  ref Attribute[1] primary_key;
+}
+
+class Attribute {
+  attr String[1] name;
+  attr AttributePrimitiveData_Type[1] attributePrimitiveData_Type;
+}
+
+enum QuestionType {
+  MULTIPLE_CHOICE = 0;
+  TRUE_FALSE = 1;
+  SHORT_QUESTION = 2;
+}
+
+enum AttributePrimitiveData_Type {
+  REAL = 0;
+  INTEGER = 1;
+  BOOLEAN = 2;
+  STRING = 3;
+}
+
+@Ecore(constraints="linkCanNotBeToItself")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(linkCanNotBeToItself="self.source <> self.target")
+@gmf.link(source="source", target="target", target.decoration="filledclosedarrow", color = "0,0,0")
+class PageLink {
+  ref WebPage[1]#outgoing source;
+  ref WebPage[1]#incoming target;
+}
+
+@gmf.node(label = "link",color="164,74,63")
+class MediaContent extends Elements {
+  attr String[1] link;
+}
+
+enum SocialNetwork_Type {
+  TWITTER = 0;
+  RSS = 1;
+}
+
+enum Form_Type {
+  SURVEY = 0;
+  QUESTIONNAIRE = 1;
+}
+
+abstract class CRUDPage extends WebPage {
+  ref Entity[1] entity;
+}
+
+@gmf.node(label.text = "CreationCRUD",color="203,115,92")
+class CreationCRUD extends CRUDPage {
+}
+
+@gmf.node(label.text = "DelitionCRUD",color="203,115,92")
+class DelitionCRUD extends CRUDPage {
+}
+
+@Ecore(constraints="R3ALLCRUDImpliesNoOtherCRUD onlyOneCRUDOfEachTypeMax")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R3ALLCRUDImpliesNoOtherCRUD="
+					let allCRUDPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(CRUDPage),
+						entityCRUDPages : Collection(CRUDPage) = allCRUDPages->select(p : CRUDPage | p.entity = self.entity),
+						notALLCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->select(p : CRUDPage | not p.oclIsKindOf(AllCRUD))
+					in
+						notALLCRUDTypePages->size() = 0", onlyOneCRUDOfEachTypeMax="
+					let allCRUDPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(CRUDPage),
+						entityCRUDPages : Collection(CRUDPage) = allCRUDPages->select(p : CRUDPage | p.entity = self.entity),
+						AllCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(AllCRUD),
+						IndexCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(IndexCRUD),
+						DetailCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(DetailCRUD),
+						CreationCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(CreationCRUD),
+						DelitionCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(DelitionCRUD)
+					in
+						AllCRUDTypePages->size() < 2 and
+						DetailCRUDTypePages->size() < 2 and
+						IndexCRUDTypePages->size() < 2 and
+						CreationCRUDTypePages->size() < 2 and
+						DelitionCRUDTypePages->size() < 2
+					")
+@gmf.node(label.text = "AllCRUD",color="203,115,92")
+class AllCRUD extends CRUDPage {
+}
+
+@Ecore(constraints="R4IndexImpliesDetail")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R4IndexImpliesDetail="
+					let allDetailPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(DetailCRUD)
+					in
+						allDetailPages->exists(p : CRUDPage | p.entity = self.entity)")
+@gmf.node(label.text = "IndexCRUD",color="203,115,92")
+class IndexCRUD extends CRUDPage {
+}
+
+@Ecore(constraints="R4DetailImpliesIndex")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(R4DetailImpliesIndex="
+					let allIndexPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(IndexCRUD)
+					in
+						allIndexPages->exists(p : CRUDPage | p.entity = self.entity)")
+@gmf.node(label.text = "DetailCRUD",color="203,115,92")
+class DetailCRUD extends CRUDPage {
+}
+
