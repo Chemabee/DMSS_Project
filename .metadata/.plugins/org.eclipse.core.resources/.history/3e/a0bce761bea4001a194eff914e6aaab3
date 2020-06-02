@@ -1,0 +1,21 @@
+/*
+ * 
+ */
+package WebDevProjectMM.diagram.providers;
+
+/**
+ * @generated
+ */
+public class WebDevProjectMMEditPartProvider extends org.eclipse.gmf.tooling.runtime.providers.DefaultEditPartProvider {
+
+	
+	/**
+ * @generated
+ */
+	public WebDevProjectMMEditPartProvider() {
+		super(new WebDevProjectMM.diagram.edit.parts.WebDevProjectMMEditPartFactory(), 			WebDevProjectMM.diagram.part.WebDevProjectMMVisualIDRegistry.TYPED_INSTANCE, 			WebDevProjectMM.diagram.edit.parts.WebSiteEditPart.MODEL_ID			
+		);
+	}
+
+
+	}

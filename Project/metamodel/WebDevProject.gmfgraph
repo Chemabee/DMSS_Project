@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="WebDevProjectMM">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolygonDecoration" name="FilledClosedArrow">
+      <template/>
+      <template x="-2" y="2"/>
+      <template x="-2" y="-2"/>
+      <template/>
+    </figures>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="RoleWebpageFigureTargetDecoration"/>
+    <descriptors name="RoleFigure">
+      <actualFigure xsi:type="gmfgraph:SVGFigure" name="RoleFigure" documentURI="platform:/plugin/Project/figures/user.svg">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="RoleLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="RoleLabelFigure" text="Role"/>
+    </descriptors>
+    <descriptors name="SocialNetworkContentFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="SocialNetworkContentFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="203" green="223" blue="189"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="SocialNetworkContentLabelFigure" text="SocialNetworkContent"/>
+      </actualFigure>
+      <accessors accessor="getFigureSocialNetworkContentLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="RegularContentPageFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="RegularContentPageFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="246" green="244" blue="210"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="RegularContentPageLabelFigure" text="RegularContentPage">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="RegularContentPageSocialnetworkcontentCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="RegularContentPageElementsCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureRegularContentPageLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+      <accessors accessor="getRegularContentPageSocialnetworkcontentCompartmentFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.1"/>
+      <accessors accessor="getRegularContentPageElementsCompartmentFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="FormFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="FormFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="212" green="224" blue="155"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="FormLabelFigure" text="Form">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="FormSocialnetworkcontentCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="FormElementsCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="FormQuestionsCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureFormLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+      <accessors accessor="getFormSocialnetworkcontentCompartmentFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.1"/>
+      <accessors accessor="getFormElementsCompartmentFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.2"/>
+      <accessors accessor="getFormQuestionsCompartmentFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.3"/>
+    </descriptors>
+    <descriptors name="StoredQuestionFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="StoredQuestionFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="143" green="192" blue="169"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="StoredQuestionLabelFigure" text="StoredQuestion"/>
+      </actualFigure>
+      <accessors accessor="getFigureStoredQuestionLabelFigure" figure="//@figures.0/@descriptors.5/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="QuestionDefinitionFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="QuestionDefinitionFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="104" green="176" blue="171"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="QuestionDefinitionLabelFigure" text="QuestionDefinition">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="QuestionDefinitionPossibleAsnwerCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureQuestionDefinitionLabelFigure" figure="//@figures.0/@descriptors.6/@actualFigure/@children.0"/>
+      <accessors accessor="getQuestionDefinitionPossibleAsnwerCompartmentFigure" figure="//@figures.0/@descriptors.6/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="PossibleAsnwerFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="PossibleAsnwerFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="PossibleAsnwerLabelFigure" text="PossibleAsnwer"/>
+      </actualFigure>
+      <accessors accessor="getFigurePossibleAsnwerLabelFigure" figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="TextFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="TextFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="241" green="156" blue="121"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="TextLabelFigure" text="Text"/>
+      </actualFigure>
+      <accessors accessor="getFigureTextLabelFigure" figure="//@figures.0/@descriptors.8/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="MediaContentFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="MediaContentFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="164" green="74" blue="63"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="MediaContentLabelFigure" text="MediaContent"/>
+      </actualFigure>
+      <accessors accessor="getFigureMediaContentLabelFigure" figure="//@figures.0/@descriptors.9/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="CreationCRUDFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="CreationCRUDFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="203" green="115" blue="92"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="CreationCRUDLabelFigure" text="CreationCRUD">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="CreationCRUDSocialnetworkcontentCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="CreationCRUDElementsCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureCreationCRUDLabelFigure" figure="//@figures.0/@descriptors.10/@actualFigure/@children.0"/>
+      <accessors accessor="getCreationCRUDSocialnetworkcontentCompartmentFigure" figure="//@figures.0/@descriptors.10/@actualFigure/@children.1"/>
+      <accessors accessor="getCreationCRUDElementsCompartmentFigure" figure="//@figures.0/@descriptors.10/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="DelitionCRUDFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="DelitionCRUDFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="203" green="115" blue="92"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="DelitionCRUDLabelFigure" text="DelitionCRUD">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="DelitionCRUDSocialnetworkcontentCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="DelitionCRUDElementsCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureDelitionCRUDLabelFigure" figure="//@figures.0/@descriptors.11/@actualFigure/@children.0"/>
+      <accessors accessor="getDelitionCRUDSocialnetworkcontentCompartmentFigure" figure="//@figures.0/@descriptors.11/@actualFigure/@children.1"/>
+      <accessors accessor="getDelitionCRUDElementsCompartmentFigure" figure="//@figures.0/@descriptors.11/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="AllCRUDFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="AllCRUDFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="203" green="115" blue="92"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="AllCRUDLabelFigure" text="AllCRUD">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="AllCRUDSocialnetworkcontentCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="AllCRUDElementsCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureAllCRUDLabelFigure" figure="//@figures.0/@descriptors.12/@actualFigure/@children.0"/>
+      <accessors accessor="getAllCRUDSocialnetworkcontentCompartmentFigure" figure="//@figures.0/@descriptors.12/@actualFigure/@children.1"/>
+      <accessors accessor="getAllCRUDElementsCompartmentFigure" figure="//@figures.0/@descriptors.12/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="IndexCRUDFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="IndexCRUDFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="203" green="115" blue="92"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="IndexCRUDLabelFigure" text="IndexCRUD">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="IndexCRUDSocialnetworkcontentCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="IndexCRUDElementsCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureIndexCRUDLabelFigure" figure="//@figures.0/@descriptors.13/@actualFigure/@children.0"/>
+      <accessors accessor="getIndexCRUDSocialnetworkcontentCompartmentFigure" figure="//@figures.0/@descriptors.13/@actualFigure/@children.1"/>
+      <accessors accessor="getIndexCRUDElementsCompartmentFigure" figure="//@figures.0/@descriptors.13/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="DetailCRUDFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="DetailCRUDFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="203" green="115" blue="92"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="DetailCRUDLabelFigure" text="DetailCRUD">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="DetailCRUDSocialnetworkcontentCompartmentFigure" outline="false"/>
+        <children xsi:type="gmfgraph:Rectangle" name="DetailCRUDElementsCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureDetailCRUDLabelFigure" figure="//@figures.0/@descriptors.14/@actualFigure/@children.0"/>
+      <accessors accessor="getDetailCRUDSocialnetworkcontentCompartmentFigure" figure="//@figures.0/@descriptors.14/@actualFigure/@children.1"/>
+      <accessors accessor="getDetailCRUDElementsCompartmentFigure" figure="//@figures.0/@descriptors.14/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="PageLinkFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="PageLinkFigure" targetDecoration="//@figures.0/@figures.0">
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="RoleWebpageFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="RoleWebpageFigure" lineKind="LINE_DOT" targetDecoration="//@figures.0/@figures.1">
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="178" green="178" blue="178"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="RoleWebpageExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="RoleWebpageExternalLabel"/>
+    </descriptors>
+    <descriptors name="EntityRefersToFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="EntityRefersToFigure"/>
+    </descriptors>
+    <descriptors name="EntityRefersToExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="EntityRefersToExternalLabel"/>
+    </descriptors>
+  </figures>
+  <nodes name="Role" figure="RoleFigure"/>
+  <nodes name="SocialNetworkContent" figure="SocialNetworkContentFigure"/>
+  <nodes name="RegularContentPage" figure="RegularContentPageFigure"/>
+  <nodes name="Form" figure="FormFigure"/>
+  <nodes name="StoredQuestion" figure="StoredQuestionFigure"/>
+  <nodes name="QuestionDefinition" figure="QuestionDefinitionFigure"/>
+  <nodes name="PossibleAsnwer" figure="PossibleAsnwerFigure"/>
+  <nodes name="Text" figure="TextFigure"/>
+  <nodes name="MediaContent" figure="MediaContentFigure"/>
+  <nodes name="CreationCRUD" figure="CreationCRUDFigure"/>
+  <nodes name="DelitionCRUD" figure="DelitionCRUDFigure"/>
+  <nodes name="AllCRUD" figure="AllCRUDFigure"/>
+  <nodes name="IndexCRUD" figure="IndexCRUDFigure"/>
+  <nodes name="DetailCRUD" figure="DetailCRUDFigure"/>
+  <connections name="PageLink" figure="PageLinkFigure"/>
+  <connections name="RoleWebpage" figure="RoleWebpageFigure"/>
+  <connections name="EntityRefersTo" figure="EntityRefersToFigure"/>
+  <compartments name="RegularContentPageSocialnetworkcontentCompartment" figure="RegularContentPageFigure" collapsible="true" accessor="//@figures.0/@descriptors.3/@accessors.1"/>
+  <compartments name="RegularContentPageElementsCompartment" figure="RegularContentPageFigure" collapsible="true" accessor="//@figures.0/@descriptors.3/@accessors.2"/>
+  <compartments name="FormSocialnetworkcontentCompartment" figure="FormFigure" collapsible="true" accessor="//@figures.0/@descriptors.4/@accessors.1"/>
+  <compartments name="FormElementsCompartment" figure="FormFigure" collapsible="true" accessor="//@figures.0/@descriptors.4/@accessors.2"/>
+  <compartments name="FormQuestionsCompartment" figure="FormFigure" collapsible="true" accessor="//@figures.0/@descriptors.4/@accessors.3"/>
+  <compartments name="QuestionDefinitionPossibleAsnwerCompartment" figure="QuestionDefinitionFigure" collapsible="true" accessor="//@figures.0/@descriptors.6/@accessors.1"/>
+  <compartments name="CreationCRUDSocialnetworkcontentCompartment" figure="CreationCRUDFigure" collapsible="true" accessor="//@figures.0/@descriptors.10/@accessors.1"/>
+  <compartments name="CreationCRUDElementsCompartment" figure="CreationCRUDFigure" collapsible="true" accessor="//@figures.0/@descriptors.10/@accessors.2"/>
+  <compartments name="DelitionCRUDSocialnetworkcontentCompartment" figure="DelitionCRUDFigure" collapsible="true" accessor="//@figures.0/@descriptors.11/@accessors.1"/>
+  <compartments name="DelitionCRUDElementsCompartment" figure="DelitionCRUDFigure" collapsible="true" accessor="//@figures.0/@descriptors.11/@accessors.2"/>
+  <compartments name="AllCRUDSocialnetworkcontentCompartment" figure="AllCRUDFigure" collapsible="true" accessor="//@figures.0/@descriptors.12/@accessors.1"/>
+  <compartments name="AllCRUDElementsCompartment" figure="AllCRUDFigure" collapsible="true" accessor="//@figures.0/@descriptors.12/@accessors.2"/>
+  <compartments name="IndexCRUDSocialnetworkcontentCompartment" figure="IndexCRUDFigure" collapsible="true" accessor="//@figures.0/@descriptors.13/@accessors.1"/>
+  <compartments name="IndexCRUDElementsCompartment" figure="IndexCRUDFigure" collapsible="true" accessor="//@figures.0/@descriptors.13/@accessors.2"/>
+  <compartments name="DetailCRUDSocialnetworkcontentCompartment" figure="DetailCRUDFigure" collapsible="true" accessor="//@figures.0/@descriptors.14/@accessors.1"/>
+  <compartments name="DetailCRUDElementsCompartment" figure="DetailCRUDFigure" collapsible="true" accessor="//@figures.0/@descriptors.14/@accessors.2"/>
+  <labels name="RoleLabel" figure="RoleLabelFigure" elementIcon="false"/>
+  <labels name="SocialNetworkContentLabel" figure="SocialNetworkContentFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="RegularContentPageLabel" figure="RegularContentPageFigure" elementIcon="false" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="FormLabel" figure="FormFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="StoredQuestionLabel" figure="StoredQuestionFigure" accessor="//@figures.0/@descriptors.5/@accessors.0"/>
+  <labels name="QuestionDefinitionLabel" figure="QuestionDefinitionFigure" accessor="//@figures.0/@descriptors.6/@accessors.0"/>
+  <labels name="PossibleAsnwerLabel" figure="PossibleAsnwerFigure" elementIcon="false" accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+  <labels name="TextLabel" figure="TextFigure" accessor="//@figures.0/@descriptors.8/@accessors.0"/>
+  <labels name="MediaContentLabel" figure="MediaContentFigure" accessor="//@figures.0/@descriptors.9/@accessors.0"/>
+  <labels name="CreationCRUDLabel" figure="CreationCRUDFigure" accessor="//@figures.0/@descriptors.10/@accessors.0"/>
+  <labels name="DelitionCRUDLabel" figure="DelitionCRUDFigure" accessor="//@figures.0/@descriptors.11/@accessors.0"/>
+  <labels name="AllCRUDLabel" figure="AllCRUDFigure" accessor="//@figures.0/@descriptors.12/@accessors.0"/>
+  <labels name="IndexCRUDLabel" figure="IndexCRUDFigure" accessor="//@figures.0/@descriptors.13/@accessors.0"/>
+  <labels name="DetailCRUDLabel" figure="DetailCRUDFigure" accessor="//@figures.0/@descriptors.14/@accessors.0"/>
+  <labels name="RoleWebpageExternalLabel" figure="RoleWebpageExternalLabelFigure" elementIcon="false"/>
+  <labels name="EntityRefersToExternalLabel" figure="EntityRefersToExternalLabelFigure" elementIcon="false"/>
+</gmfgraph:Canvas>

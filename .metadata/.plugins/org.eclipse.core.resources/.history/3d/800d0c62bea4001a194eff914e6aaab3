@@ -1,0 +1,30 @@
+/*
+ * 
+ */
+package WebDevProjectMM.diagram.preferences;
+
+/**
+ * @generated
+ */
+public class DiagramPreferenceInitializer extends org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer {
+
+	/**
+ * @generated
+ */
+	public void initializeDefaultPreferences() {
+		org.eclipse.jface.preference.IPreferenceStore store = getPreferenceStore();
+		WebDevProjectMM.diagram.preferences.DiagramGeneralPreferencePage.initDefaults(store);
+WebDevProjectMM.diagram.preferences.DiagramAppearancePreferencePage.initDefaults(store);
+WebDevProjectMM.diagram.preferences.DiagramConnectionsPreferencePage.initDefaults(store);
+WebDevProjectMM.diagram.preferences.DiagramPrintingPreferencePage.initDefaults(store);
+WebDevProjectMM.diagram.preferences.DiagramRulersAndGridPreferencePage.initDefaults(store);
+
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.jface.preference.IPreferenceStore getPreferenceStore() {
+		return WebDevProjectMM.diagram.part.WebDevProjectMMDiagramEditorPlugin.getInstance().getPreferenceStore();
+	}
+} 

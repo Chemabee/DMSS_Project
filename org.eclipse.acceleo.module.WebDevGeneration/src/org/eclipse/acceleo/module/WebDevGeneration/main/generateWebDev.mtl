@@ -6,7 +6,7 @@
 [comment @main/]
 [for (role : Role | aWebSite.roles)]
 	[for (roleWebPage : WebPage | role.webpage)]
-[role.generateWebPage(roleWebPage)/]
+[roleWebPage.generateAbstractWebPage(roleWebPage)/]
 	[/for]
 [/for]
 

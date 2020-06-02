@@ -1,0 +1,30 @@
+/*
+ * 
+ */
+package WebDevProjectMM.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class WebDevProjectMMModelingAssistantProviderOfWebSiteEditPart extends WebDevProjectMM.diagram.providers.WebDevProjectMMModelingAssistantProvider {
+
+				/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForPopupBar(org.eclipse.core.runtime.IAdaptable host) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(8);
+					types.add(WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.CreationCRUD_2001);
+					types.add(WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.DelitionCRUD_2002);
+					types.add(WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.AllCRUD_2003);
+					types.add(WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.IndexCRUD_2004);
+					types.add(WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.DetailCRUD_2005);
+					types.add(WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.RegularContentPage_2006);
+					types.add(WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.Form_2007);
+					types.add(WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.Role_2008);
+					return types;	
+	}
+			
+	
+	}

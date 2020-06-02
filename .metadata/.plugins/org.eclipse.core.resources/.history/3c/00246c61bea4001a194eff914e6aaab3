@@ -1,0 +1,150 @@
+/*
+ * 
+ */
+package WebDevProjectMM.diagram.edit.commands;
+
+/**
+ * @generated
+ */
+public class PageLinkReorientCommand extends org.eclipse.gmf.runtime.emf.type.core.commands.EditElementCommand {
+
+	/**
+ * @generated
+ */
+	private final int reorientDirection;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject oldEnd;
+
+	/**
+ * @generated
+ */
+	private final org.eclipse.emf.ecore.EObject newEnd;
+
+	/**
+ * @generated
+ */
+	public PageLinkReorientCommand(org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest request) {
+		super(request.getLabel(), request.getRelationship(), request);
+		reorientDirection = request.getDirection();
+		oldEnd = request.getOldRelationshipEnd();
+		newEnd = request.getNewRelationshipEnd();
+	}
+	
+	/**
+ * @generated
+ */
+	public boolean canExecute() {
+			if (false == getElementToEdit() instanceof WebDevProjectMM.PageLink) {
+		return false;
+	}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_SOURCE) {
+			return canReorientSource();
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_TARGET) {
+			return canReorientTarget();
+		}
+		return false;
+	}
+
+	/**
+ * @generated
+ */
+	protected boolean canReorientSource() {
+			if (!(oldEnd instanceof WebDevProjectMM.WebPage && newEnd instanceof WebDevProjectMM.WebPage)) {
+		return false;
+	}
+				WebDevProjectMM.WebPage target = getLink().getTarget();
+			if (!(getLink().eContainer() instanceof WebDevProjectMM.WebSite)) {
+		return false;
+	}
+	WebDevProjectMM.WebSite container = (WebDevProjectMM.WebSite) getLink().eContainer();
+	return WebDevProjectMM.diagram.edit.policies.WebDevProjectMMBaseItemSemanticEditPolicy.getLinkConstraints().canExistPageLink_4001(container, getLink(), getNewSource(), target);
+	}
+
+	/**
+ * @generated
+ */
+	protected boolean canReorientTarget() {
+			if (!(oldEnd instanceof WebDevProjectMM.WebPage && newEnd instanceof WebDevProjectMM.WebPage)) {
+		return false;
+	}
+						WebDevProjectMM.WebPage source = getLink().getSource();
+				if (!(getLink().eContainer() instanceof WebDevProjectMM.WebSite)) {
+		return false;
+	}
+	WebDevProjectMM.WebSite container = (WebDevProjectMM.WebSite) getLink().eContainer();
+	return WebDevProjectMM.diagram.edit.policies.WebDevProjectMMBaseItemSemanticEditPolicy.getLinkConstraints().canExistPageLink_4001(container, getLink(), source, getNewTarget());
+	}
+	
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult doExecuteWithResult(
+			org.eclipse.core.runtime.IProgressMonitor monitor, org.eclipse.core.runtime.IAdaptable info)
+			throws org.eclipse.core.commands.ExecutionException {
+		if (!canExecute()) {
+			throw new org.eclipse.core.commands.ExecutionException("Invalid arguments in reorient link command");  //$NON-NLS-1$
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_SOURCE) {
+			return reorientSource();
+		}
+		if (reorientDirection == org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest.REORIENT_TARGET) {
+			return reorientTarget();
+		}
+		throw new IllegalStateException();
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult reorientSource() throws org.eclipse.core.commands.ExecutionException {
+				getLink().setSource(getNewSource());
+	return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult(getLink());
+	}
+
+	/**
+ * @generated
+ */
+	protected org.eclipse.gmf.runtime.common.core.command.CommandResult reorientTarget() throws org.eclipse.core.commands.ExecutionException {
+				getLink().setTarget(getNewTarget());
+	return org.eclipse.gmf.runtime.common.core.command.CommandResult.newOKCommandResult(getLink());
+	}
+		
+	/**
+ * @generated
+ */
+	protected WebDevProjectMM.PageLink getLink() {
+		return (WebDevProjectMM.PageLink) getElementToEdit();
+	}
+	
+	/**
+ * @generated
+ */
+	protected WebDevProjectMM.WebPage getOldSource() {
+		return (WebDevProjectMM.WebPage) oldEnd;
+	}
+	
+	/**
+ * @generated
+ */
+	protected WebDevProjectMM.WebPage getNewSource() {
+		return (WebDevProjectMM.WebPage) newEnd;
+	}
+	
+	/**
+ * @generated
+ */
+	protected WebDevProjectMM.WebPage getOldTarget() {
+		return (WebDevProjectMM.WebPage) oldEnd;
+	}
+	
+	/**
+ * @generated
+ */
+	protected WebDevProjectMM.WebPage getNewTarget() {
+		return (WebDevProjectMM.WebPage) newEnd;
+	}
+}

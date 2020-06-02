@@ -1,0 +1,24 @@
+/*
+ * 
+ */
+package WebDevProjectMM.diagram.providers.assistants;
+
+/**
+ * @generated
+ */
+public class WebDevProjectMMModelingAssistantProviderOfQuestionDefinitionEditPart extends WebDevProjectMM.diagram.providers.WebDevProjectMMModelingAssistantProvider {
+
+				/**
+ * @generated
+ */
+	@Override
+
+	public java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> getTypesForPopupBar(org.eclipse.core.runtime.IAdaptable host) {
+		java.util.List<org.eclipse.gmf.runtime.emf.type.core.IElementType> types = new java.util.ArrayList<org.eclipse.gmf.runtime.emf.type.core.IElementType>(1);
+					types.add(WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.PossibleAsnwer_3006);
+					return types;	
+	}
+			
+	
+
+	}

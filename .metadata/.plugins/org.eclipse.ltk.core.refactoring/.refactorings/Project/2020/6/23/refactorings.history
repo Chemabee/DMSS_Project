@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 6 elements to &apos;obj16&apos;&#x0D;&#x0A;- Original project: &apos;Project&apos;&#x0D;&#x0A;- Destination element: &apos;obj16&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Text.gif&#x0D;&#x0A;     Form.gif&#x0D;&#x0A;     SocialNetworkContent.gif&#x0D;&#x0A;     MediaContent.gif&#x0D;&#x0A;     QuestionDefinition.gif&#x0D;&#x0A;     StoredQuestion.gif" description="Copy files" element1="figures/Text.gif" element2="figures/Form.gif" element3="figures/SocialNetworkContent.gif" element4="figures/MediaContent.gif" element5="figures/QuestionDefinition.gif" element6="figures/StoredQuestion.gif" files="6" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1591098347668" target="/Project.edit/icons/full/obj16" units="0" version="1.0"/>
+</session>

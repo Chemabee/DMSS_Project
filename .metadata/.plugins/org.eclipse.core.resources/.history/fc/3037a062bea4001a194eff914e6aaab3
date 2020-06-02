@@ -1,0 +1,17 @@
+	/*
+ * 
+ */
+package WebDevProjectMM.diagram.part;
+
+	/**
+ * @generated
+ */
+public class WebDevProjectMMNodeDescriptor extends org.eclipse.gmf.tooling.runtime.update.UpdaterNodeDescriptor {
+		/**
+ * @generated
+ */
+public WebDevProjectMMNodeDescriptor(org.eclipse.emf.ecore.EObject modelElement, int visualID) {
+	super(modelElement, visualID);
+}
+
+	}

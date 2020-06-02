@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated WebDevProject -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="WebDevProjectMM.presentation.WebDevProjectMMModelWizardID"
+            name="%_UI_WebDevProjectMMModelWizard_label"
+            class="WebDevProjectMM.presentation.WebDevProjectMMModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/WebDevProjectMMModelFile.gif">
+         <description>%_UI_WebDevProjectMMModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated WebDevProject -->
+      <editor
+            id="WebDevProjectMM.presentation.WebDevProjectMMEditorID"
+            name="%_UI_WebDevProjectMMEditor_label"
+            icon="icons/full/obj16/WebDevProjectMMModelFile.gif"
+            extensions="webdevprojectmm"
+            class="WebDevProjectMM.presentation.WebDevProjectMMEditor"
+            contributorClass="WebDevProjectMM.presentation.WebDevProjectMMActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/Project/src" modelPluginID="Project"
+    modelName="WebDevProjectMM" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>WebDevProject.emf</foreignModel>
+  <genPackages prefix="WebDevProjectMM" disposableProviderFactory="true" ecorePackage="WebDevProject.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="WebDevProject.ecore#//QuestionType">
+      <genEnumLiterals ecoreEnumLiteral="WebDevProject.ecore#//QuestionType/MULTIPLE_CHOICE"/>
+      <genEnumLiterals ecoreEnumLiteral="WebDevProject.ecore#//QuestionType/TRUE_FALSE"/>
+      <genEnumLiterals ecoreEnumLiteral="WebDevProject.ecore#//QuestionType/SHORT_QUESTION"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="WebDevProject.ecore#//AttributePrimitiveData_Type">
+      <genEnumLiterals ecoreEnumLiteral="WebDevProject.ecore#//AttributePrimitiveData_Type/REAL"/>
+      <genEnumLiterals ecoreEnumLiteral="WebDevProject.ecore#//AttributePrimitiveData_Type/INTEGER"/>
+      <genEnumLiterals ecoreEnumLiteral="WebDevProject.ecore#//AttributePrimitiveData_Type/BOOLEAN"/>
+      <genEnumLiterals ecoreEnumLiteral="WebDevProject.ecore#//AttributePrimitiveData_Type/STRING"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="WebDevProject.ecore#//SocialNetwork_Type">
+      <genEnumLiterals ecoreEnumLiteral="WebDevProject.ecore#//SocialNetwork_Type/TWITTER"/>
+      <genEnumLiterals ecoreEnumLiteral="WebDevProject.ecore#//SocialNetwork_Type/RSS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="WebDevProject.ecore#//Form_Type">
+      <genEnumLiterals ecoreEnumLiteral="WebDevProject.ecore#//Form_Type/SURVEY"/>
+      <genEnumLiterals ecoreEnumLiteral="WebDevProject.ecore#//Form_Type/QUESTIONNAIRE"/>
+    </genEnums>
+    <genClasses ecoreClass="WebDevProject.ecore#//Role">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//Role/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//Role/numAccesiblePages"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//Role/webpage"/>
+    </genClasses>
+    <genClasses ecoreClass="WebDevProject.ecore#//WebSite">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//WebSite/roles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//WebSite/webPages"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//WebSite/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//WebSite/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//WebSite/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//WebSite/URL"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//WebSite/link"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="WebDevProject.ecore#//WebPage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//WebPage/socialnetworkcontent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//WebPage/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//WebPage/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//WebPage/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//WebPage/elements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//WebPage/outgoing"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//WebPage/incoming"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//WebPage/role"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//WebPage/externalLink"/>
+    </genClasses>
+    <genClasses ecoreClass="WebDevProject.ecore#//SocialNetworkContent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//SocialNetworkContent/parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//SocialNetworkContent/socialNetworkType"/>
+    </genClasses>
+    <genClasses ecoreClass="WebDevProject.ecore#//RegularContentPage"/>
+    <genClasses ecoreClass="WebDevProject.ecore#//Form">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//Form/questions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//Form/formType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//Form/numTFQuestions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//Form/numMCQuestions"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="WebDevProject.ecore#//Question"/>
+    <genClasses ecoreClass="WebDevProject.ecore#//StoredQuestion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//StoredQuestion/descQuestionDefinition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//StoredQuestion/definitionOfQuestion"/>
+    </genClasses>
+    <genClasses ecoreClass="WebDevProject.ecore#//QuestionsRepo">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//QuestionsRepo/questionDefinitions"/>
+    </genClasses>
+    <genClasses ecoreClass="WebDevProject.ecore#//QuestionDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//QuestionDefinition/possibleAsnwer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//QuestionDefinition/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//QuestionDefinition/type"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//QuestionDefinition/correctAnswer"/>
+    </genClasses>
+    <genClasses ecoreClass="WebDevProject.ecore#//PossibleAsnwer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//PossibleAsnwer/answerText"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="WebDevProject.ecore#//Elements"/>
+    <genClasses ecoreClass="WebDevProject.ecore#//Text">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//Text/text"/>
+    </genClasses>
+    <genClasses ecoreClass="WebDevProject.ecore#//Database">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//Database/entities"/>
+    </genClasses>
+    <genClasses ecoreClass="WebDevProject.ecore#//Entity">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//Entity/attributes"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//Entity/refersTo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//Entity/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//Entity/primary_key"/>
+    </genClasses>
+    <genClasses ecoreClass="WebDevProject.ecore#//Attribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//Attribute/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//Attribute/attributePrimitiveData_Type"/>
+    </genClasses>
+    <genClasses ecoreClass="WebDevProject.ecore#//PageLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//PageLink/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//PageLink/target"/>
+    </genClasses>
+    <genClasses ecoreClass="WebDevProject.ecore#//MediaContent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WebDevProject.ecore#//MediaContent/link"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="WebDevProject.ecore#//CRUDPage">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference WebDevProject.ecore#//CRUDPage/entity"/>
+    </genClasses>
+    <genClasses ecoreClass="WebDevProject.ecore#//CreationCRUD"/>
+    <genClasses ecoreClass="WebDevProject.ecore#//DelitionCRUD"/>
+    <genClasses ecoreClass="WebDevProject.ecore#//AllCRUD"/>
+    <genClasses ecoreClass="WebDevProject.ecore#//IndexCRUD"/>
+    <genClasses ecoreClass="WebDevProject.ecore#//DetailCRUD"/>
+  </genPackages>
+</genmodel:GenModel>

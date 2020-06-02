@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+
+-->
+<plugin>
+
+   <extension point="org.eclipse.team.core.fileTypes" id="repo-ftype">
+      <?gmfgen generated="true"?>
+      <fileTypes type="text" extension="webdevprojectmm_diagram"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser" id="resource-factory">
+      <?gmfgen generated="true"?>
+      <parser
+         type="webdevprojectmm_diagram"
+         class="org.eclipse.gmf.runtime.emf.core.resources.GMFResourceFactory">
+      </parser>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors" id="gmf-editor">
+      <?gmfgen generated="true"?>
+      <editor
+         id="WebDevProjectMM.diagram.part.WebDevProjectMMDiagramEditorID"
+         name="%editorName"
+         icon="icons/obj16/WebDevProjectMMDiagramFile.gif"
+         extensions="webdevprojectmm_diagram"
+         default="true"
+         class="WebDevProjectMM.diagram.part.WebDevProjectMMDiagramEditor"
+         matchingStrategy="WebDevProjectMM.diagram.part.WebDevProjectMMMatchingStrategy"
+         contributorClass="WebDevProjectMM.diagram.part.WebDevProjectMMDiagramActionBarContributor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts" id="ui-context">
+      <?gmfgen generated="true"?>
+      <context
+         description="%context.description"
+         id="WebDevProjectMM.diagram.ui.diagramContext"
+         name="%context.name"
+         parentId="org.eclipse.gmf.runtime.diagram.ui.diagramContext">
+      </context>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards" id="creation-wizard">
+      <?gmfgen generated="true"?>
+  	  <wizard
+  	     name="%newWizardName"
+  	     icon="icons/obj16/WebDevProjectMMDiagramFile.gif"
+  	     category="org.eclipse.ui.Examples"
+  	     class="WebDevProjectMM.diagram.part.WebDevProjectMMCreationWizard"
+  	     id="WebDevProjectMM.diagram.part.WebDevProjectMMCreationWizardID">
+  	  	 <description>%newWizardDesc</description>  
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.popupMenus" id="init-diagram-action">
+      <?gmfgen generated="true"?>
+      <objectContribution
+            id="Project.diagram.InitDiagram"
+            nameFilter="*.webdevprojectmm"
+            objectClass="org.eclipse.core.resources.IFile">
+         <action
+               label="%initDiagramActionLabel"
+               class="WebDevProjectMM.diagram.part.WebDevProjectMMInitDiagramFileAction"
+               menubarPath="additions"
+               enablesFor="1"
+               id="Project.diagram.InitDiagramAction">
+         </action>
+      </objectContribution>
+   </extension>
+	
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.action.globalActionHandlerProviders" id="global-actions">
+      <?gmfgen generated="true"?>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.DiagramGlobalActionHandlerProvider"
+         id="WebDevProjectMMPresentation">
+         <Priority name="Lowest"/>
+         <ViewId id="WebDevProjectMM.diagram.part.WebDevProjectMMDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="delete"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
+               <GlobalActionId actionId="save"/>
+            </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.printing.render.providers.DiagramWithPrintGlobalActionHandlerProvider"
+         id="WebDevProjectMMPresentationPrint">
+         <Priority name="Lowest"/>
+         <ViewId id="WebDevProjectMM.diagram.part.WebDevProjectMMDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="print"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+         class="org.eclipse.gmf.runtime.diagram.ui.providers.ide.providers.DiagramIDEGlobalActionHandlerProvider"
+         id="WebDevProjectMMPresentationIDE">
+         <Priority name="Lowest"/>
+         <ViewId id="WebDevProjectMM.diagram.part.WebDevProjectMMDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="bookmark"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+      <GlobalActionHandlerProvider
+            class="org.eclipse.gmf.runtime.diagram.ui.render.providers.DiagramUIRenderGlobalActionHandlerProvider"
+            id="WebDevProjectMMRender">
+         <Priority name="Lowest"/>
+         <ViewId id="WebDevProjectMM.diagram.part.WebDevProjectMMDiagramEditorID">
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="cut"/>
+               <GlobalActionId actionId="copy"/>
+               <GlobalActionId actionId="paste"/>
+            </ElementType>
+         </ViewId>
+      </GlobalActionHandlerProvider>
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.markerNavigationProviders" id="markers-navigation">
+      <?gmfgen generated="true"?>
+      <MarkerNavigationProvider class="WebDevProjectMM.diagram.providers.WebDevProjectMMMarkerNavigationProvider">
+         <MarkerType name="Project.diagram.diagnostic"/>
+         <Priority name="Lowest"/>
+      </MarkerNavigationProvider>
+   </extension>
+
+   <extension id="diagnostic" name="WebDevProjectMM Plugin problems" point="org.eclipse.core.resources.markers">
+      <?gmfgen generated="true"?>
+      <super type="org.eclipse.core.resources.problemmarker"/>
+      <super type="org.eclipse.gmf.runtime.common.ui.services.marker"/>
+      <persistent value="true"/>
+   </extension>   
+
+   <extension id="validationDecoratorProvider" name="ValidationDecorations" point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="WebDevProjectMM.diagram.providers.WebDevProjectMMValidationDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.diagram.ui.editparts.IPrimaryEditPart(org.eclipse.gmf.runtime.diagram.ui)" id="PRIMARY_VIEW"/>
+         <context decoratorTargets="PRIMARY_VIEW"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.core.runtime.preferences" id="prefs">
+      <?gmfgen generated="true"?>
+      <initializer class="WebDevProjectMM.diagram.preferences.DiagramPreferenceInitializer"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.preferencePages" id="prefpages">
+      <?gmfgen generated="true"?>
+      <page
+            id="Project.diagram.general"
+            name="%prefpage.Project.diagram.general"
+            class="WebDevProjectMM.diagram.preferences.DiagramGeneralPreferencePage">
+      </page>
+      <page
+            id="Project.diagram.appearance"
+            name="%prefpage.Project.diagram.appearance"
+            category="Project.diagram.general"
+            class="WebDevProjectMM.diagram.preferences.DiagramAppearancePreferencePage">
+      </page>
+      <page
+            id="Project.diagram.connections"
+            name="%prefpage.Project.diagram.connections"
+            category="Project.diagram.general"
+            class="WebDevProjectMM.diagram.preferences.DiagramConnectionsPreferencePage">
+      </page>
+      <page
+            id="Project.diagram.printing"
+            name="%prefpage.Project.diagram.printing"
+            category="Project.diagram.general"
+            class="WebDevProjectMM.diagram.preferences.DiagramPrintingPreferencePage">
+      </page>
+      <page
+            id="Project.diagram.rulersAndGrid"
+            name="%prefpage.Project.diagram.rulersAndGrid"
+            category="Project.diagram.general"
+            class="WebDevProjectMM.diagram.preferences.DiagramRulersAndGridPreferencePage">
+      </page>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" id="prop-contrib">
+      <?gmfgen generated="true"?>
+      <propertyContributor
+            contributorId="Project.diagram"
+            labelProvider="WebDevProjectMM.diagram.sheet.WebDevProjectMMSheetLabelProvider">
+         <propertyCategory category="domain"/>
+         <propertyCategory category="visual"/>
+         <propertyCategory category="extra"/>
+      </propertyContributor>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" id="proptabs">
+      <?gmfgen generated="true"?>   
+      <propertyTabs contributorId="Project.diagram">
+         <propertyTab
+             category="visual"
+             id="property.tab.AppearancePropertySection"
+             label="%tab.appearance"/>
+          <propertyTab
+             category="visual"
+             id="property.tab.DiagramPropertySection"
+             label="%tab.diagram"/>
+          <propertyTab
+             category="domain"
+             id="property.tab.domain"
+             label="%tab.domain"/>
+      </propertyTabs>
+   </extension>
+
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertySections" id="propsections">
+      <?gmfgen generated="true"?>   
+      <propertySections contributorId="Project.diagram">
+         <propertySection id="property.section.ConnectorAppearancePropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ConnectionEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ConnectionAppearancePropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>
+         <propertySection id="property.section.ShapeColorAndFontPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.ShapeEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.ShapeColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection> 
+         <propertySection id="property.section.DiagramColorsAndFontsPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.appearance.DiagramColorsAndFontsPropertySection" 
+            tab="property.tab.AppearancePropertySection">
+         </propertySection>     
+         <propertySection id="property.section.RulerGridPropertySection" 
+            filter="org.eclipse.gmf.runtime.diagram.ui.properties.filters.DiagramEditPartPropertySectionFilter" 
+            class="org.eclipse.gmf.runtime.diagram.ui.properties.sections.grid.RulerGridPropertySection" 
+            tab="property.tab.DiagramPropertySection">
+         </propertySection>     
+         <propertySection
+            id="property.section.domain" 
+            tab="property.tab.domain"
+            class="WebDevProjectMM.diagram.sheet.WebDevProjectMMPropertySection">
+            <input type="org.eclipse.gmf.runtime.notation.View"/>
+            <input type="org.eclipse.gef.EditPart"/>
+            <input type="WebDevProjectMM.diagram.navigator.WebDevProjectMMAbstractNavigatorItem"/>
+         </propertySection>
+      </propertySections>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.core.viewProviders" id="view-provider">
+      <?gmfgen generated="true"?>
+      <viewProvider class="WebDevProjectMM.diagram.providers.WebDevProjectMMViewProvider">
+         <Priority name="Lowest"/>
+         <object id="referencing-diagrams" class="org.eclipse.gmf.runtime.notation.Diagram">
+            <method name="getType()" value="WebDevProjectMM"/>
+         </object>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="WebDevProjectMM"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005,2006,2007,2008,3001,3002,3003,3004,3005,3006"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003"/>
+      </viewProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.editpartProviders" id="ep-provider">
+      <?gmfgen generated="true"?>
+      <editpartProvider class="WebDevProjectMM.diagram.providers.WebDevProjectMMEditPartProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Diagram" id="generated-diagram">
+            <method name="getType()" value="WebDevProjectMM"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-nodes">
+            <method name="getType()" value="2001,2002,2003,2004,2005,2006,2007,2008,3001,3002,3003,3004,3005,3006"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
+            <method name="getType()" value="4001,4002,4003"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
+            <method name="getType()" value="5004,5005,5006,5007,5008,5009,5013,5014,5001,5002,5003,5010,5012,5011"/>
+         </object>
+         <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-compartments">
+            <method name="getType()" value="7001,7002,7003,7004,7005,7006,7007,7008,7009,7010,7011,7012,7013,7014,7015,7016"/>
+         </object>
+         <context views="generated-diagram,generated-nodes,generated-links,generated-labels,generated-compartments"/>
+      </editpartProvider>
+   </extension>
+
+   
+   <extension point="org.eclipse.gmf.runtime.emf.ui.modelingAssistantProviders" id="modelassist-provider">
+      <?gmfgen generated="true"?>
+      <modelingAssistantProvider class="WebDevProjectMM.diagram.providers.assistants.WebDevProjectMMModelingAssistantProviderOfWebSiteEditPart">
+         <Priority name="Lowest"/>
+         <object class="WebDevProjectMM.diagram.edit.parts.WebSiteEditPart" id="WebSite_1000"/>
+         <context elements="WebSite_1000"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="WebDevProjectMM.diagram.providers.assistants.WebDevProjectMMModelingAssistantProviderOfCreationCRUDEditPart">
+         <Priority name="Lowest"/>
+         <object class="WebDevProjectMM.diagram.edit.parts.CreationCRUDEditPart" id="CreationCRUD_2001"/>
+         <context elements="CreationCRUD_2001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="WebDevProjectMM.diagram.providers.assistants.WebDevProjectMMModelingAssistantProviderOfDelitionCRUDEditPart">
+         <Priority name="Lowest"/>
+         <object class="WebDevProjectMM.diagram.edit.parts.DelitionCRUDEditPart" id="DelitionCRUD_2002"/>
+         <context elements="DelitionCRUD_2002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="WebDevProjectMM.diagram.providers.assistants.WebDevProjectMMModelingAssistantProviderOfAllCRUDEditPart">
+         <Priority name="Lowest"/>
+         <object class="WebDevProjectMM.diagram.edit.parts.AllCRUDEditPart" id="AllCRUD_2003"/>
+         <context elements="AllCRUD_2003"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="WebDevProjectMM.diagram.providers.assistants.WebDevProjectMMModelingAssistantProviderOfIndexCRUDEditPart">
+         <Priority name="Lowest"/>
+         <object class="WebDevProjectMM.diagram.edit.parts.IndexCRUDEditPart" id="IndexCRUD_2004"/>
+         <context elements="IndexCRUD_2004"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="WebDevProjectMM.diagram.providers.assistants.WebDevProjectMMModelingAssistantProviderOfDetailCRUDEditPart">
+         <Priority name="Lowest"/>
+         <object class="WebDevProjectMM.diagram.edit.parts.DetailCRUDEditPart" id="DetailCRUD_2005"/>
+         <context elements="DetailCRUD_2005"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="WebDevProjectMM.diagram.providers.assistants.WebDevProjectMMModelingAssistantProviderOfRegularContentPageEditPart">
+         <Priority name="Lowest"/>
+         <object class="WebDevProjectMM.diagram.edit.parts.RegularContentPageEditPart" id="RegularContentPage_2006"/>
+         <context elements="RegularContentPage_2006"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="WebDevProjectMM.diagram.providers.assistants.WebDevProjectMMModelingAssistantProviderOfFormEditPart">
+         <Priority name="Lowest"/>
+         <object class="WebDevProjectMM.diagram.edit.parts.FormEditPart" id="Form_2007"/>
+         <context elements="Form_2007"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="WebDevProjectMM.diagram.providers.assistants.WebDevProjectMMModelingAssistantProviderOfRoleEditPart">
+         <Priority name="Lowest"/>
+         <object class="WebDevProjectMM.diagram.edit.parts.RoleEditPart" id="Role_2008"/>
+         <context elements="Role_2008"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="WebDevProjectMM.diagram.providers.assistants.WebDevProjectMMModelingAssistantProviderOfTextEditPart">
+         <Priority name="Lowest"/>
+         <object class="WebDevProjectMM.diagram.edit.parts.TextEditPart" id="Text_3001"/>
+         <context elements="Text_3001"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="WebDevProjectMM.diagram.providers.assistants.WebDevProjectMMModelingAssistantProviderOfMediaContentEditPart">
+         <Priority name="Lowest"/>
+         <object class="WebDevProjectMM.diagram.edit.parts.MediaContentEditPart" id="MediaContent_3002"/>
+         <context elements="MediaContent_3002"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="WebDevProjectMM.diagram.providers.assistants.WebDevProjectMMModelingAssistantProviderOfSocialNetworkContentEditPart">
+         <Priority name="Lowest"/>
+         <object class="WebDevProjectMM.diagram.edit.parts.SocialNetworkContentEditPart" id="SocialNetworkContent_3003"/>
+         <context elements="SocialNetworkContent_3003"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="WebDevProjectMM.diagram.providers.assistants.WebDevProjectMMModelingAssistantProviderOfStoredQuestionEditPart">
+         <Priority name="Lowest"/>
+         <object class="WebDevProjectMM.diagram.edit.parts.StoredQuestionEditPart" id="StoredQuestion_3004"/>
+         <context elements="StoredQuestion_3004"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="WebDevProjectMM.diagram.providers.assistants.WebDevProjectMMModelingAssistantProviderOfQuestionDefinitionEditPart">
+         <Priority name="Lowest"/>
+         <object class="WebDevProjectMM.diagram.edit.parts.QuestionDefinitionEditPart" id="QuestionDefinition_3005"/>
+         <context elements="QuestionDefinition_3005"/>
+      </modelingAssistantProvider>
+            <modelingAssistantProvider class="WebDevProjectMM.diagram.providers.assistants.WebDevProjectMMModelingAssistantProviderOfPossibleAsnwerEditPart">
+         <Priority name="Lowest"/>
+         <object class="WebDevProjectMM.diagram.edit.parts.PossibleAsnwerEditPart" id="PossibleAsnwer_3006"/>
+         <context elements="PossibleAsnwer_3006"/>
+      </modelingAssistantProvider>
+      
+   </extension>
+
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.iconProviders" id="icon-provider">
+      <?gmfgen generated="true"?>
+      <IconProvider class="WebDevProjectMM.diagram.providers.WebDevProjectMMIconProvider">
+         <Priority name="Low"/>
+      </IconProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.common.ui.services.parserProviders" id="parser-provider">
+      <?gmfgen generated="true"?>
+      <ParserProvider class="WebDevProjectMM.diagram.providers.WebDevProjectMMParserProvider">
+         <Priority name="Lowest"/>
+      </ParserProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.diagram.ui.decoratorProviders" id="decorator-provider">
+      <?gmfgen generated="true"?>
+      <decoratorProvider class="WebDevProjectMM.diagram.providers.WebDevProjectMMShortcutsDecoratorProvider">
+         <Priority name="Lowest"/>
+         <object class="org.eclipse.gmf.runtime.notation.Node(org.eclipse.gmf.runtime.notation)" id="generated-top-nodes">
+            <method name="getType()" value="2001,2002,2003,2004,2005,2006,2007,2008"/>
+         </object>
+         <context decoratorTargets="generated-top-nodes"/>
+      </decoratorProvider>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypes" id="element-types">
+      <?gmfgen generated="true"?>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.WebSite_1000"
+               name="%metatype.name.WebSite_1000"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="WebSite"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.WebSiteEditHelper">
+            <param name="semanticHint" value="1000"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.CreationCRUD_2001"
+               name="%metatype.name.CreationCRUD_2001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="CreationCRUD"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.CreationCRUDEditHelper">
+            <param name="semanticHint" value="2001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.DelitionCRUD_2002"
+               name="%metatype.name.DelitionCRUD_2002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DelitionCRUD"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.DelitionCRUDEditHelper">
+            <param name="semanticHint" value="2002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.AllCRUD_2003"
+               name="%metatype.name.AllCRUD_2003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="AllCRUD"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.AllCRUDEditHelper">
+            <param name="semanticHint" value="2003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.IndexCRUD_2004"
+               name="%metatype.name.IndexCRUD_2004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="IndexCRUD"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.IndexCRUDEditHelper">
+            <param name="semanticHint" value="2004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.DetailCRUD_2005"
+               name="%metatype.name.DetailCRUD_2005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="DetailCRUD"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.DetailCRUDEditHelper">
+            <param name="semanticHint" value="2005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.RegularContentPage_2006"
+               name="%metatype.name.RegularContentPage_2006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="RegularContentPage"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.RegularContentPageEditHelper">
+            <param name="semanticHint" value="2006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.Form_2007"
+               name="%metatype.name.Form_2007"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Form"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.FormEditHelper">
+            <param name="semanticHint" value="2007"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.Role_2008"
+               name="%metatype.name.Role_2008"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Role"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.RoleEditHelper">
+            <param name="semanticHint" value="2008"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.Text_3001"
+               name="%metatype.name.Text_3001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="Text"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.TextEditHelper">
+            <param name="semanticHint" value="3001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.MediaContent_3002"
+               name="%metatype.name.MediaContent_3002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="MediaContent"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.MediaContentEditHelper">
+            <param name="semanticHint" value="3002"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.SocialNetworkContent_3003"
+               name="%metatype.name.SocialNetworkContent_3003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="SocialNetworkContent"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.SocialNetworkContentEditHelper">
+            <param name="semanticHint" value="3003"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.StoredQuestion_3004"
+               name="%metatype.name.StoredQuestion_3004"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="StoredQuestion"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.StoredQuestionEditHelper">
+            <param name="semanticHint" value="3004"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.QuestionDefinition_3005"
+               name="%metatype.name.QuestionDefinition_3005"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="QuestionDefinition"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.QuestionDefinitionEditHelper">
+            <param name="semanticHint" value="3005"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.PossibleAsnwer_3006"
+               name="%metatype.name.PossibleAsnwer_3006"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="PossibleAsnwer"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.PossibleAsnwerEditHelper">
+            <param name="semanticHint" value="3006"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <metamodelType
+               id="Project.diagram.PageLink_4001"
+               name="%metatype.name.PageLink_4001"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType"
+               eclass="PageLink"
+               edithelper="WebDevProjectMM.diagram.edit.helpers.PageLinkEditHelper">
+            <param name="semanticHint" value="4001"/>
+         </metamodelType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <specializationType
+               id="Project.diagram.RoleWebpage_4002"
+               name="%metatype.name.RoleWebpage_4002"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4002"/>
+         </specializationType>
+      </metamodel>
+      <metamodel nsURI="https://www.WebDevProjectMM.com">
+         <specializationType
+               id="Project.diagram.EntityRefersTo_4003"
+               name="%metatype.name.EntityRefersTo_4003"
+               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
+            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
+            <param name="semanticHint" value="4003"/>
+         </specializationType>
+      </metamodel>
+   </extension>
+
+   <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
+      <?gmfgen generated="true"?>
+      <clientContext id="Project.diagram.TypeContext">
+         <enablement>
+            <test
+               property="org.eclipse.gmf.runtime.emf.core.editingDomain"
+               value="Project.diagram.EditingDomain"/>
+         </enablement>
+      </clientContext> 
+      <binding context="Project.diagram.TypeContext">
+         <elementType ref="Project.diagram.WebSite_1000"/>
+         <elementType ref="Project.diagram.CreationCRUD_2001"/>
+         <elementType ref="Project.diagram.DelitionCRUD_2002"/>
+         <elementType ref="Project.diagram.AllCRUD_2003"/>
+         <elementType ref="Project.diagram.IndexCRUD_2004"/>
+         <elementType ref="Project.diagram.DetailCRUD_2005"/>
+         <elementType ref="Project.diagram.RegularContentPage_2006"/>
+         <elementType ref="Project.diagram.Form_2007"/>
+         <elementType ref="Project.diagram.Role_2008"/>
+         <elementType ref="Project.diagram.Text_3001"/>
+         <elementType ref="Project.diagram.MediaContent_3002"/>
+         <elementType ref="Project.diagram.SocialNetworkContent_3003"/>
+         <elementType ref="Project.diagram.StoredQuestion_3004"/>
+         <elementType ref="Project.diagram.QuestionDefinition_3005"/>
+         <elementType ref="Project.diagram.PossibleAsnwer_3006"/>
+         <elementType ref="Project.diagram.PageLink_4001"/>
+         <elementType ref="Project.diagram.RoleWebpage_4002"/>
+         <elementType ref="Project.diagram.EntityRefersTo_4003"/>
+         <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
+      </binding>
+   </extension>
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isURIEditorInput">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="Project.diagram.URIEditorInputPropertyTester"
+           type="org.eclipse.emf.common.ui.URIEditorInput"
+           namespace="Project.diagram"
+           properties="isURIEditorInput"
+           class="WebDevProjectMM.diagram.part.WebDevProjectMMUriEditorInputTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.core.expressions.propertyTesters" id="navigator-proptest.isShortcut">
+      <?gmfgen generated="true"?>
+       <propertyTester
+           id="Project.diagram.ShortcutPropertyTester"
+           type="org.eclipse.gmf.runtime.notation.View"
+           namespace="Project.diagram"
+           properties="isShortcut"
+           class="WebDevProjectMM.diagram.part.WebDevProjectMMShortcutPropertyTester">
+       </propertyTester>
+   </extension>
+
+	   <extension point="org.eclipse.ui.navigator.viewer" id="navigator-viewbinding">
+      <?gmfgen generated="true"?>
+      <viewerContentBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension pattern="Project.diagram.resourceContent"/>
+			<contentExtension pattern="Project.diagram.domainResourceContent"/>
+            <contentExtension pattern="Project.diagram.navigatorLinkHelper"/>
+         </includes>
+      </viewerContentBinding>
+      <viewerActionBinding viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <actionExtension pattern="Project.diagram.navigatorActionProvider"/>
+         </includes>
+      </viewerActionBinding>
+   </extension>
+
+   <extension point="org.eclipse.ui.navigator.navigatorContent" id="navigator-content">
+      <?gmfgen generated="true"?>
+      <navigatorContent
+            id="Project.diagram.resourceContent" 
+            name="%navigatorContentName" 
+            priority="normal" 
+            contentProvider="WebDevProjectMM.diagram.navigator.WebDevProjectMMNavigatorContentProvider" 
+            labelProvider="WebDevProjectMM.diagram.navigator.WebDevProjectMMNavigatorLabelProvider"
+            icon="icons/obj16/WebDevProjectMMDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="webdevprojectmm_diagram"/>
+               </and>
+               <instanceof value="WebDevProjectMM.diagram.navigator.WebDevProjectMMAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="Project.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <or>
+         	   <instanceof value="WebDevProjectMM.diagram.navigator.WebDevProjectMMAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="Project.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </possibleChildren>
+         <commonSorter 
+               id="Project.diagram.navigatorSorter" 
+               class="WebDevProjectMM.diagram.navigator.WebDevProjectMMNavigatorSorter">
+            <parentExpression>
+               <or>
+	              <and>
+    	             <instanceof value="org.eclipse.core.resources.IFile"/>
+        	         <test property="org.eclipse.core.resources.extension" value="webdevprojectmm_diagram"/>
+                  </and>
+                  <instanceof value="WebDevProjectMM.diagram.navigator.WebDevProjectMMAbstractNavigatorItem"/>
+               </or>
+            </parentExpression>
+         </commonSorter>
+      </navigatorContent>
+      <navigatorContent
+            id="Project.diagram.domainResourceContent" 
+            name="%domainNavigatorContentName" 
+            priority="normal" 
+            contentProvider="WebDevProjectMM.diagram.navigator.WebDevProjectMMDomainNavigatorContentProvider" 
+            labelProvider="WebDevProjectMM.diagram.navigator.WebDevProjectMMDomainNavigatorLabelProvider"
+            icon="icons/obj16/WebDevProjectMMDiagramFile.gif"
+            activeByDefault="true">
+         <triggerPoints>
+            <or>
+	           <and>
+    	          <instanceof value="org.eclipse.core.resources.IFile"/>
+        	      <test property="org.eclipse.core.resources.extension" value="webdevprojectmm"/>
+               </and>
+               <instanceof value="WebDevProjectMM.diagram.navigator.WebDevProjectMMDomainNavigatorItem"/>
+            </or>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof value="WebDevProjectMM.diagram.navigator.WebDevProjectMMDomainNavigatorItem"/>
+         </possibleChildren>
+      </navigatorContent>
+      <actionProvider
+            id="Project.diagram.navigatorActionProvider"
+            class="WebDevProjectMM.diagram.navigator.WebDevProjectMMNavigatorActionProvider">
+         <enablement>
+            <or>
+               <instanceof value="WebDevProjectMM.diagram.navigator.WebDevProjectMMAbstractNavigatorItem"/>
+           	   <adapt type="org.eclipse.gmf.runtime.notation.View">
+           	      <test property="Project.diagram.isShortcut"/>
+           	   </adapt>
+            </or>
+         </enablement>
+      </actionProvider>
+   </extension>
+   
+	   <extension point="org.eclipse.ui.navigator.linkHelper" id="navigator-linkhelper">
+      <?gmfgen generated="true"?>
+      <linkHelper
+            id="Project.diagram.navigatorLinkHelper"
+            class="WebDevProjectMM.diagram.navigator.WebDevProjectMMNavigatorLinkHelper">
+         <editorInputEnablement>
+            <and>
+               <instanceof value="org.eclipse.emf.common.ui.URIEditorInput"/>
+               <test property="Project.diagram.isURIEditorInput"/>
+            </and>
+         </editorInputEnablement>
+         <selectionEnablement>
+            <instanceof value="WebDevProjectMM.diagram.navigator.WebDevProjectMMAbstractNavigatorItem"/>
+         </selectionEnablement>
+      </linkHelper>
+   </extension>
+   <extension point="org.eclipse.ui.commands" id="update-cmd">
+      <?gmfgen generated="true"?>
+      <command
+         categoryId="org.eclipse.ui.category.edit"
+         defaultHandler="WebDevProjectMM.diagram.part.WebDevProjectMMDiagramUpdateCommand"
+         description="%update.diagram.description"
+         id="WebDevProjectMM.diagram.updateDiagram"
+         name="%update.diagram.name"/>
+   </extension>
+   
+   <extension point="org.eclipse.ui.bindings" id="update-cmd-binding">
+      <?gmfgen generated="true"?>
+      <key 
+         commandId="WebDevProjectMM.diagram.updateDiagram"
+         contextId="WebDevProjectMM.diagram.ui.diagramContext"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="F5"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.menus" id="context-menus">
+      <?gmfgen generated="true"?>
+      <!-- menuContribution locationURI="menu:org.eclipse.ui.main.menu?after=">
+      </menuContribution>
+      <menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar?after=">
+      </menuContribution -->
+      <menuContribution locationURI="popup:org.eclipse.gmf.runtime.diagram.ui.DiagramEditorContextMenu">
+         <command commandId="Project.diagram.LoadResourceAction">
+            <visibleWhen>
+               <and>
+                  <with variable="activePartId"><equals value="WebDevProjectMM.diagram.part.WebDevProjectMMDiagramEditorID"/></with>
+                  <with variable="selection"><iterate ifEmpty="false"> 
+                     <instanceof value="WebDevProjectMM.diagram.edit.parts.WebSiteEditPart"/>
+                  </iterate></with>
+               </and>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands" id="menu-commands">
+      <?gmfgen generated="true"?>
+      <category id="WebDevProjectMM.diagram.part.WebDevProjectMMDiagramEditorID" name="%cmdcategory.name" description="%cmdcategory.desc"/>
+      <command id="Project.diagram.LoadResourceAction"
+         name="Load Resource"
+         categoryId="WebDevProjectMM.diagram.part.WebDevProjectMMDiagramEditorID"
+         defaultHandler="WebDevProjectMM.diagram.part.LoadResourceAction"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.handlers" id="menu-handlers">
+      <?gmfgen generated="true"?>
+   </extension>
+
+   <!-- optionally, specify keybindings -->
+</plugin>

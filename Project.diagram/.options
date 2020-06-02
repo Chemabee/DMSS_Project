@@ -1,0 +1,7 @@
+# Tracing options for the Project.diagram plug-in
+
+# Common issues
+Project.diagram/debug=false
+
+# Visual IDs
+Project.diagram/debug/visualID=false

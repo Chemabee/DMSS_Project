@@ -1,0 +1,25 @@
+	/*
+ * 
+ */
+package WebDevProjectMM.diagram.edit.policies;
+
+/**
+ * @generated
+ */
+public class RoleWebpageItemSemanticEditPolicy extends WebDevProjectMM.diagram.edit.policies.WebDevProjectMMBaseItemSemanticEditPolicy {
+
+		/**
+ * @generated
+ */
+	public RoleWebpageItemSemanticEditPolicy() {
+				super(WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.RoleWebpage_4002);
+	}
+
+			/**
+ * @generated
+ */
+	protected org.eclipse.gef.commands.Command getDestroyReferenceCommand(org.eclipse.gmf.runtime.emf.type.core.requests.DestroyReferenceRequest req) {
+		return getGEFWrapper(new org.eclipse.gmf.runtime.emf.type.core.commands.DestroyReferenceCommand(req));
+	}
+		
+	}
