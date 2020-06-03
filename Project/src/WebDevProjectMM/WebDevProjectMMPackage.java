@@ -821,7 +821,7 @@ public interface WebDevProjectMMPackage extends EPackage {
 	int ENTITY__ATTRIBUTES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Refers To</b></em>' reference.
+	 * The feature id for the '<em><b>Refers To</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2200,10 +2200,10 @@ public interface WebDevProjectMMPackage extends EPackage {
 	EReference getEntity_Attributes();
 
 	/**
-	 * Returns the meta object for the reference '{@link WebDevProjectMM.Entity#getRefersTo <em>Refers To</em>}'.
+	 * Returns the meta object for the reference list '{@link WebDevProjectMM.Entity#getRefersTo <em>Refers To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Refers To</em>'.
+	 * @return the meta object for the reference list '<em>Refers To</em>'.
 	 * @see WebDevProjectMM.Entity#getRefersTo()
 	 * @see #getEntity()
 	 * @generated
@@ -2889,7 +2889,7 @@ public interface WebDevProjectMMPackage extends EPackage {
 		EReference ENTITY__ATTRIBUTES = eINSTANCE.getEntity_Attributes();
 
 		/**
-		 * The meta object literal for the '<em><b>Refers To</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Refers To</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

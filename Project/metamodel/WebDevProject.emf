@@ -142,13 +142,13 @@ class Database {
   val Entity[*] entities;
 }
 
-@Ecore(constraints="primaryKeyMustBeOwnAttribute")
-@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(primaryKeyMustBeOwnAttribute="self.attributes->includes(self.primary_key)")
+@Ecore(constraints="primaryKeyMustBeOwnAttribute canNotReferToItself")
+@"http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"(primaryKeyMustBeOwnAttribute="self.attributes->includes(self.primary_key)", canNotReferToItself="not self.refersTo->includes(self)")
 class Entity {
   @gmf.compartment(layout="list")
   val Attribute[+] attributes;
   @gmf.link
-  ref Entity refersTo;
+  ref Entity[*] refersTo;
   id attr String[1] ~id;
   ref Attribute[1] primary_key;
 }

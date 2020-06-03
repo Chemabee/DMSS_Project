@@ -1,0 +1,23 @@
+[comment encoding = UTF-8 /]
+[module generateDatabase('https://www.WebDevProjectMM.com')]
+
+
+[template public generateDatabase(aDatabase : Database)]
+[comment @main/]
+[file ('database.sql', false, 'UTF-8')]
+[for (anEntity : Entity | aDatabase.entities)]
+CREATE TABLE '[anEntity.id.substituteAll(' ', '').toUpperCase()/]'(
+[for (anAttribute : Attribute | anEntity.attributes) separator(',')]
+	[anAttribute.name.substituteAll(' ', '_')/] [generateAttributeType(anAttribute.attributePrimitiveData_Type)/] NOT NULL
+[/for]
+[if(anEntity.attributes->size()>0)],   [/if]PRIMARY KEY ([anEntity.primary_key.name.substituteAll(' ', '')/])[if (anEntity.refersTo->size() > 0)],
+	[for (referedEntity : Entity | anEntity.refersTo) separator(',')]FOREIGN KEY ([referedEntity.primary_key.name.substituteAll(' ', '_')/]) REFERENCES [referedEntity.id.substituteAll(' ', '').toUpperCase()/]([referedEntity.primary_key.name.substituteAll(' ', '_')/])[/for][/if]
+);
+
+[/for]
+[/file]
+[/template]
+
+[template public generateAttributeType(anAttributeType : AttributePrimitiveData_Type)]
+[if (anAttributeType = AttributePrimitiveData_Type::INTEGER)]INT[elseif (anAttributeType = AttributePrimitiveData_Type::REAL)]FLOAT(5)[elseif (anAttributeType = AttributePrimitiveData_Type::BOOLEAN)]BOOL[elseif (anAttributeType = AttributePrimitiveData_Type::STRING)]VARCHAR(250)[/if]
+[/template]
