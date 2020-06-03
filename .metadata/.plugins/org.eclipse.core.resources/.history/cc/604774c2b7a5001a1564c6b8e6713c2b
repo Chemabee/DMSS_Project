@@ -1,0 +1,49 @@
+[comment encoding = UTF-8 /]
+[module generateFormXML('https://www.WebDevProjectMM.com')]
+
+[comment habria que modularizarlo un poco/]
+[template public generateDatabase(aWebSite : WebSite)]
+[comment @main/]
+[for(aWebPage : WebPage | aWebSite.webPages) ? (aWebPage.oclIsKindOf(Form))]
+[generateFile(aWebPage.oclAsType(Form))/]
+[/for]
+[/template]
+
+[template public generateFile(aForm : Form)]
+[file (aForm.name.substituteAll(' ', '').toUpperFirst()+'.xml', false, 'UTF-8')]
+<?xml version="1.0" ?>
+<quiz>
+[for (aQuestion : Question | aForm.questions)]
+	[generateQuestion(aQuestion)/]
+[/for]
+</quiz>
+[/file]
+[/template]
+
+[template public generateQuestion(aQuestion : Question)/]
+
+[template public generateQuestion(aQuestion : StoredQuestion)]
+[generateQuestion(aQuestion.definitionOfQuestion)/]
+[/template]
+
+[template public generateQuestion(aQuestion : QuestionDefinition)]
+<question type ="[if(aQuestion.type = QuestionType::MULTIPLE_CHOICE)]multichoice[elseif(aQuestion.type = QuestionType::TRUE_FALSE)]truefalse[elseif(aQuestion.type = QuestionType::SHORT_QUESTION)]shortanswer[/if]">
+	<name>
+		<text>[aQuestion.description/]</text>
+	</name>
+	<questiontext format="html">
+		<text>This is a [if(aQuestion.type = QuestionType::MULTIPLE_CHOICE)]Multiple Choice[elseif(aQuestion.type = QuestionType::TRUE_FALSE)]True/False[elseif(aQuestion.type = QuestionType::SHORT_QUESTION)]Short[/if] Question!</text>
+	</questiontext>
+[for(anAnswer : PossibleAsnwer | aQuestion.possibleAsnwer)]
+[generateAnswer(anAnswer, aQuestion)/]
+[/for]
+[if(aQuestion.type=QuestionType::MULTIPLE_CHOICE)]<shuffleanswers>1</shuffleanswers>[/if]
+</question>
+[/template]
+
+[template public generateAnswer(anAnswer : PossibleAsnwer, aQuestion : QuestionDefinition)]
+[let fr : Real = 100/aQuestion.correctAnswer->size()]
+<answer fraction="[if(aQuestion.correctAnswer->includes(anAnswer))][fr/][else]0[/if]">
+	<text>[anAnswer.answerText/]</text>
+	<feedback><text>[if(aQuestion.correctAnswer->includes(anAnswer))]You're Right!![else]I'm afraid not...[/if]</text></feedback>[/let]
+[/template]
