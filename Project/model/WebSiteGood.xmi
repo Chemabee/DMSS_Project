@@ -86,7 +86,7 @@
     <socialnetworkcontent
         parameters="https://twitter.com/IbaiLlanos"/>
     <socialnetworkcontent
-        parameters="https://www.w3schools.com"
+        parameters="http://feeds.bbci.co.uk/news/england/rss.xml"
         socialNetworkType="RSS"/>
     <externalLink>https://www.hobbyconsolas.com/</externalLink>
     <entity

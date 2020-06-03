@@ -1,0 +1,12 @@
+<html>
+	<body>
+		<h1>CRUD</h1>
+		<footer>
+			<a class="twitter-timeline" data-width="220" data-height="600" href="https://twitter.com/IbaiLlanos">Tweets</a> 
+			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+			<a type="application/rss+xml" href="https://ww.xul.fr/rss.xml"> 
+		    RSS feed for this site
+			</a>
+		</footer>
+	</body>
+</html>	

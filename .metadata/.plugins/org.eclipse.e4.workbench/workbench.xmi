@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_aZ6g0KS5EeqKFqCC8GMoJg" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_aZ6g0aS5EeqKFqCC8GMoJg" bindingContexts="_aZ8_3aS5EeqKFqCC8GMoJg">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;Delition Car.html&quot; tooltip=&quot;Project/src/Delition Car.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/src/Delition Car.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;Creation Car.html&quot; tooltip=&quot;Project/src/Creation Car.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/src/Creation Car.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ocl.xtext.oclinecore.OCLinEcore&quot; name=&quot;WebDevProject.ecore&quot; tooltip=&quot;Project/metamodel/WebDevProject.ecore&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/metamodel/WebDevProject.ecore&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.emfatic.ui.editor.EmfaticEditor&quot; name=&quot;WebDevProject.emf&quot; tooltip=&quot;Project/metamodel/WebDevProject.emf&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/metamodel/WebDevProject.emf&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor&quot; name=&quot;generateWebDev.mtl&quot; tooltip=&quot;org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateWebDev.mtl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateWebDev.mtl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.pde.ui.manifestEditor&quot; name=&quot;MANIFEST.MF&quot; tooltip=&quot;Project/META-INF/MANIFEST.MF&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/META-INF/MANIFEST.MF&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;WebSiteGood.xmi&quot; tooltip=&quot;Project/model/WebSiteGood.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/model/WebSiteGood.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.ecore.presentation.ReflectiveEditorID&quot; name=&quot;WebSiteWithErrors.xmi&quot; tooltip=&quot;Project/model/WebSiteWithErrors.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/model/WebSiteWithErrors.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;All CRUD Person.html&quot; tooltip=&quot;Project/src/All CRUD Person.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/src/All CRUD Person.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;Survey1&quot; tooltip=&quot;Project/src/Survey1&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/src/Survey1&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;Questionnaire1&quot; tooltip=&quot;Project/src/Questionnaire1&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/src/Questionnaire1&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;PageWithElements&quot; tooltip=&quot;Project/src/PageWithElements&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/src/PageWithElements&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;Index Speaker&quot; tooltip=&quot;Project/src/Index Speaker&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/src/Index Speaker&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.ecore.presentation.ReflectiveEditorID&quot; name=&quot;WebSiteGood.xmi&quot; tooltip=&quot;Project/model/WebSiteGood.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/model/WebSiteGood.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;Index Car.html&quot; tooltip=&quot;Project/generated/Index Car.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/Index Car.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;Index Speaker.html&quot; tooltip=&quot;Project/generated/Index Speaker.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/Index Speaker.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;Delition Car.html&quot; tooltip=&quot;Project/generated/Delition Car.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/Delition Car.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;Creation Car.html&quot; tooltip=&quot;Project/generated/Creation Car.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/Creation Car.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_aZ6g0aS5EeqKFqCC8GMoJg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_aZ6g0qS5EeqKFqCC8GMoJg" label="%trimmedwindow.label.eclipseSDK" x="-7" y="0" width="974" height="1047">
@@ -96,17 +96,23 @@
           <tags>persp.perspSC:org.eclipse.acceleo.ide.ui.AcceleoPerspective</tags>
           <tags>persp.actionSet:org.eclipse.ui.edit.text.actionSet.presentation</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_aZ6g46S5EeqKFqCC8GMoJg" selectedElement="_aZ6g5qS5EeqKFqCC8GMoJg" horizontal="true">
-            <children xsi:type="basic:PartStack" xmi:id="_aZ6g5KS5EeqKFqCC8GMoJg" elementId="left" containerData="1653" selectedElement="_aZ6g5aS5EeqKFqCC8GMoJg">
+            <children xsi:type="basic:PartStack" xmi:id="_aZ6g5KS5EeqKFqCC8GMoJg" elementId="left" visible="false" containerData="1653" selectedElement="_aZ6g5aS5EeqKFqCC8GMoJg">
+              <tags>Minimized</tags>
+              <tags>MinimizedByZoom</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_aZ6g5aS5EeqKFqCC8GMoJg" elementId="org.eclipse.jdt.ui.PackageExplorer" ref="_aZ89FaS5EeqKFqCC8GMoJg"/>
             </children>
             <children xsi:type="basic:PartSashContainer" xmi:id="_aZ6g5qS5EeqKFqCC8GMoJg" containerData="8347" selectedElement="_aZ6g56S5EeqKFqCC8GMoJg">
               <children xsi:type="basic:PartSashContainer" xmi:id="_aZ6g56S5EeqKFqCC8GMoJg" containerData="7468" selectedElement="_aZ6g6KS5EeqKFqCC8GMoJg" horizontal="true">
-                <children xsi:type="advanced:Placeholder" xmi:id="_aZ6g6KS5EeqKFqCC8GMoJg" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_aZ6iA6S5EeqKFqCC8GMoJg"/>
-                <children xsi:type="basic:PartStack" xmi:id="_aZ6g6aS5EeqKFqCC8GMoJg" elementId="org.eclipse.ui.views.ContentOutlineMStack" containerData="2500" selectedElement="_aZ6g6qS5EeqKFqCC8GMoJg">
+                <children xsi:type="advanced:Placeholder" xmi:id="_aZ6g6KS5EeqKFqCC8GMoJg" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_aZ6iA6S5EeqKFqCC8GMoJg">
+                  <tags>Maximized</tags>
+                </children>
+                <children xsi:type="basic:PartStack" xmi:id="_aZ6g6aS5EeqKFqCC8GMoJg" elementId="org.eclipse.ui.views.ContentOutlineMStack" visible="false" containerData="2500" selectedElement="_aZ6g6qS5EeqKFqCC8GMoJg">
+                  <tags>Minimized</tags>
+                  <tags>MinimizedByZoom</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_aZ6g6qS5EeqKFqCC8GMoJg" elementId="org.eclipse.ui.views.ContentOutline" ref="_aZ6iKKS5EeqKFqCC8GMoJg"/>
                 </children>
               </children>
-              <children xsi:type="basic:PartSashContainer" xmi:id="_aZ6g66S5EeqKFqCC8GMoJg" containerData="2532" selectedElement="_aZ6g7KS5EeqKFqCC8GMoJg" horizontal="true">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_aZ6g66S5EeqKFqCC8GMoJg" visible="false" containerData="2532" selectedElement="_aZ6g86S5EeqKFqCC8GMoJg" horizontal="true">
                 <children xsi:type="basic:PartStack" xmi:id="_aZ6g7KS5EeqKFqCC8GMoJg" elementId="bottom" visible="false" containerData="5000" selectedElement="_aZ6g8aS5EeqKFqCC8GMoJg">
                   <tags>Minimized</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_aZ6g7aS5EeqKFqCC8GMoJg" elementId="org.eclipse.acceleo.ui.interpreter.view" ref="_aZ89dqS5EeqKFqCC8GMoJg"/>
@@ -116,8 +122,10 @@
                   <children xsi:type="advanced:Placeholder" xmi:id="_aZ6g8aS5EeqKFqCC8GMoJg" elementId="org.eclipse.ui.console.ConsoleView" ref="_aZ89EqS5EeqKFqCC8GMoJg"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_aZ6g8qS5EeqKFqCC8GMoJg" elementId="org.eclipse.ui.views.ProgressView" toBeRendered="false" ref="_aZ6iRaS5EeqKFqCC8GMoJg"/>
                 </children>
-                <children xsi:type="basic:PartStack" xmi:id="_aZ6g86S5EeqKFqCC8GMoJg" elementId="org.eclipse.acceleo.ide.ui.views.overrides.OverridesBrowserMStack" containerData="5000" selectedElement="_aZ6g9qS5EeqKFqCC8GMoJg">
+                <children xsi:type="basic:PartStack" xmi:id="_aZ6g86S5EeqKFqCC8GMoJg" elementId="org.eclipse.acceleo.ide.ui.views.overrides.OverridesBrowserMStack" visible="false" containerData="5000" selectedElement="_aZ6g9qS5EeqKFqCC8GMoJg">
                   <tags>General</tags>
+                  <tags>Minimized</tags>
+                  <tags>MinimizedByZoom</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_aZ6g9KS5EeqKFqCC8GMoJg" elementId="org.eclipse.acceleo.ide.ui.views.overrides.OverridesBrowser" ref="_aZ89e6S5EeqKFqCC8GMoJg"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_aZ6g9aS5EeqKFqCC8GMoJg" elementId="org.eclipse.acceleo.ide.ui.views.proposals.ProposalsBrowser" toBeRendered="false" ref="_aZ89fqS5EeqKFqCC8GMoJg"/>
                   <children xsi:type="advanced:Placeholder" xmi:id="_aZ6g9qS5EeqKFqCC8GMoJg" elementId="org.eclipse.ui.views.PropertySheet" ref="_aZ6iK6S5EeqKFqCC8GMoJg"/>
@@ -166,7 +174,7 @@
       <children xsi:type="basic:PartStack" xmi:id="_aZ6iBKS5EeqKFqCC8GMoJg" elementId="PartStack@409eca36" selectedElement="_4YlwsKTdEeq5I9lBKhtxvg">
         <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_4YlwsKTdEeq5I9lBKhtxvg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="generateWebDev.mtl" iconURI="platform:/plugin/org.eclipse.acceleo.ide.ui/icons/AcceleoEditor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor&quot; name=&quot;generateWebDev.mtl&quot; partName=&quot;generateWebDev.mtl&quot; title=&quot;generateWebDev.mtl&quot; tooltip=&quot;org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateWebDev.mtl&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateWebDev.mtl&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;533&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor&quot; name=&quot;generateWebDev.mtl&quot; partName=&quot;generateWebDev.mtl&quot; title=&quot;generateWebDev.mtl&quot; tooltip=&quot;org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateWebDev.mtl&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateWebDev.mtl&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;6075&quot; selectionTopPixel=&quot;3791&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor</tags>
           <tags>removeOnHide</tags>
@@ -338,7 +346,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_aZ89haS5EeqKFqCC8GMoJg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_x_bPMKTdEeq5I9lBKhtxvg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_aZ_ePqS5EeqKFqCC8GMoJg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Zqxe4KTlEeqVDfL_-Jd-cw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_aZ_ePqS5EeqKFqCC8GMoJg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_aZ89kqS5EeqKFqCC8GMoJg" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -362,7 +370,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_aZ89w6S5EeqKFqCC8GMoJg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_x_gHsKTdEeq5I9lBKhtxvg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_aZ_d3qS5EeqKFqCC8GMoJg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_Zq3lgKTlEeqVDfL_-Jd-cw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_aZ_d3qS5EeqKFqCC8GMoJg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_aZ891KS5EeqKFqCC8GMoJg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -409,7 +417,7 @@
         <tags>TrimStack</tags>
         <tags>Draggable</tags>
       </children>
-      <children xsi:type="menu:ToolControl" xmi:id="_aZ899aS5EeqKFqCC8GMoJg" elementId="left(IDEWindow).(org.eclipse.acceleo.ide.ui.AcceleoPerspective)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+      <children xsi:type="menu:ToolControl" xmi:id="_aZ899aS5EeqKFqCC8GMoJg" elementId="left(IDEWindow).(org.eclipse.acceleo.ide.ui.AcceleoPerspective)" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
         <tags>TrimStack</tags>
         <tags>Draggable</tags>
       </children>
@@ -418,16 +426,16 @@
         <tags>Draggable</tags>
       </children>
     </trimBars>
-    <trimBars xmi:id="_aZ8996S5EeqKFqCC8GMoJg" elementId="org.eclipse.ui.trim.vertical2" toBeRendered="false" side="Right">
+    <trimBars xmi:id="_aZ8996S5EeqKFqCC8GMoJg" elementId="org.eclipse.ui.trim.vertical2" side="Right">
       <children xsi:type="menu:ToolControl" xmi:id="_aZ89-KS5EeqKFqCC8GMoJg" elementId="bottom(IDEWindow).(org.eclipse.sirius.ui.tools.perspective.modeling)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
         <tags>TrimStack</tags>
         <tags>Draggable</tags>
       </children>
-      <children xsi:type="menu:ToolControl" xmi:id="_aZ89-aS5EeqKFqCC8GMoJg" elementId="org.eclipse.ui.views.ContentOutlineMStack(IDEWindow).(org.eclipse.acceleo.ide.ui.AcceleoPerspective)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+      <children xsi:type="menu:ToolControl" xmi:id="_aZ89-aS5EeqKFqCC8GMoJg" elementId="org.eclipse.ui.views.ContentOutlineMStack(IDEWindow).(org.eclipse.acceleo.ide.ui.AcceleoPerspective)" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
         <tags>TrimStack</tags>
         <tags>Draggable</tags>
       </children>
-      <children xsi:type="menu:ToolControl" xmi:id="_aZ89-qS5EeqKFqCC8GMoJg" elementId="org.eclipse.acceleo.ide.ui.views.overrides.OverridesBrowserMStack(IDEWindow).(org.eclipse.acceleo.ide.ui.AcceleoPerspective)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+      <children xsi:type="menu:ToolControl" xmi:id="_aZ89-qS5EeqKFqCC8GMoJg" elementId="org.eclipse.acceleo.ide.ui.views.overrides.OverridesBrowserMStack(IDEWindow).(org.eclipse.acceleo.ide.ui.AcceleoPerspective)" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
         <tags>TrimStack</tags>
         <tags>Draggable</tags>
       </children>
