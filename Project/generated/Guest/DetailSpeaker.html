@@ -4,6 +4,11 @@
 
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <html>
 	<body>
@@ -21,9 +26,38 @@
 	    <main role="main" class="container">
 		<div class="container">
 		</div>
-	      <h1 class="mt-5">Sticky footer with fixed navbar</h1>
-	      <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
-	      <p>Back to <a href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
+
+		  <h1>Details of Speaker</h1>
+		  <div class="row">
+		    <div class="col-4">
+		      <div class="list-group" id="list-tab" role="tablist">
+		        <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">
+		  	    Instance number one
+		  	  </a>
+		        <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
+		          Instance number two
+		  	  </a>
+		        <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">
+		  	    Instance number three
+		  	  </a>
+		        <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">
+		  	    Instance number four
+		  	  </a>
+		      </div>
+		    </div>
+		    <div class="col-8">
+		      <div class="tab-content" id="nav-tabContent">
+		        <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list"><code>Instance number one	    <br><small>Attribute 1</small>
+		  	    <br><small>Attribute 2</small></code></div>
+		        <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"><code>Instance number two	    <br><small>Attribute 1</small>
+		  	    <br><small>Attribute 2</small></code></div>
+		        <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"><code>Instance number three	    <br><small>Attribute 1</small>
+		  	    <br><small>Attribute 2</small></code></div>
+		        <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"><code>Instance number four	    <br><small>Attribute 1</small>
+		  	    <br><small>Attribute 2</small></code></div>
+		      </div>
+		    </div>
+		  </div>
 	    </main>
 
 	</body>
