@@ -1,4 +1,4 @@
-!SESSION 2020-06-05 10:46:03.230 -----------------------------------------------
+!SESSION 2020-06-05 11:32:16.352 -----------------------------------------------
 eclipse.buildId=4.6.3.M20170301-0400
 java.version=1.8.0_241
 java.vendor=Oracle Corporation
@@ -6,94 +6,28 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_ES
 Framework arguments:  -product org.eclipse.epp.package.modeling.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.modeling.product
 
-This is a continuation of log file D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\.metadata\.bak_0.log
-Created Time: 2020-06-05 11:00:26.511
+This is a continuation of log file E:\Desktop\NeonDMSS1718\DMSS_Project\.metadata\.bak_0.log
+Created Time: 2020-06-05 14:22:21.057
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:00:26.511
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1ed27c10 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1ed27c10 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:00:26.558
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1ed27c10 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1ed27c10 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:00:26.560
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1ed27c10 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1ed27c10 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:00:26.562
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1ed27c10 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1ed27c10 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:00:26.563
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1ed27c10 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1ed27c10 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 0 2020-06-05 11:00:26.603
+!ENTRY org.eclipse.acceleo.engine 2 0 2020-06-05 14:22:21.063
 !MESSAGE Some files were generated more than once during this generation.
 
+RegularUser/DelitionCarDelitionConfirmed.html : 2 times
 Admin/DelitionCar.html : 2 times
+RegularUser/CreationCarDelitionConfirmed.html : 2 times
+Admin/CreationCarDelitionConfirmed.html : 2 times
+Admin/DelitionCarDelitionConfirmed.html : 2 times
 RegularUser/DelitionCar.html : 2 times
 Admin/CreationCar.html : 2 times
 RegularUser/CreationCar.html : 2 times
 
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:01:08.981
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:28:25.550
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -102,12 +36,12 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:01:08.983
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:28:25.558
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -116,12 +50,12 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:01:08.984
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:28:25.567
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -130,12 +64,12 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:01:08.985
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:28:25.578
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -144,12 +78,12 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:01:09.023
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:28:25.633
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -158,12 +92,12 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:01:09.024
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:28:25.645
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -172,12 +106,12 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:01:09.025
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:28:25.653
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -186,12 +120,12 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:01:09.026
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:28:25.679
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@1781f14f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@60480c3 (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -200,21 +134,25 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 0 2020-06-05 11:01:09.063
+!ENTRY org.eclipse.acceleo.engine 2 0 2020-06-05 14:28:25.715
 !MESSAGE Some files were generated more than once during this generation.
 
+RegularUser/DelitionCarDelitionConfirmed.html : 2 times
 Admin/DelitionCar.html : 2 times
+RegularUser/CreationCarDelitionConfirmed.html : 2 times
+Admin/CreationCarDelitionConfirmed.html : 2 times
+Admin/DelitionCarDelitionConfirmed.html : 2 times
 RegularUser/DelitionCar.html : 2 times
 Admin/CreationCar.html : 2 times
 RegularUser/CreationCar.html : 2 times
 
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:04:55.627
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:29:44.783
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -223,12 +161,12 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:04:55.629
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:29:44.792
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -237,12 +175,12 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:04:55.630
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:29:44.799
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -251,12 +189,12 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:04:55.631
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:29:44.806
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\Admin\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -265,12 +203,12 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:04:55.674
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:29:44.854
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -279,12 +217,12 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:04:55.676
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:29:44.860
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -293,12 +231,12 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:04:55.677
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:29:44.867
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -307,12 +245,12 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:04:55.679
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 14:29:44.874
+!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 !STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@4afac36b (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
+org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@594545ea (eClass: org.eclipse.emf.ecore.impl.EClassImpl@2f96c606 (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'E:\Desktop\NeonDMSS1718\DMSS_Project\Project\generated\RegularUser\AllCRUDPerson.html'.
 	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
+	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:76)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
 	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
@@ -321,373 +259,14 @@ org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCru
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
 	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
 
-!ENTRY org.eclipse.acceleo.engine 2 0 2020-06-05 11:04:55.721
+!ENTRY org.eclipse.acceleo.engine 2 0 2020-06-05 14:29:44.907
 !MESSAGE Some files were generated more than once during this generation.
 
+RegularUser/DelitionCarDelitionConfirmed.html : 2 times
 Admin/DelitionCar.html : 2 times
-RegularUser/DelitionCar.html : 2 times
-Admin/CreationCar.html : 2 times
-RegularUser/CreationCar.html : 2 times
-
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:06:36.958
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:06:36.959
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:06:36.961
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:06:36.962
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:06:37.009
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:06:37.010
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:06:37.012
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:06:37.013
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@521e957c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 0 2020-06-05 11:06:37.054
-!MESSAGE Some files were generated more than once during this generation.
-
-Admin/DelitionCar.html : 2 times
-RegularUser/DelitionCar.html : 2 times
-Admin/CreationCar.html : 2 times
-RegularUser/CreationCar.html : 2 times
-
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:07:58.176
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:07:58.177
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:07:58.178
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:07:58.180
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:07:58.229
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:07:58.230
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:07:58.232
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:07:58.233
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@650601f (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 0 2020-06-05 11:07:58.272
-!MESSAGE Some files were generated more than once during this generation.
-
-Admin/DelitionCar.html : 2 times
-RegularUser/DelitionCar.html : 2 times
-Admin/CreationCar.html : 2 times
-RegularUser/CreationCar.html : 2 times
-
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:09:05.108
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:09:05.110
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:09:05.111
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:09:05.112
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\Admin\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:09:05.152
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::IndexCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:09:05.154
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DetailCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:09:05.155
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::CreationCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 2 2020-06-05 11:09:05.156
-!MESSAGE Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-!STACK 0
-org.eclipse.acceleo.engine.AcceleoEvaluationException: Undefined argument allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD) of invocation at line 0 in Module generateWebDev for block generateCrudPage(allCrudPage.oclAsType(WebDevProjectMM::DelitionCRUD)). Last recorded value of self was org.eclipse.emf.ecore.impl.DynamicEObjectImpl@6688be9c (eClass: org.eclipse.emf.ecore.impl.EClassImpl@6f14914a (name: AllCRUD) (instanceClassName: null) (abstract: false, interface: false)). Problem found while generating the file 'D:\gsb-d\OneDrive - Universidad\OneDrive - Universidad de Extremadura\4º Año\DMSS\Practicas\Project\Project\generated\RegularUser\AllCRUDPerson.html'.
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:0)
-	at generateWebDev.generateCrudPage(AllCRUD)(generateWebDev.mtl:61)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:0)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:33)
-	at generateWebDev.generateWebPage(CRUDPage,Role)(generateWebDev.mtl:32)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:0)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:8)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:7)
-	at generateWebDev.generatePackage(WebSite)(generateWebDev.mtl:5)
-
-!ENTRY org.eclipse.acceleo.engine 2 0 2020-06-05 11:09:05.189
-!MESSAGE Some files were generated more than once during this generation.
-
-Admin/DelitionCar.html : 2 times
+RegularUser/CreationCarDelitionConfirmed.html : 2 times
+Admin/CreationCarDelitionConfirmed.html : 2 times
+Admin/DelitionCarDelitionConfirmed.html : 2 times
 RegularUser/DelitionCar.html : 2 times
 Admin/CreationCar.html : 2 times
 RegularUser/CreationCar.html : 2 times
