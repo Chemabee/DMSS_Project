@@ -107,29 +107,12 @@
   <div class="col-8">
     <div class="tab-content" id="nav-tabContent">
 	  [for(Sequence{1,2,3,4})]
-	  <div class="tab-pane fade show active" id="[detailCrudPage.entity.id/][self/]" role="tabpanel" aria-labelledby="[detailCrudPage.entity.id.toUpperCase()/][self/]"><code>Instance [detailCrudPage.entity.id/] [self/]
-	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
+	  <div class="tab-pane fade show active" id="[detailCrudPage.entity.id/][self/]" aria-labelledby="[detailCrudPage.entity.id.toUpperCase()/][self/]">
+		[for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
+		<code>Instance [detailCrudPage.entity.id/] [self/]
 	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
 	  [/for]</code></div>
 	  [/for]
-
-      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list"><code>Instance number one
-	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
-	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
-	  [/for]</code></div>
-
-      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"><code>Instance number two
-	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
-	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
-	  [/for]</code></div>
-      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"><code>Instance number three
-	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
-	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
-	  [/for]</code></div>
-      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"><code>Instance number four
-	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
-	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
-	  [/for]</code></div>
     </div>
   </div>
 </div>

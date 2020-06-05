@@ -86,6 +86,18 @@
 	    Instance [indexCrudPage.entity.id/] [self/]
 	  </a>
 	  [/for]
+      <a class="list-group-item list-group-item-action" id="list-home-list" role="tab" aria-controls="home">
+	    Instance number one
+	  </a>
+      <a class="list-group-item list-group-item-action" id="list-profile-list" role="tab" aria-controls="profile">
+        Instance number two
+	  </a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" role="tab" aria-controls="messages">
+	    Instance number three
+	  </a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" role="tab" aria-controls="settings">
+	    Instance number four
+	  </a>
   </div>
 </div>
 [/template]
@@ -97,27 +109,26 @@
 <div class="row">
   <div class="col-4">
     <div class="list-group" id="list-tab" role="tablist">
-	  [for (Sequence{1,2,3,4})]
-	  <a class="list-group-item list-group-item-action" id="[detailCrudPage.entity.id/][self/]" role="tab" aria-controls="[detailCrudPage.entity.id.toUpperCase()/][self/]">
-	    Instance [detailCrudPage.entity.id/] [self/]
+      <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">
+	    Instance number one
 	  </a>
-	  [/for]
+      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">
+        Instance number two
+	  </a>
+      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">
+	    Instance number three
+	  </a>
+      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">
+	    Instance number four
+	  </a>
     </div>
   </div>
   <div class="col-8">
     <div class="tab-content" id="nav-tabContent">
-	  [for(Sequence{1,2,3,4})]
-	  <div class="tab-pane fade show active" id="[detailCrudPage.entity.id/][self/]" role="tabpanel" aria-labelledby="[detailCrudPage.entity.id.toUpperCase()/][self/]"><code>Instance [detailCrudPage.entity.id/] [self/]
-	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
-	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
-	  [/for]</code></div>
-	  [/for]
-
       <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list"><code>Instance number one
 	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
 	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
 	  [/for]</code></div>
-
       <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"><code>Instance number two
 	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
 	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
