@@ -40,8 +40,9 @@
 		  [generateElements(crudPage)/]
 		  [/if]
 		</div>
-
+			
 		  [generateCrudPage(crudPage)/]
+
 	    </main>
 
 		[if (crudPage.socialnetworkcontent->size() >= 1)]
@@ -50,40 +51,102 @@
 	</body>
 </html>	
 [/file]
+[if (crudPage.oclIsTypeOf(DelitionCRUD))]
+	[file (role.name+'/'+crudPage.name.substituteAll(' ', '')+'DelitionConfirmed'+'.html', false, 'UTF-8')]
+	[generateHeadAndBodyHeader(crudPage, role)/]
+	<div class="container">
+	  <h1>[crudPage.entity.id/] Instance <code class="text-danger">deleted</code></h1>
+	</div>
+	[/file]
+[elseif (crudPage.oclIsTypeOf(CreationCRUD))]
+	[file (role.name+'/'+crudPage.name.substituteAll(' ', '')+'CreationConfirmed'+'.html', false, 'UTF-8')]
+	[generateHeadAndBodyHeader(crudPage, role)/]
+	<div class="container">
+	  <h1>[crudPage.entity.id/] Instance <code class="text-success">created</code></h1>
+	</div>
+	[/file]
+[elseif (crudPage.oclIsTypeOf(AllCRUD))]
+	[file (role.name+'/'+crudPage.name.substituteAll(' ', '')+'DelitionConfirmed'+'.html', false, 'UTF-8')]
+	[generateHeadAndBodyHeader(crudPage, role)/]
+	<div class="container">
+	  <h1>[crudPage.entity.id/] Instance <code class="text-danger">deleted</code></h1>
+	</div>
+	[/file]
+	[file (role.name+'/'+crudPage.name.substituteAll(' ', '')+'CreationConfirmed'+'.html', false, 'UTF-8')]
+	[generateHeadAndBodyHeader(crudPage, role)/]
+	<div class="container">
+	  <h1>[crudPage.entity.id/] Instance <code class="text-success">created</code></h1>
+	</div>
+	[/file]
+[/if]
 [/template]
 
 
 
-[template public generateCrudPage(crudPage : CRUDPage)/]
-
-
-
-[template public generateCrudPage(allCrudPage : AllCRUD)]
-[generateCrudPage(allCrudPage.oclAsType(IndexCRUD))/]
-[generateCrudPage(allCrudPage.oclAsType(DetailCRUD))/]
-[generateCrudPage(allCrudPage.oclAsType(CreationCRUD))/]
-[generateCrudPage(allCrudPage.oclAsType(DelitionCRUD))/]
+[template public generateCrudPage(crudPage : CRUDPage)]
+[if (crudPage.oclIsTypeOf(AllCRUD))]
+[generateAllCrudPage(crudPage)/]
+[elseif (crudPage.oclIsTypeOf(CreationCRUD))]
+[generateCreationCrudPage(crudPage)/]
+[elseif (crudPage.oclIsTypeOf(DelitionCRUD))]
+[generateDelitionCrudPage(crudPage)/]
+[elseif (crudPage.oclIsTypeOf(DetailCRUD))]
+[generateDetailCrudPage(crudPage)/]
+[elseif (crudPage.oclIsTypeOf(IndexCRUD))]
+[generateIndexCrudPage(crudPage)/]
+[/if]
 [/template]
 
 
 
-[template public generateCrudPage(creationCrudPage : CreationCRUD)]
+[template public generateAllCrudPage(allCrudPage : CRUDPage)]
+[generateIndexCrudPage(allCrudPage)/]
+[generateDetailCrudPage(allCrudPage)/]
+[generateCreationCrudPage(allCrudPage)/]
+[generateDelitionCrudPage(allCrudPage)/]
 [/template]
 
 
 
-[template public generateCrudPage(delitionCrudPage : DelitionCRUD)]
+[template public generateCreationCrudPage(creationCrudPage : CRUDPage)]
+<h1>Creation of [creationCrudPage.entity.id/] instances</h1>
+<form>
+[for(anAttribute : Attribute | creationCrudPage.entity.attributes)]
+  <div class="form-group">
+    <label for="exampleInput[anAttribute.name/]">[anAttribute.name/]</label>
+    <input type="email" class="form-control" id="exampleInput[anAttribute.name/]" placeholder="Enter [anAttribute.name/]">
+  </div>
+[/for]
+  <a class="btn btn-primary" href="[creationCrudPage.name.substituteAll(' ', '')+'CreationConfirmed'+'.html'/]" role="button">Create instance</a>
+</form>
 [/template]
 
 
 
-[template public generateCrudPage(indexCrudPage : IndexCRUD)]
+[template public generateDelitionCrudPage(delitionCrudPage : CRUDPage)]
+<h1>Instances of [delitionCrudPage.entity.id/]</h1>
+  <div class="col-4">
+    <div class="list-group" id="list-tab" role="tablist">
+	  <p>Select the instance wanted to be deleted and press "Delete instance" button</p>
+	  [for (count : Integer | Sequence{1,2,3,4})]
+	  <a class="list-group-item list-group-item-action" id="list-[delitionCrudPage.entity.id/][count/]-list" role="tab" data-toggle="list" aria-controls="[delitionCrudPage.entity.id/][self/]">
+	    Instance [delitionCrudPage.entity.id/] [count/]
+	  </a>
+	  [/for]
+	  <a class="btn btn-danger" href="[delitionCrudPage.name.substituteAll(' ', '')+'DelitionConfirmed'+'.html'/]" role="button">Delete instance</a>
+    </div>
+  </div>
+[/template]
+
+
+
+[template public generateIndexCrudPage(indexCrudPage : CRUDPage)]
 <h1>Instances of [indexCrudPage.entity.id/]</h1>
 <div class="row">
   <div class="col-4">
-	  [for (Sequence{1,2,3,4})]
+	  [for (count : Integer | Sequence{1,2,3,4})]
 	  <a class="list-group-item list-group-item-action" id="[indexCrudPage.entity.id/][self/]" role="tab" aria-controls="[indexCrudPage.entity.id.toUpperCase()/][self/]">
-	    Instance [indexCrudPage.entity.id/] [self/]
+	    Instance [indexCrudPage.entity.id/] [count/]
 	  </a>
 	  [/for]
   </div>
@@ -92,44 +155,32 @@
 
 
 
-[template public generateCrudPage(detailCrudPage : DetailCRUD)]
+[template public generateDetailCrudPage(detailCrudPage : CRUDPage)]
 <h1>Details of [detailCrudPage.entity.id/]</h1>
 <div class="row">
   <div class="col-4">
     <div class="list-group" id="list-tab" role="tablist">
-	  [for (Sequence{1,2,3,4})]
-	  <a class="list-group-item list-group-item-action" id="[detailCrudPage.entity.id/][self/]" role="tab" aria-controls="[detailCrudPage.entity.id.toUpperCase()/][self/]">
-	    Instance [detailCrudPage.entity.id/] [self/]
+	  [for (count : Integer | Sequence{1,2,3,4})]
+	  <a class="list-group-item list-group-item-action" id="list-[detailCrudPage.entity.id/][count/]-list" role="tab" data-toggle="list" href="#list-[detailCrudPage.entity.id/][self/]" aria-controls="[detailCrudPage.entity.id/][self/]">
+	    Instance [detailCrudPage.entity.id/] [count/]
 	  </a>
 	  [/for]
     </div>
   </div>
   <div class="col-8">
     <div class="tab-content" id="nav-tabContent">
-	  [for(Sequence{1,2,3,4})]
-	  <div class="tab-pane fade show active" id="[detailCrudPage.entity.id/][self/]" role="tabpanel" aria-labelledby="[detailCrudPage.entity.id.toUpperCase()/][self/]"><code>Instance [detailCrudPage.entity.id/] [self/]
+	  [for(count : Integer | Sequence{1,2,3,4})]
+	  <div class="tab-pane fade [if (self = 1)]show active[/if]" id="list-[detailCrudPage.entity.id/][count/]" role="tabpanel" aria-labelledby="list-[detailCrudPage.entity.id/][self/]-list"><code>Instance [detailCrudPage.entity.id/] [self/]
 	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
-	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
+	  	<br><small>Attribute: [anAttribute.name/] (Type : [anAttribute.attributePrimitiveData_Type/]) = 
+		[if (anAttribute.attributePrimitiveData_Type=AttributePrimitiveData_Type::BOOLEAN)][detailCrudPage.entity.id/][count/]_true_[anAttribute.name/]
+		[elseif (anAttribute.attributePrimitiveData_Type=AttributePrimitiveData_Type::INTEGER)][detailCrudPage.entity.id/][count/]_1_[anAttribute.name/]
+		[elseif (anAttribute.attributePrimitiveData_Type=AttributePrimitiveData_Type::REAL)][detailCrudPage.entity.id/][count/]_1.23_[anAttribute.name/]
+		[elseif (anAttribute.attributePrimitiveData_Type=AttributePrimitiveData_Type::STRING)][detailCrudPage.entity.id/][count/]_String_[anAttribute.name/]
+		[/if]
+		</small>
 	  [/for]</code></div>
 	  [/for]
-
-      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list"><code>Instance number one
-	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
-	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
-	  [/for]</code></div>
-
-      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"><code>Instance number two
-	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
-	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
-	  [/for]</code></div>
-      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"><code>Instance number three
-	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
-	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
-	  [/for]</code></div>
-      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"><code>Instance number four
-	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
-	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
-	  [/for]</code></div>
     </div>
   </div>
 </div>

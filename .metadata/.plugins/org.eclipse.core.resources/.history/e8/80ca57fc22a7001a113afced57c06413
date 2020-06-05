@@ -1,0 +1,100 @@
+<head>
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+<html>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+	        <div class="collapse navbar-collapse" id="navbarCollapse">
+			  <a class="navbar-brand">Detail Car</a>
+	          <ul class="navbar-nav mr-auto">
+				
+	          </ul>
+        	</div>
+      		</nav>
+		</header>
+
+	    <main role="main" class="container">
+		<div class="container">
+		</div>
+
+		  <h1>Details of Car</h1>
+		  <div class="row">
+		    <div class="col-4">
+		      <div class="list-group" id="list-tab" role="tablist">
+		  	  <a class="list-group-item list-group-item-action" id="list-Car1-list" role="tab" data-toggle="list" href="#list-Car1" aria-controls="Car1">
+		  	    Instance Car 1
+		  	  </a>
+		  	  <a class="list-group-item list-group-item-action" id="list-Car2-list" role="tab" data-toggle="list" href="#list-Car2" aria-controls="Car2">
+		  	    Instance Car 2
+		  	  </a>
+		  	  <a class="list-group-item list-group-item-action" id="list-Car3-list" role="tab" data-toggle="list" href="#list-Car3" aria-controls="Car3">
+		  	    Instance Car 3
+		  	  </a>
+		  	  <a class="list-group-item list-group-item-action" id="list-Car4-list" role="tab" data-toggle="list" href="#list-Car4" aria-controls="Car4">
+		  	    Instance Car 4
+		  	  </a>
+		      </div>
+		    </div>
+		    <div class="col-8">
+		      <div class="tab-content" id="nav-tabContent">
+		  	  <div class="tab-pane fade show active" id="list-Car1" role="tabpanel" aria-labelledby="list-Car1-list"><code>Instance Car 1
+		  	  	<br><small>Attribute: Car_NumOfWheels (Type : INTEGER) = 
+		  Car1_1_Car_NumOfWheels
+		  		</small>
+		  	  	<br><small>Attribute: Car_Brand (Type : STRING) = 
+		  Car1_String_Car_Brand
+		  		</small>
+		  	  	<br><small>Attribute: Car_Plate (Type : STRING) = 
+		  Car1_String_Car_Plate
+		  		</small>
+		  </code></div>
+		  	  <div class="tab-pane fade " id="list-Car2" role="tabpanel" aria-labelledby="list-Car2-list"><code>Instance Car 2
+		  	  	<br><small>Attribute: Car_NumOfWheels (Type : INTEGER) = 
+		  Car2_1_Car_NumOfWheels
+		  		</small>
+		  	  	<br><small>Attribute: Car_Brand (Type : STRING) = 
+		  Car2_String_Car_Brand
+		  		</small>
+		  	  	<br><small>Attribute: Car_Plate (Type : STRING) = 
+		  Car2_String_Car_Plate
+		  		</small>
+		  </code></div>
+		  	  <div class="tab-pane fade " id="list-Car3" role="tabpanel" aria-labelledby="list-Car3-list"><code>Instance Car 3
+		  	  	<br><small>Attribute: Car_NumOfWheels (Type : INTEGER) = 
+		  Car3_1_Car_NumOfWheels
+		  		</small>
+		  	  	<br><small>Attribute: Car_Brand (Type : STRING) = 
+		  Car3_String_Car_Brand
+		  		</small>
+		  	  	<br><small>Attribute: Car_Plate (Type : STRING) = 
+		  Car3_String_Car_Plate
+		  		</small>
+		  </code></div>
+		  	  <div class="tab-pane fade " id="list-Car4" role="tabpanel" aria-labelledby="list-Car4-list"><code>Instance Car 4
+		  	  	<br><small>Attribute: Car_NumOfWheels (Type : INTEGER) = 
+		  Car4_1_Car_NumOfWheels
+		  		</small>
+		  	  	<br><small>Attribute: Car_Brand (Type : STRING) = 
+		  Car4_String_Car_Brand
+		  		</small>
+		  	  	<br><small>Attribute: Car_Plate (Type : STRING) = 
+		  Car4_String_Car_Plate
+		  		</small>
+		  </code></div>
+		      </div>
+		    </div>
+		  </div>
+	    </main>
+
+	</body>
+</html>	
