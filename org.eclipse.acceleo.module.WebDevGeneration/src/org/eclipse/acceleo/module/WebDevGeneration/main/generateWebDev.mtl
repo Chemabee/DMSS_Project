@@ -40,8 +40,9 @@
 		  [generateElements(crudPage)/]
 		  [/if]
 		</div>
-
+			
 		  [generateCrudPage(crudPage)/]
+
 	    </main>
 
 		[if (crudPage.socialnetworkcontent->size() >= 1)]
@@ -51,38 +52,63 @@
 </html>	
 [/file]
 [if (crudPage.oclIsTypeOf(DelitionCRUD))]
-[file (role.name+'/'+crudPage.name.substituteAll(' ', '')+'DelitionConfirmed'+'.html', false, 'UTF-8')]
-[generateHeadAndBodyHeader(crudPage, role)/]
-<div class="container">
-  <h1>[crudPage.entity.id/] Instance <code class="text-danger">deleted</code></h1>
-</div>
-[/file]
+	[file (role.name+'/'+crudPage.name.substituteAll(' ', '')+'DelitionConfirmed'+'.html', false, 'UTF-8')]
+	[generateHeadAndBodyHeader(crudPage, role)/]
+	<div class="container">
+	  <h1>[crudPage.entity.id/] Instance <code class="text-danger">deleted</code></h1>
+	</div>
+	[/file]
 [elseif (crudPage.oclIsTypeOf(CreationCRUD))]
-[file (role.name+'/'+crudPage.name.substituteAll(' ', '')+'DelitionConfirmed'+'.html', false, 'UTF-8')]
-[generateHeadAndBodyHeader(crudPage, role)/]
-<div class="container">
-  <h1>[crudPage.entity.id/] Instance <code class="text-success">created</code></h1>
-</div>
-[/file]
+	[file (role.name+'/'+crudPage.name.substituteAll(' ', '')+'CreationConfirmed'+'.html', false, 'UTF-8')]
+	[generateHeadAndBodyHeader(crudPage, role)/]
+	<div class="container">
+	  <h1>[crudPage.entity.id/] Instance <code class="text-success">created</code></h1>
+	</div>
+	[/file]
+[elseif (crudPage.oclIsTypeOf(AllCRUD))]
+	[file (role.name+'/'+crudPage.name.substituteAll(' ', '')+'DelitionConfirmed'+'.html', false, 'UTF-8')]
+	[generateHeadAndBodyHeader(crudPage, role)/]
+	<div class="container">
+	  <h1>[crudPage.entity.id/] Instance <code class="text-danger">deleted</code></h1>
+	</div>
+	[/file]
+	[file (role.name+'/'+crudPage.name.substituteAll(' ', '')+'CreationConfirmed'+'.html', false, 'UTF-8')]
+	[generateHeadAndBodyHeader(crudPage, role)/]
+	<div class="container">
+	  <h1>[crudPage.entity.id/] Instance <code class="text-success">created</code></h1>
+	</div>
+	[/file]
 [/if]
 [/template]
 
 
 
-[template public generateCrudPage(crudPage : CRUDPage)/]
-
-
-
-[template public generateCrudPage(allCrudPage : AllCRUD)]
-[generateCrudPage(allCrudPage.oclAsType(IndexCRUD))/]
-[generateCrudPage(allCrudPage.oclAsType(DetailCRUD))/]
-[generateCrudPage(allCrudPage.oclAsType(CreationCRUD))/]
-[generateCrudPage(allCrudPage.oclAsType(DelitionCRUD))/]
+[template public generateCrudPage(crudPage : CRUDPage)]
+[if (crudPage.oclIsTypeOf(AllCRUD))]
+[generateAllCrudPage(crudPage)/]
+[elseif (crudPage.oclIsTypeOf(CreationCRUD))]
+[generateCreationCrudPage(crudPage)/]
+[elseif (crudPage.oclIsTypeOf(DelitionCRUD))]
+[generateDelitionCrudPage(crudPage)/]
+[elseif (crudPage.oclIsTypeOf(DetailCRUD))]
+[generateDetailCrudPage(crudPage)/]
+[elseif (crudPage.oclIsTypeOf(IndexCRUD))]
+[generateIndexCrudPage(crudPage)/]
+[/if]
 [/template]
 
 
 
-[template public generateCrudPage(creationCrudPage : CreationCRUD)]
+[template public generateAllCrudPage(allCrudPage : CRUDPage)]
+[generateIndexCrudPage(allCrudPage)/]
+[generateDetailCrudPage(allCrudPage)/]
+[generateCreationCrudPage(allCrudPage)/]
+[generateDelitionCrudPage(allCrudPage)/]
+[/template]
+
+
+
+[template public generateCreationCrudPage(creationCrudPage : CRUDPage)]
 <h1>Creation of [creationCrudPage.entity.id/] instances</h1>
 <form>
 [for(anAttribute : Attribute | creationCrudPage.entity.attributes)]
@@ -91,13 +117,13 @@
     <input type="email" class="form-control" id="exampleInput[anAttribute.name/]" placeholder="Enter [anAttribute.name/]">
   </div>
 [/for]
-  <a class="btn btn-primary" href="[creationCrudPage.name.substituteAll(' ', '')+'DelitionConfirmed'+'.html'/]" role="button">Create instance</a>
+  <a class="btn btn-primary" href="[creationCrudPage.name.substituteAll(' ', '')+'CreationConfirmed'+'.html'/]" role="button">Create instance</a>
 </form>
 [/template]
 
 
 
-[template public generateCrudPage(delitionCrudPage : DelitionCRUD)]
+[template public generateDelitionCrudPage(delitionCrudPage : CRUDPage)]
 <h1>Instances of [delitionCrudPage.entity.id/]</h1>
   <div class="col-4">
     <div class="list-group" id="list-tab" role="tablist">
@@ -114,7 +140,7 @@
 
 
 
-[template public generateCrudPage(indexCrudPage : IndexCRUD)]
+[template public generateIndexCrudPage(indexCrudPage : CRUDPage)]
 <h1>Instances of [indexCrudPage.entity.id/]</h1>
 <div class="row">
   <div class="col-4">
@@ -129,7 +155,7 @@
 
 
 
-[template public generateCrudPage(detailCrudPage : DetailCRUD)]
+[template public generateDetailCrudPage(detailCrudPage : CRUDPage)]
 <h1>Details of [detailCrudPage.entity.id/]</h1>
 <div class="row">
   <div class="col-4">
