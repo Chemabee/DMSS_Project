@@ -11,10 +11,438 @@
 	<p>Author: José María Crespo Sánchez, Enrique Vílchez Campillejo</p>
 	<p>Last Updated: 05-06-2020</p>
 	
+	<img src="../../figures/class_diagram.svg" border="1" alt="WebDevMM" height="1200"/>
 	<p>Name: WebDevProjectMM</p>
 	<p>NsURI: https://www.WebDevProjectMM.com</p>
 	<p>NsPrefix: WebDevProjectMM</p>
+	<br>
+	<ul>
+	</ul>
+	<span style="background-color:LightGoldenRodYellow">EClass: Role</span><br>
+	<p>Description: This Meta-Class represents the role associated to an user while moving throught the WebSite. 
+	Each Role has access to several WebPages.</p>
 	
-
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>numAccesiblePages</b>: EBigInteger = <span style="font-style: italic; color: blue">self.webpage->size()</span></li> 
+	</ul><br>
+	<ul><li>(1..*) <b>webpage#<i>role</i></b> : WebPage</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: WebSite</span><br>
+	<p>Description: WebSite Meta-Class represents the root where all the WebPages and roles are contained.
+	It has a path called 'URL' used by all the webpages contained in it, appart from other attributes for self-describing.</p>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(1..1) <b>URL</b>: EString</li> 
+	</ul><br>
+	<ul><li>(1..*) <b>roles</b> : Role (Composition)</li>
+	<li>(1..*) <b>webPages</b> : WebPage (Composition)</li>
+	<li>(0..*) <b>link</b> : PageLink (Composition)</li>
+	</ul>
+	<ul><li>invariant <b>R6MustIncludeAtLeastOneQuestionnaire</b>:
+		<span style="font-style: italic; color: blue">
+		
+				let allForms : Collection(Form) = self.webPages->selectByKind(Form),
+					existsAnyQuestionnaires : Boolean = allForms->exists(f : Form | f.formType = Form_Type::QUESTIONNAIRE)
+				in
+					existsAnyQuestionnaires
+	</span></li>
+	<li>invariant <b>R6MustIncludeAtLeastOneSurvey</b>:
+		<span style="font-style: italic; color: blue">
+		
+				let allForms : Collection(Form) = self.webPages->selectByKind(Form),
+					existsAnySurvey : Boolean = allForms->exists(f : Form | f.formType = Form_Type::SURVEY)
+				in
+					existsAnySurvey
+	</span></li>
+	</ul>
+	<span style="background-color:LightGrey">EClass: WebPage</span>(abstract)<br/>
+	<br>
+	<p>Description: WebPage represents instances of webpages contained in the WebSite. Each of those webpages can be of any of the sub-types of webpage, but not of type webpage, as it is an abstract class.
+	Each webpage can be accessed by any number of roles.
+	Also, each webpage has links to other webpages, that can be inside our model or outside from our model (external links).
+	Finally, each webpage can contain any number of elements (media elements or text elements), and any number of social network content.</p>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	</ul>
+	<ul><li>invariant <b>R2isolatedWebPage</b>:
+		<span style="font-style: italic; color: blue">
+		Self.role->size() > 0 or self.incoming->size() > 0
+	</span></li>
+	</ul>
+	<span style="background-color:LightGoldenRodYellow">EClass: SocialNetworkContent</span><br>
+	<p>Description: SocialNetworkContent represents embedded content from social networks such as Twitter or RSS.
+	This content is shown in the webpage, according to the paramenters given by the user.</p>
+	
+	<ul><li>(1..1) <b>parameters</b>: EString</li> 
+	<li>(1..1) <b>socialNetworkType</b>: SocialNetwork_Type</li> 
+	</ul><br>
+	
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: RegularContentPage</span><br>
+	<p>Description: RegulaContentPage represent pages that only have elements and social network content inside.</p>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: Form</span><br>
+	<p>Description: Form represent webpages of type Questionnaire or Survey, as the Meta-Class Form is abstract.
+	Forms are a set of questions that need to be answered by users.</p>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	<li>(1..1) <b>formType</b>: Form_Type</li> 
+	<li>(1..1) <b>numTFQuestions</b>: EBigInteger = <span style="font-style: italic; color: blue">self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::TRUE_FALSE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definitionOfQuestion.type = QuestionType::TRUE_FALSE) )->size()</span></li> 
+	<li>(1..1) <b>numMCQuestions</b>: EBigInteger = <span style="font-style: italic; color: blue">self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::MULTIPLE_CHOICE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definitionOfQuestion.type = QuestionType::MULTIPLE_CHOICE) )->size()</span></li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	<li>(1..*) <b>questions</b> : Question (Composition)</li>
+	</ul>
+	<ul><li>invariant <b>R7AllQustionsInQuestionnaireHasCorrectAnswer</b>:
+		<span style="font-style: italic; color: blue">
+		
+						let isQuestionnaire : Boolean = self.formType = Form_Type::QUESTIONNAIRE,
+							allQuestionDefinitions : Collection(QuestionDefinition) = self.questions->selectByKind(QuestionDefinition),
+							allQuestionDefinitionsHaveAnAnswer : Boolean = allQuestionDefinitions->forAll(q : QuestionDefinition | q.correctAnswer->size() > 0),
+							allStoredQuestions : Collection(StoredQuestion) = self.questions->selectByKind(StoredQuestion),
+							allStoredQuestionsHaveAnAnswer : Boolean = allStoredQuestions->forAll(q : StoredQuestion |  q.definitionOfQuestion.oclAsType(QuestionDefinition).correctAnswer->size() > 0)
+						in
+							isQuestionnaire implies
+							(
+								(allQuestionDefinitions->size() > 0 implies allQuestionDefinitionsHaveAnAnswer)
+								and
+								(allStoredQuestions->size() > 0 implies allStoredQuestionsHaveAnAnswer)
+							)
+	</span></li>
+	</ul>
+	<span style="background-color:LightGrey">EClass: Question</span>(abstract)<br/>
+	<br>
+	<p>Description: Question is the representation for a question, that can be an StoredQuestion or a QuestionDefinition, as Question Meta-Class is abstract.</p>
+	
+	<br>
+	
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: StoredQuestion</span><br>
+	<p>Description: StoredQuestion represent questions added to a Form, that are taken from the database repository or from existing QuestionDefinition.
+	An StoredQuestion is basically a pointer to a QuestionDefinition, and is designed so that the user is not creating new questions all the time and can reuse the ones already created.</p>
+	
+	<ul><li>(1..1) <b>descQuestionDefinition</b>: EString = <span style="font-style: italic; color: blue">if self.definitionOfQuestion->size() = 1 then self.definitionOfQuestion.description else '' endif</span></li> 
+	</ul><br>
+	<ul><li>(1..1) <b>definitionOfQuestion</b> : QuestionDefinition</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: QuestionsRepo</span><br>
+	<p>Description: QuestionsRepo represents an external database composed by a number of QuestionDefinitions.
+	This representation is a local representation, with its own model separated form the WebSite model, as QuestionRepo works as another root.</p>
+	
+	<br>
+	<ul><li>(0..*) <b>questionDefinitions</b> : QuestionDefinition (Composition)</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: QuestionDefinition</span><br>
+	<p>Description: QuestionDefinition represents all the data of each question. This is, its description and its type.
+	Also, is connected to all its possible answers, and to its correct answer or answers.
+	Depending on the type, each question could have from 0 to many correct answers, but allways its correct answer has to be included in the possible answers.</p>
+	
+	<ul><li>(1..1) <b>description</b>: EString</li> 
+	<li>(1..1) <b>type</b>: QuestionType</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>possibleAsnwer</b> : PossibleAsnwer (Composition)</li>
+	<li>(0..*) <b>correctAnswer</b> : PossibleAsnwer</li>
+	</ul>
+	<ul><li>invariant <b>OnlyItsOwnAnswers</b>:
+		<span style="font-style: italic; color: blue">
+		Self.correctAnswer->size() > 0 implies self.possibleAsnwer->includesAll(self.correctAnswer)
+	</span></li>
+	<li>invariant <b>TrueFalseHaveOnlyOneCorrectAnswer</b>:
+		<span style="font-style: italic; color: blue">
+		(self.type = QuestionType::TRUE_FALSE) implies self.correctAnswer->size() < 2
+	</span></li>
+	</ul>
+	<span style="background-color:LightGoldenRodYellow">EClass: PossibleAsnwer</span><br>
+	<p>Description: PossibleAnswer represents a text as a possible answer for a question definition.</p>
+	
+	<ul><li>(1..1) <b>answerText</b>: EString</li> 
+	</ul><br>
+	
+	
+	<span style="background-color:LightGrey">EClass: Elements</span>(abstract)<br/>
+	<br>
+	<p>Description: Elements represent embedded elements in a webpage, that could be media elements or text elements, but not elements itself, as it is abstract.
+	These elements are represented visualy in the webpage.</p>
+	
+	<br>
+	
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: Text</span><br>
+	<p>Description: Text Elements are string elements that are embedded in the webpage to show a message.</p>
+	
+	<ul><li>(1..1) <b>text</b>: EString</li> 
+	</ul><br>
+	
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: Database</span><br>
+	<p>Description: Database represents an external database composed by a number of Entities.
+	This representation is a local representation, with its own model separated form the WebSite model, as Database works as another root.</p>
+	
+	<br>
+	<ul><li>(0..*) <b>entities</b> : Entity (Composition)</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: Entity</span><br>
+	<p>Description: Entity represents a table of the database.
+	Each table is composed by several number of columns, designed as attributes, and any number of references to other tables.
+	Also, each table has a pointer to an attribute of its own, representing its primary key used in SQL databases.</p>
+	
+	<ul><li>(1..1) <b>id</b>: EString</li> 
+	</ul><br>
+	<ul><li>(1..*) <b>attributes</b> : Attribute (Composition)</li>
+	<li>(0..*) <b>refersTo</b> : Entity</li>
+	<li>(1..1) <b>primary_key</b> : Attribute</li>
+	</ul>
+	<ul><li>invariant <b>PrimaryKeyMustBeOwnAttribute</b>:
+		<span style="font-style: italic; color: blue">
+		Self.attributes->includes(self.primary_key)
+	</span></li>
+	<li>invariant <b>CanNotReferToItself</b>:
+		<span style="font-style: italic; color: blue">
+		Not self.refersTo->includes(self)
+	</span></li>
+	</ul>
+	<span style="background-color:LightGoldenRodYellow">EClass: Attribute</span><br>
+	<p>Description: Attribute represents a column of a table from the database.
+	Each attribute has a name and a type.</p>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>attributePrimitiveData_Type</b>: AttributePrimitiveData_Type</li> 
+	</ul><br>
+	
+	
+	<span style="background-color: #e6ffe6">EEnum: QuestionType</span>
+	<br>
+	<p>Description: QuestionType represents the enumeration of different types that a QuestionDefinition could have.</p>
+	
+	{0: MULTIPLE_CHOICE
+	, 1: TRUE_FALSE
+	, 2: SHORT_QUESTION
+	}<br><br>
+	
+	
+	<span style="background-color: #e6ffe6">EEnum: AttributePrimitiveData_Type</span>
+	<br>
+	<p>Description: AttributePrimitiveData_Type represents the type of an attribute from an entity.</p>
+	
+	{0: REAL
+	, 1: INTEGER
+	, 2: BOOLEAN
+	, 3: STRING
+	}<br><br>
+	
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: PageLink</span><br>
+	<p>Description: PageLink represents links between webpages, by using source and target pointers.
+	These links are used to move from a webpage (source) to another (target).</p>
+	
+	<br>
+	<ul><li>(1..1) <b>source#<i>outgoing</i></b> : WebPage</li>
+	<li>(1..1) <b>target#<i>incoming</i></b> : WebPage</li>
+	</ul>
+	<ul><li>invariant <b>LinkCanNotBeToItself</b>:
+		<span style="font-style: italic; color: blue">
+		Self.source <> self.target
+	</span></li>
+	</ul>
+	<span style="background-color:LightGoldenRodYellow">EClass: MediaContent</span><br>
+	<p>Description: MediaContent Elements represent all the elements that are images, videos, sounds, etc.
+	These elements are embedded into the webpage, by using a uri as parameter for finding it.</p>
+	
+	<ul><li>(1..1) <b>link</b>: EString</li> 
+	</ul><br>
+	
+	
+	<span style="background-color: #e6ffe6">EEnum: SocialNetwork_Type</span>
+	<br>
+	<p>Description: SocialNetworkType represents the types of social network content that can be added to the webpage.
+	In this moment we have Twitter and RSS, but this EENum is created for letting the developer to add more in the future.</p>
+	
+	{0: TWITTER
+	, 1: RSS
+	}<br><br>
+	
+	
+	<span style="background-color: #e6ffe6">EEnum: Form_Type</span>
+	<br>
+	<p>Description: Form_Type represents the type of a Form, that could be Survey if the result of the questions doesn't matter, or Questionnaire if the result matters.</p>
+	
+	{0: SURVEY
+	, 1: QUESTIONNAIRE
+	}<br><br>
+	
+	
+	<span style="background-color:LightGrey">EClass: CRUDPage</span>(abstract)<br/>
+	<br>
+	<p>Description: CRUDPage represents a kind of webpage designated to read, write, update or delete data from the database.
+	Each CRUDPage is associated to an entity, which is a table from the database.</p>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	<li>(1..1) <b>entity</b> : Entity</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: CreationCRUD</span><br>
+	<p>Description: CreationCRUD represents a webpage for creating a new instace of the entity associated to that CRUDPage into the database.</p>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	<li>(1..1) <b>entity</b> : Entity</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: DelitionCRUD</span><br>
+	<p>Description: DelitionCRUD represents a webpage for deliting an instace of the entity associated to that CRUDPage from the database.</p>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	<li>(1..1) <b>entity</b> : Entity</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: AllCRUD</span><br>
+	<p>Description: AllCRUD represents a webpage for generating all the other CRUDPages associated with an entity.</p>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	<li>(1..1) <b>entity</b> : Entity</li>
+	</ul>
+	<ul><li>invariant <b>R3ALLCRUDImpliesNoOtherCRUD</b>:
+		<span style="font-style: italic; color: blue">
+		
+						let allCRUDPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(CRUDPage),
+							entityCRUDPages : Collection(CRUDPage) = allCRUDPages->select(p : CRUDPage | p.entity = self.entity),
+							notALLCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->select(p : CRUDPage | not p.oclIsKindOf(AllCRUD))
+						in
+							notALLCRUDTypePages->size() = 0
+	</span></li>
+	<li>invariant <b>OnlyOneCRUDOfEachTypeMax</b>:
+		<span style="font-style: italic; color: blue">
+		
+						let allCRUDPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(CRUDPage),
+							entityCRUDPages : Collection(CRUDPage) = allCRUDPages->select(p : CRUDPage | p.entity = self.entity),
+							AllCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(AllCRUD),
+							IndexCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(IndexCRUD),
+							DetailCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(DetailCRUD),
+							CreationCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(CreationCRUD),
+							DelitionCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(DelitionCRUD)
+						in
+							AllCRUDTypePages->size() < 2 and
+							DetailCRUDTypePages->size() < 2 and
+							IndexCRUDTypePages->size() < 2 and
+							CreationCRUDTypePages->size() < 2 and
+							DelitionCRUDTypePages->size() < 2
+						
+	</span></li>
+	</ul>
+	<span style="background-color:LightGoldenRodYellow">EClass: IndexCRUD</span><br>
+	<p>Description: IndexCRUD represents a webpage for showing all the instances of the entity associated with that CRUDPage.</p>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	<li>(1..1) <b>entity</b> : Entity</li>
+	</ul>
+	<ul><li>invariant <b>R4IndexImpliesDetail</b>:
+		<span style="font-style: italic; color: blue">
+		
+						let allDetailPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(DetailCRUD)
+						in
+							allDetailPages->exists(p : CRUDPage | p.entity = self.entity)
+	</span></li>
+	</ul>
+	<span style="background-color:LightGoldenRodYellow">EClass: DetailCRUD</span><br>
+	<p>Description: DetailCRUD represents a webpage for checking the details of an instance of the entity associated to the CRUDPage.</p>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	<li>(1..1) <b>entity</b> : Entity</li>
+	</ul>
+	<ul><li>invariant <b>R4DetailImpliesIndex</b>:
+		<span style="font-style: italic; color: blue">
+		
+						let allIndexPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(IndexCRUD)
+						in
+							allIndexPages->exists(p : CRUDPage | p.entity = self.entity)
+	</span></li>
+	</ul>
 </body>
 
