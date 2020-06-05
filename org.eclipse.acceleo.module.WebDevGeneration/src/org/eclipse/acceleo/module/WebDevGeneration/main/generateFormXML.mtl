@@ -37,14 +37,15 @@
 [for(anAnswer : PossibleAsnwer | aQuestion.possibleAsnwer)]
 	[generateAnswer(anAnswer, aQuestion)/]
 [/for]
-[if(aQuestion.type=QuestionType::MULTIPLE_CHOICE)]	<shuffleanswers>1</shuffleanswers>
+[if(aQuestion.type=QuestionType::MULTIPLE_CHOICE and aQuestion.correctAnswer->size() > 1)]	<shuffleanswers>true</shuffleanswers>
+<single>false</single>[elseif(aQuestion.type=QuestionType::MULTIPLE_CHOICE)]<shuffleanswers>true</shuffleanswers>
 </question>[else]</question>[/if]
 
 [/template]
 
 [template public generateAnswer(anAnswer : PossibleAsnwer, aQuestion : QuestionDefinition)]
 [let fr : Real = 100/aQuestion.correctAnswer->size()]
-<answer fraction="[if(aQuestion.correctAnswer->includes(anAnswer))][fr/][else]0[/if]">
+<answer fraction="[if(aQuestion.correctAnswer->includes(anAnswer) and aQuestion.type = QuestionType::MULTIPLE_CHOICE)][fr.floor()/][elseif(aQuestion.correctAnswer->includes(anAnswer) and aQuestion.type = QuestionType::SHORT_QUESTION)]100[else]0[/if]">
 	<text>[anAnswer.answerText/]</text>
 	<feedback><text>[if(aQuestion.correctAnswer->includes(anAnswer))]You're Right!![else]I'm afraid not...[/if]</text></feedback>[/let]
 [/template]

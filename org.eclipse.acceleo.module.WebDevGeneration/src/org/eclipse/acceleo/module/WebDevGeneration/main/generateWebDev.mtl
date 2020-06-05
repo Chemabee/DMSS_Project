@@ -17,7 +17,7 @@
 [template public generateAbstractWebPage(roleWebPage : WebPage, role : Role)]
 [for (pageLink : PageLink | roleWebPage.outgoing)]
 <li class="nav-item">
-	<a class="nav-link" href="[pageLink.target.name+'.html'/]">Link to [pageLink.target.name+'.html'/]</a>
+	<a class="nav-link" href="[pageLink.target.name.substituteAll(' ', '')+'.html'/]">Link to [pageLink.target.name.substituteAll(' ', '')+'.html'/]</a>
 </li>
 [generateWebPage(pageLink.target, role)/]
 [/for]
@@ -120,14 +120,22 @@
   </div>
   <div class="col-8">
     <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list"><code>Instance number one	    <br><small>Attribute 1</small>
-	    <br><small>Attribute 2</small></code></div>
-      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"><code>Instance number two	    <br><small>Attribute 1</small>
-	    <br><small>Attribute 2</small></code></div>
-      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"><code>Instance number three	    <br><small>Attribute 1</small>
-	    <br><small>Attribute 2</small></code></div>
-      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"><code>Instance number four	    <br><small>Attribute 1</small>
-	    <br><small>Attribute 2</small></code></div>
+      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list"><code>Instance number one
+	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
+	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
+	  [/for]</code></div>
+      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list"><code>Instance number two
+	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
+	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
+	  [/for]</code></div>
+      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"><code>Instance number three
+	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
+	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
+	  [/for]</code></div>
+      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list"><code>Instance number four
+	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
+	  	<br><small>Attribute: [anAttribute.name/] = [anAttribute.attributePrimitiveData_Type/]</small>
+	  [/for]</code></div>
     </div>
   </div>
 </div>

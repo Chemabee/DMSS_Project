@@ -184,11 +184,11 @@
       <details key="color" value="104,176,171"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="constraints" value="onlyItsOwnAnswers trueFalseAndShortQuestionHaveOnlyOneCorrectAnswer"/>
+      <details key="constraints" value="onlyItsOwnAnswers trueFalseHaveOnlyOneCorrectAnswer"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
       <details key="onlyItsOwnAnswers" value="self.correctAnswer->size() > 0 implies self.possibleAsnwer->includesAll(self.correctAnswer)"/>
-      <details key="trueFalseAndShortQuestionHaveOnlyOneCorrectAnswer" value="(self.type = QuestionType::TRUE_FALSE or self.type = QuestionType::SHORT_QUESTION) implies self.correctAnswer->size() &lt; 2"/>
+      <details key="trueFalseHaveOnlyOneCorrectAnswer" value="(self.type = QuestionType::TRUE_FALSE) implies self.correctAnswer->size() &lt; 2"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="possibleAsnwer" upperBound="-1"
         eType="#//PossibleAsnwer" containment="true">
