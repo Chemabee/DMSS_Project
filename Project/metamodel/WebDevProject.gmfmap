@@ -514,28 +514,12 @@
     </labelMappings>
     <tool
         xsi:type="gmftool:CreationTool"
-        href="WebDevProject.gmftool#//@palette/@tools.1/@tools.2"/>
+        href="WebDevProject.gmftool#//@palette/@tools.1/@tools.1"/>
     <diagramLink
         href="WebDevProject.gmfgraph#RoleWebpage"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="WebDevProject.ecore#//Role/webpage"/>
-  </links>
-  <links>
-    <labelMappings
-        xsi:type="gmfmap:DesignLabelMapping"
-        readOnly="true">
-      <diagramLabel
-          href="WebDevProject.gmfgraph#EntityRefersToExternalLabel"/>
-    </labelMappings>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="WebDevProject.gmftool#//@palette/@tools.1/@tools.1"/>
-    <diagramLink
-        href="WebDevProject.gmfgraph#EntityRefersTo"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="WebDevProject.ecore#//Entity/refersTo"/>
   </links>
   <diagram>
     <diagramCanvas

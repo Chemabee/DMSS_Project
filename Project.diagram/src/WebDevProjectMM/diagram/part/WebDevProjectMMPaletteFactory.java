@@ -59,8 +59,7 @@ public class WebDevProjectMMPaletteFactory {
 				WebDevProjectMM.diagram.part.Messages.Connections2Group_title);
 		paletteContainer.setId("createConnections2Group"); //$NON-NLS-1$
 		paletteContainer.add(createPageLink1CreationTool());
-		paletteContainer.add(createRefersTo2CreationTool());
-		paletteContainer.add(createWebpage3CreationTool());
+		paletteContainer.add(createWebpage2CreationTool());
 		return paletteContainer;
 	}
 
@@ -293,27 +292,12 @@ public class WebDevProjectMMPaletteFactory {
 	/**
 	* @generated
 	*/
-	private ToolEntry createRefersTo2CreationTool() {
+	private ToolEntry createWebpage2CreationTool() {
 		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
-				WebDevProjectMM.diagram.part.Messages.RefersTo2CreationTool_title,
-				WebDevProjectMM.diagram.part.Messages.RefersTo2CreationTool_desc, Collections.singletonList(
-						WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.EntityRefersTo_4003));
-		entry.setId("createRefersTo2CreationTool"); //$NON-NLS-1$
-		entry.setSmallIcon(WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes
-				.getImageDescriptor(WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.EntityRefersTo_4003));
-		entry.setLargeIcon(entry.getSmallIcon());
-		return entry;
-	}
-
-	/**
-	* @generated
-	*/
-	private ToolEntry createWebpage3CreationTool() {
-		DefaultLinkToolEntry entry = new DefaultLinkToolEntry(
-				WebDevProjectMM.diagram.part.Messages.Webpage3CreationTool_title,
-				WebDevProjectMM.diagram.part.Messages.Webpage3CreationTool_desc, Collections
+				WebDevProjectMM.diagram.part.Messages.Webpage2CreationTool_title,
+				WebDevProjectMM.diagram.part.Messages.Webpage2CreationTool_desc, Collections
 						.singletonList(WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.RoleWebpage_4002));
-		entry.setId("createWebpage3CreationTool"); //$NON-NLS-1$
+		entry.setId("createWebpage2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes
 				.getImageDescriptor(WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.RoleWebpage_4002));
 		entry.setLargeIcon(entry.getSmallIcon());

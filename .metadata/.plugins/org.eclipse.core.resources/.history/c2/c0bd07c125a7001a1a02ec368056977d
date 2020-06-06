@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="WebDevProjectMM" nsURI="https://www.WebDevProjectMM.com" nsPrefix="WebDevProjectMM">
+  <eAnnotations source="gmf"/>
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
+  <eAnnotations source="MyDSLDoc">
+    <details key="Author" value="José María Crespo Sánchez&#xD;&#xA;Enrique Vílchez Campillejo"/>
+    <details key="Last Updated" value="05-06-2020"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Role">
+    <eAnnotations source="gmf.node">
+      <details key="figure" value="svg"/>
+      <details key="label" value="name"/>
+      <details key="svg.uri" value="platform:/plugin/Project/figures/user.svg"/>
+      <details key="label.icon" value="false"/>
+      <details key="label.placement" value="external"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="This Meta-Class represents the role associated to an user while moving throught the WebSite. &#xD;&#xA;Each Role has access to several WebPages."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numAccesiblePages" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"
+        volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="derivation" value="self.webpage->size()"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="webpage" lowerBound="1"
+        upperBound="-1" eType="#//WebPage" eOpposite="#//WebPage/role">
+      <eAnnotations source="gmf.link">
+        <details key="target.decoration" value="arrow"/>
+        <details key="color" value="178,178,178"/>
+        <details key="style" value="dot"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WebSite">
+    <eAnnotations source="gmf.diagram">
+      <details key="label" value="name"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="R6MustIncludeAtLeastOneQuestionnaire R6MustIncludeAtLeastOneSurvey"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="R6MustIncludeAtLeastOneQuestionnaire" value="&#xA;&#x9;&#x9;&#x9;let allForms : Collection(Form) = self.webPages->selectByKind(Form),&#xA;&#x9;&#x9;&#x9;&#x9;existsAnyQuestionnaires : Boolean = allForms->exists(f : Form | f.formType = Form_Type::QUESTIONNAIRE)&#xA;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;existsAnyQuestionnaires"/>
+      <details key="R6MustIncludeAtLeastOneSurvey" value="&#xA;&#x9;&#x9;&#x9;let allForms : Collection(Form) = self.webPages->selectByKind(Form),&#xA;&#x9;&#x9;&#x9;&#x9;existsAnySurvey : Boolean = allForms->exists(f : Form | f.formType = Form_Type::SURVEY)&#xA;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;existsAnySurvey"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="WebSite Meta-Class represents the root where all the WebPages and roles are contained.&#xD;&#xA;It has a path called 'URL' used by all the webpages contained in it, appart from other attributes for self-describing."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="roles" lowerBound="1" upperBound="-1"
+        eType="#//Role" containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="list"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="webPages" lowerBound="1"
+        upperBound="-1" eType="#//WebPage" containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="list"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="URL" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="link" upperBound="-1" eType="#//PageLink"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WebPage" abstract="true">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="R2isolatedWebPage"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="R2isolatedWebPage" value="self.role->size() > 0 or self.incoming->size() > 0"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="WebPage represents instances of webpages contained in the WebSite. Each of those webpages can be of any of the sub-types of webpage, but not of type webpage, as it is an abstract class.&#xD;&#xA;Each webpage can be accessed by any number of roles.&#xD;&#xA;Also, each webpage has links to other webpages, that can be inside our model or outside from our model (external links).&#xD;&#xA;Finally, each webpage can contain any number of elements (media elements or text elements), and any number of social network content."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="socialnetworkcontent" upperBound="-1"
+        eType="#//SocialNetworkContent" containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="list"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//Elements" containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="list"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoing" upperBound="-1"
+        eType="#//PageLink" eOpposite="#//PageLink/source"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" upperBound="-1"
+        eType="#//PageLink" eOpposite="#//PageLink/target"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" upperBound="-1" eType="#//Role"
+        eOpposite="#//Role/webpage"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="externalLink" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SocialNetworkContent">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="parameters"/>
+      <details key="color" value="203,223,189"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="SocialNetworkContent represents embedded content from social networks such as Twitter or RSS.&#xD;&#xA;This content is shown in the webpage, according to the paramenters given by the user."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="parameters" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="socialNetworkType" lowerBound="1"
+        eType="#//SocialNetwork_Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RegularContentPage" eSuperTypes="#//WebPage">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="color" value="246,244,210"/>
+      <details key="label.icon" value="false"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="RegulaContentPage represent pages that only have elements and social network content inside."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Form" eSuperTypes="#//WebPage">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="name"/>
+      <details key="color" value="212,224,155"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="R7AllQustionsInQuestionnaireHasCorrectAnswer"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="R7AllQustionsInQuestionnaireHasCorrectAnswer" value="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;let isQuestionnaire : Boolean = self.formType = Form_Type::QUESTIONNAIRE,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;allQuestionDefinitions : Collection(QuestionDefinition) = self.questions->selectByKind(QuestionDefinition),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;allQuestionDefinitionsHaveAnAnswer : Boolean = allQuestionDefinitions->forAll(q : QuestionDefinition | q.correctAnswer->size() > 0),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;allStoredQuestions : Collection(StoredQuestion) = self.questions->selectByKind(StoredQuestion),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;allStoredQuestionsHaveAnAnswer : Boolean = allStoredQuestions->forAll(q : StoredQuestion |  q.definitionOfQuestion.oclAsType(QuestionDefinition).correctAnswer->size() > 0)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;isQuestionnaire implies&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(allQuestionDefinitions->size() > 0 implies allQuestionDefinitionsHaveAnAnswer)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;and&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;(allStoredQuestions->size() > 0 implies allStoredQuestionsHaveAnAnswer)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;)"/>
+    </eAnnotations>
+    <eAnnotations source="MYDSLDoc">
+      <details key="Description" value="Form represent webpages of type Questionnaire or Survey, as the Meta-Class Form is abstract.&#xD;&#xA;Forms are a set of questions that need to be answered by users."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questions" lowerBound="1"
+        upperBound="-1" eType="#//Question" containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="list"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="formType" lowerBound="1"
+        eType="#//Form_Type"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numTFQuestions" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"
+        volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="derivation" value="self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::TRUE_FALSE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definitionOfQuestion.type = QuestionType::TRUE_FALSE) )->size()"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numMCQuestions" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBigInteger"
+        volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="derivation" value="self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::MULTIPLE_CHOICE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definitionOfQuestion.type = QuestionType::MULTIPLE_CHOICE) )->size()"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Question" abstract="true">
+    <eAnnotations source="MYDSLDoc">
+      <details key="Description" value="Question is the representation for a question, that can be an StoredQuestion or a QuestionDefinition, as Question Meta-Class is abstract."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StoredQuestion" eSuperTypes="#//Question">
+    <eAnnotations source="gmf.node">
+      <details key="color" value="143,192,169"/>
+      <details key="label" value="descQuestionDefinition"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="StoredQuestion represent questions added to a Form, that are taken from the database repository or from existing QuestionDefinition.&#xD;&#xA;An StoredQuestion is basically a pointer to a QuestionDefinition, and is designed so that the user is not creating new questions all the time and can reuse the ones already created."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="descQuestionDefinition"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        volatile="true" transient="true" derived="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="derivation" value="if self.definitionOfQuestion->size() = 1 then self.definitionOfQuestion.description else '' endif"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="definitionOfQuestion" lowerBound="1"
+        eType="#//QuestionDefinition">
+      <eAnnotations source="gmf.affixed"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QuestionsRepo">
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="QuestionsRepo represents an external database composed by a number of QuestionDefinitions.&#xD;&#xA;This representation is a local representation, with its own model separated form the WebSite model, as QuestionRepo works as another root."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="questionDefinitions" upperBound="-1"
+        eType="#//QuestionDefinition" containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="list"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QuestionDefinition" eSuperTypes="#//Question">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="description"/>
+      <details key="color" value="104,176,171"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="onlyItsOwnAnswers trueFalseHaveOnlyOneCorrectAnswer"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="onlyItsOwnAnswers" value="self.correctAnswer->size() > 0 implies self.possibleAsnwer->includesAll(self.correctAnswer)"/>
+      <details key="trueFalseHaveOnlyOneCorrectAnswer" value="(self.type = QuestionType::TRUE_FALSE) implies self.correctAnswer->size() &lt; 2"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="QuestionDefinition represents all the data of each question. This is, its description and its type.&#xD;&#xA;Also, is connected to all its possible answers, and to its correct answer or answers.&#xD;&#xA;Depending on the type, each question could have from 0 to many correct answers, but allways its correct answer has to be included in the possible answers."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="possibleAsnwer" upperBound="-1"
+        eType="#//PossibleAsnwer" containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="list"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//QuestionType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="correctAnswer" upperBound="-1"
+        eType="#//PossibleAsnwer"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PossibleAsnwer">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="answerText"/>
+      <details key="label.icon" value="false"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="PossibleAnswer represents a text as a possible answer for a question definition."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="answerText" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Elements" abstract="true">
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="Elements represent embedded elements in a webpage, that could be media elements or text elements, but not elements itself, as it is abstract.&#xD;&#xA;These elements are represented visualy in the webpage."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//Elements">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="text"/>
+      <details key="color" value="241,156,121"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="Text Elements are string elements that are embedded in the webpage to show a message."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Database">
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="Database represents an external database composed by a number of Entities.&#xD;&#xA;This representation is a local representation, with its own model separated form the WebSite model, as Database works as another root."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//Entity" containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="list"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Entity">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="primaryKeyMustBeOwnAttribute canNotReferToItself"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="primaryKeyMustBeOwnAttribute" value="self.attributes->includes(self.primary_key)"/>
+      <details key="canNotReferToItself" value="not self.refersTo->includes(self)"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="Entity represents a table of the database.&#xD;&#xA;Each table is composed by several number of columns, designed as attributes, and any number of references to other tables.&#xD;&#xA;Also, each table has a pointer to an attribute of its own, representing its primary key used in SQL databases."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" lowerBound="1"
+        upperBound="-1" eType="#//Attribute" containment="true">
+      <eAnnotations source="gmf.compartment">
+        <details key="layout" value="list"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refersTo" upperBound="-1"
+        eType="#//Entity">
+      <eAnnotations source="gmf.link"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="primary_key" lowerBound="1"
+        eType="#//Attribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute">
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="Attribute represents a column of a table from the database.&#xD;&#xA;Each attribute has a name and a type."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attributePrimitiveData_Type"
+        lowerBound="1" eType="#//AttributePrimitiveData_Type"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="QuestionType">
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="QuestionType represents the enumeration of different types that a QuestionDefinition could have."/>
+    </eAnnotations>
+    <eLiterals name="MULTIPLE_CHOICE"/>
+    <eLiterals name="TRUE_FALSE" value="1"/>
+    <eLiterals name="SHORT_QUESTION" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AttributePrimitiveData_Type">
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="AttributePrimitiveData_Type represents the type of an attribute from an entity."/>
+    </eAnnotations>
+    <eLiterals name="REAL"/>
+    <eLiterals name="INTEGER" value="1"/>
+    <eLiterals name="BOOLEAN" value="2"/>
+    <eLiterals name="STRING" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PageLink">
+    <eAnnotations source="gmf.link">
+      <details key="source" value="source"/>
+      <details key="target" value="target"/>
+      <details key="target.decoration" value="filledclosedarrow"/>
+      <details key="color" value="0,0,0"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="linkCanNotBeToItself"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="linkCanNotBeToItself" value="self.source &lt;> self.target"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="PageLink represents links between webpages, by using source and target pointers.&#xD;&#xA;These links are used to move from a webpage (source) to another (target)."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
+        eType="#//WebPage" eOpposite="#//WebPage/outgoing"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" lowerBound="1"
+        eType="#//WebPage" eOpposite="#//WebPage/incoming"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MediaContent" eSuperTypes="#//Elements">
+    <eAnnotations source="gmf.node">
+      <details key="label" value="link"/>
+      <details key="color" value="164,74,63"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="MediaContent Elements represent all the elements that are images, videos, sounds, etc.&#xD;&#xA;These elements are embedded into the webpage, by using a uri as parameter for finding it."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="link" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SocialNetwork_Type">
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="SocialNetworkType represents the types of social network content that can be added to the webpage.&#xD;&#xA;In this moment we have Twitter and RSS, but this EENum is created for letting the developer to add more in the future."/>
+    </eAnnotations>
+    <eLiterals name="TWITTER"/>
+    <eLiterals name="RSS" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Form_Type">
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="Form_Type represents the type of a Form, that could be Survey if the result of the questions doesn't matter, or Questionnaire if the result matters."/>
+    </eAnnotations>
+    <eLiterals name="SURVEY"/>
+    <eLiterals name="QUESTIONNAIRE" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CRUDPage" abstract="true" eSuperTypes="#//WebPage">
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="CRUDPage represents a kind of webpage designated to read, write, update or delete data from the database.&#xD;&#xA;Each CRUDPage is associated to an entity, which is a table from the database."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
+        eType="#//Entity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CreationCRUD" eSuperTypes="#//CRUDPage">
+    <eAnnotations source="gmf.node">
+      <details key="label.text" value="CreationCRUD"/>
+      <details key="color" value="203,115,92"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="CreationCRUD represents a webpage for creating a new instace of the entity associated to that CRUDPage into the database."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DelitionCRUD" eSuperTypes="#//CRUDPage">
+    <eAnnotations source="gmf.node">
+      <details key="label.text" value="DelitionCRUD"/>
+      <details key="color" value="203,115,92"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="DelitionCRUD represents a webpage for deliting an instace of the entity associated to that CRUDPage from the database."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AllCRUD" eSuperTypes="#//CRUDPage">
+    <eAnnotations source="gmf.node">
+      <details key="label.text" value="AllCRUD"/>
+      <details key="color" value="203,115,92"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="R3ALLCRUDImpliesNoOtherCRUD onlyOneCRUDOfEachTypeMax"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="R3ALLCRUDImpliesNoOtherCRUD" value="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;let allCRUDPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(CRUDPage),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;entityCRUDPages : Collection(CRUDPage) = allCRUDPages->select(p : CRUDPage | p.entity = self.entity),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;notALLCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->select(p : CRUDPage | not p.oclIsKindOf(AllCRUD))&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;notALLCRUDTypePages->size() = 0"/>
+      <details key="onlyOneCRUDOfEachTypeMax" value="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;let allCRUDPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(CRUDPage),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;entityCRUDPages : Collection(CRUDPage) = allCRUDPages->select(p : CRUDPage | p.entity = self.entity),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AllCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(AllCRUD),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;IndexCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(IndexCRUD),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DetailCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(DetailCRUD),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;CreationCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(CreationCRUD),&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DelitionCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(DelitionCRUD)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;AllCRUDTypePages->size() &lt; 2 and&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DetailCRUDTypePages->size() &lt; 2 and&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;IndexCRUDTypePages->size() &lt; 2 and&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;CreationCRUDTypePages->size() &lt; 2 and&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;DelitionCRUDTypePages->size() &lt; 2&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="AllCRUD represents a webpage for generating all the other CRUDPages associated with an entity."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IndexCRUD" eSuperTypes="#//CRUDPage">
+    <eAnnotations source="gmf.node">
+      <details key="label.text" value="IndexCRUD"/>
+      <details key="color" value="203,115,92"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="R4IndexImpliesDetail"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="R4IndexImpliesDetail" value="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;let allDetailPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(DetailCRUD)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;allDetailPages->exists(p : CRUDPage | p.entity = self.entity)"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="IndexCRUD represents a webpage for showing all the instances of the entity associated with that CRUDPage."/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DetailCRUD" eSuperTypes="#//CRUDPage">
+    <eAnnotations source="gmf.node">
+      <details key="label.text" value="DetailCRUD"/>
+      <details key="color" value="203,115,92"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="R4DetailImpliesIndex"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="R4DetailImpliesIndex" value="&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;let allIndexPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(IndexCRUD)&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;in&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;allIndexPages->exists(p : CRUDPage | p.entity = self.entity)"/>
+    </eAnnotations>
+    <eAnnotations source="MyDSLDoc">
+      <details key="Description" value="DetailCRUD represents a webpage for checking the details of an instance of the entity associated to the CRUDPage."/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>

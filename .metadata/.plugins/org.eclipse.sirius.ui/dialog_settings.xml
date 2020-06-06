@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="ExportRepresentationsAsImagesDialog">
-		<item value="JPG" key="ExportRepresentationsAsImagesDialog.imageFormat"/>
+		<item value="SVG" key="ExportRepresentationsAsImagesDialog.imageFormat"/>
 		<list key="ExportRepresentationsAsImagesDialog.folder">
 			<item value="D:\Users\gsb-d\Escritorio"/>
 		</list>
 		<list key="ExportRepresentationsAsImagesDialog.file">
+			<item value="D:\Users\gsb-d\Escritorio"/>
 			<item value="E:\Desktop\NeonDMSS1718\DMSS_Project\Project\metamodel"/>
 			<item value="E:\Desktop\NeonDMSS1718\DMSS_Project\Project\metamodel\ class diagram.jpg"/>
 		</list>

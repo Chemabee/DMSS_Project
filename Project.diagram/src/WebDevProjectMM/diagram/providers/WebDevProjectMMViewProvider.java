@@ -25,7 +25,6 @@ import org.eclipse.gmf.runtime.draw2d.ui.figures.FigureUtilities;
 import org.eclipse.gmf.runtime.emf.core.util.EMFCoreUtil;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.emf.type.core.IHintedType;
-import org.eclipse.gmf.runtime.notation.Connector;
 import org.eclipse.gmf.runtime.notation.DecorationNode;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.Edge;
@@ -268,8 +267,6 @@ public class WebDevProjectMMViewProvider extends AbstractProvider implements IVi
 					preferencesHint);
 		case WebDevProjectMM.diagram.edit.parts.RoleWebpageEditPart.VISUAL_ID:
 			return createRoleWebpage_4002(containerView, index, persisted, preferencesHint);
-		case WebDevProjectMM.diagram.edit.parts.EntityRefersToEditPart.VISUAL_ID:
-			return createEntityRefersTo_4003(containerView, index, persisted, preferencesHint);
 		}
 		// can never happen, provided #provides(CreateEdgeViewOperation) is correct
 		return null;
@@ -959,55 +956,6 @@ public class WebDevProjectMMViewProvider extends AbstractProvider implements IVi
 		Location location6001 = (Location) label6001.getLayoutConstraint();
 		location6001.setX(0);
 		location6001.setY(40);
-		return edge;
-	}
-
-	/**
-	* @generated
-	*/
-	public Edge createEntityRefersTo_4003(View containerView, int index, boolean persisted,
-			PreferencesHint preferencesHint) {
-		Connector edge = NotationFactory.eINSTANCE.createConnector();
-		edge.getStyles().add(NotationFactory.eINSTANCE.createFontStyle());
-		RelativeBendpoints bendpoints = NotationFactory.eINSTANCE.createRelativeBendpoints();
-		ArrayList<RelativeBendpoint> points = new ArrayList<RelativeBendpoint>(2);
-		points.add(new RelativeBendpoint());
-		points.add(new RelativeBendpoint());
-		bendpoints.setPoints(points);
-		edge.setBendpoints(bendpoints);
-		ViewUtil.insertChildView(containerView, edge, index, persisted);
-		edge.setType(WebDevProjectMM.diagram.part.WebDevProjectMMVisualIDRegistry
-				.getType(WebDevProjectMM.diagram.edit.parts.EntityRefersToEditPart.VISUAL_ID));
-		edge.setElement(null);
-		// initializePreferences
-		final IPreferenceStore prefStore = (IPreferenceStore) preferencesHint.getPreferenceStore();
-
-		org.eclipse.swt.graphics.RGB lineRGB = PreferenceConverter.getColor(prefStore,
-				IPreferenceConstants.PREF_LINE_COLOR);
-		ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE.getLineStyle_LineColor(),
-				FigureUtilities.RGBToInteger(lineRGB));
-		FontStyle edgeFontStyle = (FontStyle) edge.getStyle(NotationPackage.Literals.FONT_STYLE);
-		if (edgeFontStyle != null) {
-			FontData fontData = PreferenceConverter.getFontData(prefStore, IPreferenceConstants.PREF_DEFAULT_FONT);
-			edgeFontStyle.setFontName(fontData.getName());
-			edgeFontStyle.setFontHeight(fontData.getHeight());
-			edgeFontStyle.setBold((fontData.getStyle() & SWT.BOLD) != 0);
-			edgeFontStyle.setItalic((fontData.getStyle() & SWT.ITALIC) != 0);
-			org.eclipse.swt.graphics.RGB fontRGB = PreferenceConverter.getColor(prefStore,
-					IPreferenceConstants.PREF_FONT_COLOR);
-			edgeFontStyle.setFontColor(FigureUtilities.RGBToInteger(fontRGB).intValue());
-		}
-		Routing routing = Routing.get(prefStore.getInt(IPreferenceConstants.PREF_LINE_STYLE));
-		if (routing != null) {
-			ViewUtil.setStructuralFeatureValue(edge, NotationPackage.eINSTANCE.getRoutingStyle_Routing(), routing);
-		}
-		Node label6002 = createLabel(edge, WebDevProjectMM.diagram.part.WebDevProjectMMVisualIDRegistry
-				.getType(WebDevProjectMM.diagram.edit.parts.WrappingLabel2EditPart.VISUAL_ID));
-		label6002.getStyles().add(NotationFactory.eINSTANCE.createDescriptionStyle());
-		label6002.setLayoutConstraint(NotationFactory.eINSTANCE.createLocation());
-		Location location6002 = (Location) label6002.getLayoutConstraint();
-		location6002.setX(0);
-		location6002.setY(40);
 		return edge;
 	}
 

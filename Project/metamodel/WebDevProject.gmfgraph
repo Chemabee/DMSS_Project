@@ -208,12 +208,6 @@
     <descriptors name="RoleWebpageExternalLabelFigure">
       <actualFigure xsi:type="gmfgraph:Label" name="RoleWebpageExternalLabel"/>
     </descriptors>
-    <descriptors name="EntityRefersToFigure">
-      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="EntityRefersToFigure"/>
-    </descriptors>
-    <descriptors name="EntityRefersToExternalLabelFigure">
-      <actualFigure xsi:type="gmfgraph:Label" name="EntityRefersToExternalLabel"/>
-    </descriptors>
   </figures>
   <nodes name="Role" figure="RoleFigure"/>
   <nodes name="SocialNetworkContent" figure="SocialNetworkContentFigure"/>
@@ -231,7 +225,6 @@
   <nodes name="DetailCRUD" figure="DetailCRUDFigure"/>
   <connections name="PageLink" figure="PageLinkFigure"/>
   <connections name="RoleWebpage" figure="RoleWebpageFigure"/>
-  <connections name="EntityRefersTo" figure="EntityRefersToFigure"/>
   <compartments name="RegularContentPageSocialnetworkcontentCompartment" figure="RegularContentPageFigure" collapsible="true" accessor="//@figures.0/@descriptors.3/@accessors.1"/>
   <compartments name="RegularContentPageElementsCompartment" figure="RegularContentPageFigure" collapsible="true" accessor="//@figures.0/@descriptors.3/@accessors.2"/>
   <compartments name="FormSocialnetworkcontentCompartment" figure="FormFigure" collapsible="true" accessor="//@figures.0/@descriptors.4/@accessors.1"/>
@@ -263,5 +256,4 @@
   <labels name="IndexCRUDLabel" figure="IndexCRUDFigure" accessor="//@figures.0/@descriptors.13/@accessors.0"/>
   <labels name="DetailCRUDLabel" figure="DetailCRUDFigure" accessor="//@figures.0/@descriptors.14/@accessors.0"/>
   <labels name="RoleWebpageExternalLabel" figure="RoleWebpageExternalLabelFigure" elementIcon="false"/>
-  <labels name="EntityRefersToExternalLabel" figure="EntityRefersToExternalLabelFigure" elementIcon="false"/>
 </gmfgraph:Canvas>

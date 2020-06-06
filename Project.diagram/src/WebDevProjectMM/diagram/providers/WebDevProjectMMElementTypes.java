@@ -116,10 +116,6 @@ public class WebDevProjectMMElementTypes {
 	* @generated
 	*/
 	public static final IElementType RoleWebpage_4002 = getElementType("Project.diagram.RoleWebpage_4002"); //$NON-NLS-1$
-	/**
-	* @generated
-	*/
-	public static final IElementType EntityRefersTo_4003 = getElementType("Project.diagram.EntityRefersTo_4003"); //$NON-NLS-1$
 
 	/**
 	* @generated
@@ -195,8 +191,6 @@ public class WebDevProjectMMElementTypes {
 			elements.put(PageLink_4001, WebDevProjectMM.WebDevProjectMMPackage.eINSTANCE.getPageLink());
 
 			elements.put(RoleWebpage_4002, WebDevProjectMM.WebDevProjectMMPackage.eINSTANCE.getRole_Webpage());
-
-			elements.put(EntityRefersTo_4003, WebDevProjectMM.WebDevProjectMMPackage.eINSTANCE.getEntity_RefersTo());
 		}
 		return (ENamedElement) elements.get(type);
 	}
@@ -231,7 +225,6 @@ public class WebDevProjectMMElementTypes {
 			KNOWN_ELEMENT_TYPES.add(PossibleAsnwer_3006);
 			KNOWN_ELEMENT_TYPES.add(PageLink_4001);
 			KNOWN_ELEMENT_TYPES.add(RoleWebpage_4002);
-			KNOWN_ELEMENT_TYPES.add(EntityRefersTo_4003);
 		}
 		return KNOWN_ELEMENT_TYPES.contains(elementType);
 	}
@@ -275,8 +268,6 @@ public class WebDevProjectMMElementTypes {
 			return PageLink_4001;
 		case WebDevProjectMM.diagram.edit.parts.RoleWebpageEditPart.VISUAL_ID:
 			return RoleWebpage_4002;
-		case WebDevProjectMM.diagram.edit.parts.EntityRefersToEditPart.VISUAL_ID:
-			return EntityRefersTo_4003;
 		}
 		return null;
 	}

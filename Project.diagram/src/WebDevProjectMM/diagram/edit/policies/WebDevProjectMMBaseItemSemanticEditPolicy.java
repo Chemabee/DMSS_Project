@@ -330,19 +330,6 @@ public class WebDevProjectMMBaseItemSemanticEditPolicy extends SemanticEditPolic
 		}
 
 		/**
-		 * @generated
-		 */
-		public boolean canCreateEntityRefersTo_4003(WebDevProjectMM.Entity source, WebDevProjectMM.Entity target) {
-			if (source != null) {
-				if (source.getRefersTo().contains(target)) {
-					return false;
-				}
-			}
-
-			return canExistEntityRefersTo_4003(source, target);
-		}
-
-		/**
 		* @generated
 		*/
 		public boolean canExistPageLink_4001(WebDevProjectMM.WebSite container, WebDevProjectMM.PageLink linkInstance,
@@ -354,13 +341,6 @@ public class WebDevProjectMMBaseItemSemanticEditPolicy extends SemanticEditPolic
 		* @generated
 		*/
 		public boolean canExistRoleWebpage_4002(WebDevProjectMM.Role source, WebDevProjectMM.WebPage target) {
-			return true;
-		}
-
-		/**
-		* @generated
-		*/
-		public boolean canExistEntityRefersTo_4003(WebDevProjectMM.Entity source, WebDevProjectMM.Entity target) {
 			return true;
 		}
 	}

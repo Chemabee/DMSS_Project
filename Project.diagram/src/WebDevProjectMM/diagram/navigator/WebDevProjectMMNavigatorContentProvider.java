@@ -269,10 +269,6 @@ public class WebDevProjectMMNavigatorContentProvider implements ICommonContentPr
 					WebDevProjectMM.diagram.part.WebDevProjectMMVisualIDRegistry
 							.getType(WebDevProjectMM.diagram.edit.parts.RoleWebpageEditPart.VISUAL_ID));
 			links.addChildren(createNavigatorItems(connectedViews, links, false));
-			connectedViews = getDiagramLinksByType(Collections.singleton(sv),
-					WebDevProjectMM.diagram.part.WebDevProjectMMVisualIDRegistry
-							.getType(WebDevProjectMM.diagram.edit.parts.EntityRefersToEditPart.VISUAL_ID));
-			links.addChildren(createNavigatorItems(connectedViews, links, false));
 			if (!links.isEmpty()) {
 				result.add(links);
 			}

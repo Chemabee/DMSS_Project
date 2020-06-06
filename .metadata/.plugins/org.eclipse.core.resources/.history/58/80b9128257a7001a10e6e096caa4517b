@@ -1,0 +1,84 @@
+[comment encoding = UTF-8 /] [module generateDocumentation
+('http://www.eclipse.org/emf/2002/Ecore')]
+
+[template public generateElement(anEPackage : EPackage)] 
+[comment @main/]
+[file ('DocumentationOfMetaModel.html', false, 'UTF-8')] 
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Documentation of the WebDev Metamodel</title>
+	<meta name="description" content="WebDev Documentation">
+	<link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+<body>
+	<span style="font-family:calibri; color: black">
+	[generateAnnotations(anEPackage)/]
+	<img src="../../figures/class_diagram.svg" border="1" alt="WebDevMM" height="1200"/>
+	[generateProperties(anEPackage)/]
+	<span style="background-color:LightGoldenRodYellow">EClass: [anEPackage.name/]</span>
+	<ul>
+	</ul>
+	[for(class : EClassifier| anEPackage.eClassifiers)]
+	[generateName(class)/]
+	[generateAnnotations(class)/]
+	[generateProperties(class)/]
+	[generateConnections(class)/]
+	[generateInvariants(class)/]
+	[/for]
+</body>
+
+[/file] [/template]
+
+[template public generateName (anEClass : EClassifier)]
+[if(anEClass.oclIsKindOf(EEnum))]<span style="background-color: #e6ffe6">[anEClass.eClass().name/]: [anEClass.name/]</span>
+[elseif(anEClass.oclIsKindOf(EClass) and anEClass.oclAsType(EClass).abstract)]<span style="background-color:LightGrey">[anEClass.eClass().name/]: [anEClass.name/]</span>(abstract)<br/>
+[else]<span style="background-color:LightGoldenRodYellow">[anEClass.eClass().name/]: [anEClass.name/]</span>[/if]<br>
+[/template]
+
+[template public generateAnnotations (anEPackage : EPackage)]
+[for(dict : EStringToStringMapEntry | anEPackage.getEAnnotation('MyDSLDoc').details)]
+<p>[dict.key.toUpperFirst()/]: [dict.value.toUpperFirst()/]</p>
+[/for]
+[/template]
+
+[template public generateAnnotations (aClass : EClassifier)]
+[for(dict : EStringToStringMapEntry | aClass.getEAnnotation('MyDSLDoc').details)]
+<p>[dict.key.toUpperFirst()/]: [dict.value.toUpperFirst()/]</p>
+[/for]
+[/template]
+
+[template public generateProperties (anEPackage : EPackage)]
+[for(anAttribute : EAttribute | anEPackage.eClass().eAllAttributes)]
+<p>[anAttribute.name.toUpperFirst()/]: [anEPackage.eGet(anAttribute.name)/]</p>
+[/for]<br>
+[/template]
+
+[template public generateProperties (aClass : EClassifier) ? (aClass.oclIsKindOf(EClass))]
+[for(anAttribute : EAttribute | aClass.oclAsType(EClass).eAllAttributes) before('<ul>') after('</ul>')]
+<li>([anAttribute.lowerBound/]..[if(anAttribute.upperBound = -1)]*[else][anAttribute.upperBound/][/if]) <b>[anAttribute.name/]</b>: [anAttribute.eAttributeType.name/][if(anAttribute.derived)] = <span style="font-style: italic; color: blue">[anAttribute.getEAnnotation('http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot').details.value/]</span>[/if]</li> 
+[/for]<br>
+[/template]
+
+[template public generateProperties (aClass : EEnum)]
+[for(num : EEnumLiteral| aClass.eLiterals) before('{') separator(', ') after('}<br><br>')]
+[num.value/]: [num.literal/]
+[/for]
+[/template]
+
+[template public generateInvariants (anEClass : EClassifier)]
+[for(dict : EStringToStringMapEntry | anEClass.getEAnnotation('http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot').details) before('<ul>') after('</ul>')]
+<li>invariant <b>[dict.key.toUpperFirst()/]</b>:
+	<span style="font-style: italic; color: blue">
+	[dict.value.toUpperFirst()/]
+</span></li>
+[/for]
+[/template]
+
+[template public generateConnections(anEClass : EClassifier)]
+[for( ref : EReference| anEClass.oclAsType(EClass).eAllReferences) before('<ul>') after('</ul>')]
+<li>([ref.lowerBound/]..[if(ref.upperBound = -1)]*[else][ref.upperBound/][/if]) <b>[ref.name/][if(not ref.eOpposite.oclIsUndefined())]#<i>[ref.eOpposite.name/]</i>[/if]</b> : [ref.eReferenceType.name/][if(ref.containment)] (Composition)[/if]</li>
+[/for]
+[/template]
+

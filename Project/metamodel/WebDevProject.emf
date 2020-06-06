@@ -147,7 +147,6 @@ class Database {
 class Entity {
   @gmf.compartment(layout="list")
   val Attribute[+] attributes;
-  @gmf.link
   ref Entity[*] refersTo;
   id attr String[1] ~id;
   ref Attribute[1] primary_key;

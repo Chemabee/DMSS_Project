@@ -1341,7 +1341,7 @@ public class WebDevProjectMMPackageImpl extends EPackageImpl implements WebDevPr
 		  (entityEClass, 
 		   source, 
 		   new String[] {
-			 "constraints", "primaryKeyMustBeOwnAttribute"
+			 "constraints", "primaryKeyMustBeOwnAttribute canNotReferToItself"
 		   });	
 		addAnnotation
 		  (pageLinkEClass, 
@@ -1564,7 +1564,8 @@ public class WebDevProjectMMPackageImpl extends EPackageImpl implements WebDevPr
 		  (entityEClass, 
 		   source, 
 		   new String[] {
-			 "primaryKeyMustBeOwnAttribute", "self.attributes->includes(self.primary_key)"
+			 "primaryKeyMustBeOwnAttribute", "self.attributes->includes(self.primary_key)",
+			 "canNotReferToItself", "not self.refersTo->includes(self)"
 		   });	
 		addAnnotation
 		  (pageLinkEClass, 
@@ -1608,11 +1609,6 @@ public class WebDevProjectMMPackageImpl extends EPackageImpl implements WebDevPr
 			 "target.decoration", "arrow",
 			 "color", "178,178,178",
 			 "style", "dot"
-		   });	
-		addAnnotation
-		  (getEntity_RefersTo(), 
-		   source, 
-		   new String[] {
 		   });	
 		addAnnotation
 		  (pageLinkEClass, 

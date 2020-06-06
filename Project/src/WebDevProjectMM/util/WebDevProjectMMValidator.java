@@ -536,6 +536,7 @@ public class WebDevProjectMMValidator extends EObjectValidator {
 		if (result || diagnostics != null) result &= validate_EveryKeyUnique(entity, diagnostics, context);
 		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(entity, diagnostics, context);
 		if (result || diagnostics != null) result &= validateEntity_primaryKeyMustBeOwnAttribute(entity, diagnostics, context);
+		if (result || diagnostics != null) result &= validateEntity_canNotReferToItself(entity, diagnostics, context);
 		return result;
 	}
 
@@ -563,6 +564,35 @@ public class WebDevProjectMMValidator extends EObjectValidator {
 				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
 				 "primaryKeyMustBeOwnAttribute",
 				 ENTITY__PRIMARY_KEY_MUST_BE_OWN_ATTRIBUTE__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
+	}
+
+	/**
+	 * The cached validation expression for the canNotReferToItself constraint of '<em>Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String ENTITY__CAN_NOT_REFER_TO_ITSELF__EEXPRESSION = "not self.refersTo->includes(self)";
+
+	/**
+	 * Validates the canNotReferToItself constraint of '<em>Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateEntity_canNotReferToItself(Entity entity, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(WebDevProjectMMPackage.Literals.ENTITY,
+				 entity,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "canNotReferToItself",
+				 ENTITY__CAN_NOT_REFER_TO_ITSELF__EEXPRESSION,
 				 Diagnostic.ERROR,
 				 DIAGNOSTIC_SOURCE,
 				 0);

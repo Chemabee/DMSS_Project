@@ -259,7 +259,7 @@
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" containerViews="referencing-diagrams"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Diagram" semanticHints="WebDevProjectMM"/>
          <context viewClass="org.eclipse.gmf.runtime.notation.Node" semanticHints="2001,2002,2003,2004,2005,2006,2007,2008,3001,3002,3003,3004,3005,3006"/>
-         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002,4003"/>
+         <context viewClass="org.eclipse.gmf.runtime.notation.Edge" semanticHints="4001,4002"/>
       </viewProvider>
    </extension>
 
@@ -274,7 +274,7 @@
             <method name="getType()" value="2001,2002,2003,2004,2005,2006,2007,2008,3001,3002,3003,3004,3005,3006"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Edge" id="generated-links">
-            <method name="getType()" value="4001,4002,4003"/>
+            <method name="getType()" value="4001,4002"/>
          </object>
          <object class="org.eclipse.gmf.runtime.notation.Node" id="generated-labels">
             <method name="getType()" value="5004,5005,5006,5007,5008,5009,5013,5014,5001,5002,5003,5010,5012,5011"/>
@@ -564,15 +564,6 @@
             <param name="semanticHint" value="4002"/>
          </specializationType>
       </metamodel>
-      <metamodel nsURI="https://www.WebDevProjectMM.com">
-         <specializationType
-               id="Project.diagram.EntityRefersTo_4003"
-               name="%metatype.name.EntityRefersTo_4003"
-               kind="org.eclipse.gmf.runtime.emf.type.core.IHintedType">
-            <specializes id="org.eclipse.gmf.runtime.emf.type.core.null"/>
-            <param name="semanticHint" value="4003"/>
-         </specializationType>
-      </metamodel>
    </extension>
 
    <extension point="org.eclipse.gmf.runtime.emf.type.core.elementTypeBindings" id="element-types-bindings">
@@ -602,7 +593,6 @@
          <elementType ref="Project.diagram.PossibleAsnwer_3006"/>
          <elementType ref="Project.diagram.PageLink_4001"/>
          <elementType ref="Project.diagram.RoleWebpage_4002"/>
-         <elementType ref="Project.diagram.EntityRefersTo_4003"/>
          <advice ref="org.eclipse.gmf.runtime.diagram.core.advice.notationDepdendents"/>
       </binding>
    </extension>
