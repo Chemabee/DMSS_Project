@@ -152,15 +152,6 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="RefersTo"
-          description="Create new RefersTo">
-        <smallIcon
-            xsi:type="gmftool:DefaultImage"/>
-        <largeIcon
-            xsi:type="gmftool:DefaultImage"/>
-      </tools>
-      <tools
-          xsi:type="gmftool:CreationTool"
           title="Webpage"
           description="Create new Webpage">
         <smallIcon

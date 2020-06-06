@@ -22,8 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see WebDevProjectMM.WebDevProjectMMPackage#getEntity()
- * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='primaryKeyMustBeOwnAttribute'"
- *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot primaryKeyMustBeOwnAttribute='self.attributes->includes(self.primary_key)'"
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='primaryKeyMustBeOwnAttribute canNotReferToItself'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot primaryKeyMustBeOwnAttribute='self.attributes->includes(self.primary_key)' canNotReferToItself='not self.refersTo->includes(self)'"
  * @generated
  */
 public interface Entity extends EObject {

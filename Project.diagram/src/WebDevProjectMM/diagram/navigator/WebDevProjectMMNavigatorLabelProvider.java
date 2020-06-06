@@ -135,9 +135,6 @@ public class WebDevProjectMMNavigatorLabelProvider extends LabelProvider
 		case WebDevProjectMM.diagram.edit.parts.RoleWebpageEditPart.VISUAL_ID:
 			return getImage("Navigator?Link?https://www.WebDevProjectMM.com?Role?webpage", //$NON-NLS-1$
 					WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.RoleWebpage_4002);
-		case WebDevProjectMM.diagram.edit.parts.EntityRefersToEditPart.VISUAL_ID:
-			return getImage("Navigator?Link?https://www.WebDevProjectMM.com?Entity?refersTo", //$NON-NLS-1$
-					WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.EntityRefersTo_4003);
 		}
 		return getImage("Navigator?UnknownElement", null); //$NON-NLS-1$
 	}
@@ -232,8 +229,6 @@ public class WebDevProjectMMNavigatorLabelProvider extends LabelProvider
 			return getPageLink_4001Text(view);
 		case WebDevProjectMM.diagram.edit.parts.RoleWebpageEditPart.VISUAL_ID:
 			return getRoleWebpage_4002Text(view);
-		case WebDevProjectMM.diagram.edit.parts.EntityRefersToEditPart.VISUAL_ID:
-			return getEntityRefersTo_4003Text(view);
 		}
 		return getUnknownElementText(view);
 	}
@@ -538,23 +533,6 @@ public class WebDevProjectMMNavigatorLabelProvider extends LabelProvider
 		} else {
 			WebDevProjectMM.diagram.part.WebDevProjectMMDiagramEditorPlugin.getInstance()
 					.logError("Parser was not found for label " + 6001); //$NON-NLS-1$
-			return ""; //$NON-NLS-1$
-		}
-	}
-
-	/**
-	* @generated
-	*/
-	private String getEntityRefersTo_4003Text(View view) {
-		IParser parser = WebDevProjectMM.diagram.providers.WebDevProjectMMParserProvider.getParser(
-				WebDevProjectMM.diagram.providers.WebDevProjectMMElementTypes.EntityRefersTo_4003,
-				view.getElement() != null ? view.getElement() : view, CommonParserHint.DESCRIPTION);
-		if (parser != null) {
-			return parser.getPrintString(new EObjectAdapter(view.getElement() != null ? view.getElement() : view),
-					ParserOptions.NONE.intValue());
-		} else {
-			WebDevProjectMM.diagram.part.WebDevProjectMMDiagramEditorPlugin.getInstance()
-					.logError("Parser was not found for label " + 6002); //$NON-NLS-1$
 			return ""; //$NON-NLS-1$
 		}
 	}

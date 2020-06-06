@@ -542,11 +542,6 @@ public class WebDevProjectMMVisualIDRegistry {
 				return true;
 			}
 			break;
-		case WebDevProjectMM.diagram.edit.parts.EntityRefersToEditPart.VISUAL_ID:
-			if (WebDevProjectMM.diagram.edit.parts.WrappingLabel2EditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
 		}
 		return false;
 	}

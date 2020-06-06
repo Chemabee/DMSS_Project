@@ -175,12 +175,6 @@ public class WebDevProjectMMEditPartFactory implements EditPartFactory {
 			case WebDevProjectMM.diagram.edit.parts.WrappingLabelEditPart.VISUAL_ID:
 				return new WebDevProjectMM.diagram.edit.parts.WrappingLabelEditPart(view);
 
-			case WebDevProjectMM.diagram.edit.parts.EntityRefersToEditPart.VISUAL_ID:
-				return new WebDevProjectMM.diagram.edit.parts.EntityRefersToEditPart(view);
-
-			case WebDevProjectMM.diagram.edit.parts.WrappingLabel2EditPart.VISUAL_ID:
-				return new WebDevProjectMM.diagram.edit.parts.WrappingLabel2EditPart(view);
-
 			}
 		}
 		return createUnrecognizedEditPart(context, model);

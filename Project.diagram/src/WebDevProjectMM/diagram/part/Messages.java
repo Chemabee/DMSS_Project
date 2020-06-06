@@ -406,22 +406,12 @@ public class Messages extends NLS {
 	/**
 	* @generated
 	*/
-	public static String RefersTo2CreationTool_title;
+	public static String Webpage2CreationTool_title;
 
 	/**
 	* @generated
 	*/
-	public static String RefersTo2CreationTool_desc;
-
-	/**
-	* @generated
-	*/
-	public static String Webpage3CreationTool_title;
-
-	/**
-	* @generated
-	*/
-	public static String Webpage3CreationTool_desc;
+	public static String Webpage2CreationTool_desc;
 
 	/**
 	* @generated
