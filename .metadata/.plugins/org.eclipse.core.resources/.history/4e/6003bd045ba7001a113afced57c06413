@@ -1,0 +1,382 @@
+[comment encoding = UTF-8 /]
+[module generateWebDev('https://www.WebDevProjectMM.com')]
+
+
+[template public generatePackage(aWebSite : WebSite)]
+[comment @main/]
+[for (role : Role | aWebSite.roles)]
+	[for (roleWebPage : WebPage | role.webpage)]
+[generateWebPage(roleWebPage, role)/]
+	[/for]
+[/for]
+
+[/template]
+
+
+[comment Polimorfic templates for the generic structure of each web page/]
+[template public generateAbstractWebPage(roleWebPage : WebPage, role : Role)]
+[for (pageLink : PageLink | roleWebPage.outgoing)]
+<li class="nav-item">
+	<a class="nav-link" href="[pageLink.target.name.substituteAll(' ', '')+'.html'/]">Link to [pageLink.target.name.substituteAll(' ', '')+'.html'/]</a>
+</li>
+[generateWebPage(pageLink.target, role)/]
+[/for]
+[/template]
+
+
+
+[template public generateWebPage(aWebPage : WebPage, role : Role)/]
+
+
+[comment CRUD pages/]
+[template public generateWebPage(crudPage : CRUDPage, role : Role)]
+[file (role.name+'/'+crudPage.name.substituteAll(' ', '')+'.html', false, 'UTF-8')]
+[generateHeadAndBodyHeader(crudPage, role)/]
+
+	    <main role="main" class="container">
+		<div class="container">
+		  [if (crudPage.elements->size() >= 1)]
+		  <h2>Elements</h2>
+		  [generateElements(crudPage)/]
+		  [/if]
+		</div>
+			
+		  [generateCrudPage(crudPage)/]
+
+	    </main>
+
+		[if (crudPage.socialnetworkcontent->size() >= 1)]
+		[generateSocialNetworks(crudPage)/]
+		[/if]
+	</body>
+</html>	
+[/file]
+[if (crudPage.oclIsTypeOf(DelitionCRUD))]
+	[file (role.name+'/'+crudPage.name.substituteAll(' ', '')+'DelitionConfirmed'+'.html', false, 'UTF-8')]
+	[generateHeadAndBodyHeader(crudPage, role)/]
+	<div class="container">
+	  <h1>[crudPage.entity.id/] Instance <code class="text-danger">deleted</code></h1>
+	</div>
+	[/file]
+[elseif (crudPage.oclIsTypeOf(CreationCRUD))]
+	[file (role.name+'/'+crudPage.name.substituteAll(' ', '')+'CreationConfirmed'+'.html', false, 'UTF-8')]
+	[generateHeadAndBodyHeader(crudPage, role)/]
+	<div class="container">
+	  <h1>[crudPage.entity.id/] Instance <code class="text-success">created</code></h1>
+	</div>
+	[/file]
+[elseif (crudPage.oclIsTypeOf(AllCRUD))]
+	[file (role.name+'/'+crudPage.name.substituteAll(' ', '')+'DelitionConfirmed'+'.html', false, 'UTF-8')]
+	[generateHeadAndBodyHeader(crudPage, role)/]
+	<div class="container">
+	  <h1>[crudPage.entity.id/] Instance <code class="text-danger">deleted</code></h1>
+	</div>
+	[/file]
+	[file (role.name+'/'+crudPage.name.substituteAll(' ', '')+'CreationConfirmed'+'.html', false, 'UTF-8')]
+	[generateHeadAndBodyHeader(crudPage, role)/]
+	<div class="container">
+	  <h1>[crudPage.entity.id/] Instance <code class="text-success">created</code></h1>
+	</div>
+	[/file]
+[/if]
+[/template]
+
+
+
+[template public generateCrudPage(crudPage : CRUDPage)]
+[if (crudPage.oclIsTypeOf(AllCRUD))]
+[generateAllCrudPage(crudPage)/]
+[elseif (crudPage.oclIsTypeOf(CreationCRUD))]
+[generateCreationCrudPage(crudPage)/]
+[elseif (crudPage.oclIsTypeOf(DelitionCRUD))]
+[generateDelitionCrudPage(crudPage)/]
+[elseif (crudPage.oclIsTypeOf(DetailCRUD))]
+[generateDetailCrudPage(crudPage)/]
+[elseif (crudPage.oclIsTypeOf(IndexCRUD))]
+[generateIndexCrudPage(crudPage)/]
+[/if]
+[/template]
+
+
+
+[template public generateAllCrudPage(allCrudPage : CRUDPage)]
+[generateIndexCrudPage(allCrudPage)/]
+[generateDetailCrudPage(allCrudPage)/]
+[generateCreationCrudPage(allCrudPage)/]
+[generateDelitionCrudPage(allCrudPage)/]
+[/template]
+
+
+
+[template public generateCreationCrudPage(creationCrudPage : CRUDPage)]
+<h1>Creation of [creationCrudPage.entity.id/] instances</h1>
+<form>
+[for(anAttribute : Attribute | creationCrudPage.entity.attributes)]
+  <div class="form-group">
+    <label for="exampleInput[anAttribute.name/]">[anAttribute.name/]</label>
+    <input type="email" class="form-control" id="exampleInput[anAttribute.name/]" placeholder="Enter [anAttribute.name/]">
+  </div>
+[/for]
+  <a class="btn btn-primary" href="[creationCrudPage.name.substituteAll(' ', '')+'CreationConfirmed'+'.html'/]" role="button">Create instance</a>
+</form>
+[/template]
+
+
+
+[template public generateDelitionCrudPage(delitionCrudPage : CRUDPage)]
+<h1>Instances of [delitionCrudPage.entity.id/]</h1>
+  <div class="col-4">
+    <div class="list-group" id="list-tab" role="tablist">
+	  <p>Select the instance wanted to be deleted and press "Delete instance" button</p>
+	  [for (count : Integer | Sequence{1,2,3,4})]
+	  <a class="list-group-item list-group-item-action" id="list-[delitionCrudPage.entity.id/][count/]-list" role="tab" data-toggle="list" aria-controls="[delitionCrudPage.entity.id/][self/]">
+	    Instance [delitionCrudPage.entity.id/] [count/]
+	  </a>
+	  [/for]
+	  <a class="btn btn-danger" href="[delitionCrudPage.name.substituteAll(' ', '')+'DelitionConfirmed'+'.html'/]" role="button">Delete instance</a>
+    </div>
+  </div>
+[/template]
+
+
+
+[template public generateIndexCrudPage(indexCrudPage : CRUDPage)]
+<h1>Instances of [indexCrudPage.entity.id/]</h1>
+<div class="row">
+  <div class="col-4">
+	  [for (count : Integer | Sequence{1,2,3,4})]
+	  <a class="list-group-item list-group-item-action" id="[indexCrudPage.entity.id/][self/]" role="tab" aria-controls="[indexCrudPage.entity.id.toUpperCase()/][self/]">
+	    Instance [indexCrudPage.entity.id/] [count/]
+	  </a>
+	  [/for]
+  </div>
+</div>
+[/template]
+
+
+
+[template public generateDetailCrudPage(detailCrudPage : CRUDPage)]
+<h1>Details of [detailCrudPage.entity.id/]</h1>
+<div class="row">
+  <div class="col-4">
+    <div class="list-group" id="list-tab" role="tablist">
+	  [for (count : Integer | Sequence{1,2,3,4})]
+	  <a class="list-group-item list-group-item-action" id="list-[detailCrudPage.entity.id/][count/]-list" role="tab" data-toggle="list" href="#list-[detailCrudPage.entity.id/][self/]" aria-controls="[detailCrudPage.entity.id/][self/]">
+	    Instance [detailCrudPage.entity.id/] [count/]
+	  </a>
+	  [/for]
+    </div>
+  </div>
+  <div class="col-8">
+    <div class="tab-content" id="nav-tabContent">
+	  [for(count : Integer | Sequence{1,2,3,4})]
+	  <div class="tab-pane fade [if (self = 1)]show active[/if]" id="list-[detailCrudPage.entity.id/][count/]" role="tabpanel" aria-labelledby="list-[detailCrudPage.entity.id/][self/]-list"><code>Instance [detailCrudPage.entity.id/] [self/]
+	  [for(anAttribute : Attribute | detailCrudPage.entity.attributes)]
+	  	<br><small>Attribute: [anAttribute.name/] (Type : [anAttribute.attributePrimitiveData_Type/]) = 
+		[if (anAttribute.attributePrimitiveData_Type=AttributePrimitiveData_Type::BOOLEAN)][detailCrudPage.entity.id/][count/]_true_[anAttribute.name/]
+		[elseif (anAttribute.attributePrimitiveData_Type=AttributePrimitiveData_Type::INTEGER)][detailCrudPage.entity.id/][count/]_1_[anAttribute.name/]
+		[elseif (anAttribute.attributePrimitiveData_Type=AttributePrimitiveData_Type::REAL)][detailCrudPage.entity.id/][count/]_1.23_[anAttribute.name/]
+		[elseif (anAttribute.attributePrimitiveData_Type=AttributePrimitiveData_Type::STRING)][detailCrudPage.entity.id/][count/]_String_[anAttribute.name/]
+		[/if]
+		</small>
+	  [/for]</code></div>
+	  [/for]
+    </div>
+  </div>
+</div>
+[/template]
+
+
+[comment regular content pages/]
+[template public generateWebPage(regularContentPage : RegularContentPage, role : Role)]
+[file (role.name+'/'+regularContentPage.name.substituteAll(' ', '')+'.html', false, 'UTF-8')]
+[generateHeadAndBodyHeader(regularContentPage, role)/]
+
+ 		<main role="main" class="container">
+		<div class="container">
+		  [if (regularContentPage.elements->size() >= 1)]
+		  <h2>Elements</h2>
+		  [generateElements(regularContentPage)/]
+		  [/if]
+		</div>
+	    </main>
+
+		[if (regularContentPage.socialnetworkcontent->size() >= 1)]
+		[generateSocialNetworks(regularContentPage)/]
+		[/if]
+	</body>
+</html>	
+[/file]
+[/template]
+
+
+[comment form pages/]
+[template public generateWebPage(formPage : Form, role : Role)]
+[file (role.name+'/'+formPage.name.substituteAll(' ', '')+'.html', false, 'UTF-8')]
+[generateHeadAndBodyHeader(formPage, role)/]
+
+ 		<main role="main" class="container">
+		<div class="container">
+		  [if (formPage.elements->size() >= 1)]
+		  <h2>Elements</h2>
+		  [generateElements(formPage)/]
+		  [/if]
+		</div>
+
+		<div class="container">
+			[for (question : Question | formPage.questions)]
+			[generateStoredQuestions(question.oclAsType(StoredQuestion))/]
+			[/for]
+			[for (question : Question | formPage.questions)]
+			[generateQuestionDefinitions(question.oclAsType(QuestionDefinition))/]
+			[/for]
+		</div>
+		[if (formPage.formType=Form_Type::QUESTIONNAIRE)]
+		[generateQuestionnaire(formPage)/]
+		[elseif (formPage.formType=Form_Type::SURVEY)]
+		[generateSurvey(formPage)/]
+		[/if]
+	    </main>
+
+		[if (formPage.socialnetworkcontent->size() >= 1)]
+		[generateSocialNetworks(formPage)/]
+		[/if]
+	</body>
+</html>	
+[/file]
+[/template]
+
+
+
+[template public generateQuestionnaire(formPage : Form)]
+
+[/template]
+
+
+
+[template public generateSurvey(formPage : Form)]
+
+[/template]
+
+
+
+[template public generateStoredQuestions(question : StoredQuestion)]
+[generateQuestionDefinitions(question.definitionOfQuestion)/]
+[/template]
+
+
+
+[template public generateQuestionDefinitions(question : QuestionDefinition)]
+	<h4>[question.description/]</h4>
+	[if (question.type=QuestionType::MULTIPLE_CHOICE)]
+	[for (answer : PossibleAsnwer | question.possibleAsnwer)]
+	<div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">
+      [answer.answerText/]
+      </label>
+    </div>
+	[/for]
+	[elseif (question.type=QuestionType::TRUE_FALSE)]
+	[for (answer : PossibleAsnwer | question.possibleAsnwer)]
+	<div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+      <label class="form-check-label" for="exampleRadios1">
+      [answer.answerText/]
+      </label>
+    </div>
+	[/for]
+	[elseif (question.type=QuestionType::SHORT_QUESTION)]
+	<div class="form-check">
+      <label for="exampleFormControlTextarea1">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+	[/if]
+[/template]
+
+
+
+[template public generateHeadAndBodyHeader(webPage : WebPage, role : Role)]
+<head>
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+<html>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+	        <div class="collapse navbar-collapse" id="navbarCollapse">
+			  <a class="navbar-brand">[webPage.name/]</a>
+	          <ul class="navbar-nav mr-auto">
+				[generateAbstractWebPage(webPage, role)/]
+	          </ul>
+        	</div>
+      		</nav>
+		</header>
+[/template]
+
+
+
+[comment Elements and social networks for each web page/]
+[template public generateElements(webPage : WebPage)]
+<div class="container-fluid">
+		<div class="row">
+		[for (element : Elements | webPage.elements )]
+		<div class="col-m">
+			[if (element.oclIsTypeOf(MediaContent))]
+				[if (element.oclAsType(MediaContent).link.contains('youtube')) ]
+			<div class="card" style="width: 18rem;">
+			  <div class="embed-responsive embed-responsive-4by3">	 
+			    <iframe width="854" height="480" src="https://www.youtube.com/embed/qN3OueBm9F4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			  </div>
+			</div>
+				[else]
+			<div class="card" style="width: 18rem;">
+ 			  <img src="[element.oclAsType(MediaContent).link/]" class="card-img-top">
+			</div>
+				[/if]
+			[elseif (element.oclIsTypeOf(Text))]
+			<div class="card" style="width: 18rem;">
+			  <div class="card-body">
+			    <h5 class="card-title">Text content</h5>
+			    <p class="card-text">[element.oclAsType(Text).text/]</p>
+			  </div>
+			</div>
+			[/if]
+		</div>
+		[/for]
+	</div>
+</div>
+[/template]
+
+
+
+[template public generateSocialNetworks(webPage : WebPage)]
+<footer class="bg-light">
+	<div class="container-fluid bg-footer">
+		<div class="row">
+		[for (socialNetwork : SocialNetworkContent | webPage.socialnetworkcontent )]
+		<div class="col-sm">
+			[if (socialNetwork.socialNetworkType = SocialNetwork_Type::TWITTER)]
+			<a class="twitter-timeline" data-width="400" data-height="300" href="[socialNetwork.parameters/]">Tweets</a> 
+			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+			[elseif (socialNetwork.socialNetworkType = SocialNetwork_Type::RSS)]
+			<div class="overflow-auto p-3 mb-3 mb-md-0 mr-md-3 bg-light" style="max-width: 1000px; max-height: 250px;">
+				<h3>RSS feed</h3>
+				<script language="JavaScript" src="http://feed2js.org//feed2js.php?src=[socialNetwork.parameters/]" charset="UTF-8" type="text/javascript"></script>
+			</div>
+			[/if]
+		</div>
+		[/for]
+		</div>
+	</div>
+</footer>
+[/template]

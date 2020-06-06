@@ -4,6 +4,26 @@
 
 [template public generatePackage(aWebSite : WebSite)]
 [comment @main/]
+[file ('index.html', false, 'UTF-8')]
+<h1>Web pages links</h1>
+[for (role : Role | aWebSite.roles)]
+<li class="nav-item">
+	<a class="nav-link" href="[role.name+'/'+'index.html'/]">Link to [role.name+'/'+'index.html'/]</a>
+</li>
+[/for]
+[/file]
+
+[for (role : Role | aWebSite.roles)]
+	[file (role.name+'/'+'index.html', false, 'UTF-8')]
+	<h1>WebPages links of [role.name/] role</h1>
+	[for (roleWebPage : WebPage | role.webpage)]
+	<li class="nav-item">
+		<a class="nav-link" href="[roleWebPage.name.substituteAll(' ', '')+'.html'/]">Link to [role.name+'/'+roleWebPage.name.substituteAll(' ', '')+'.html'/]</a>
+	</li>
+	[/for]
+	[/file]
+[/for]
+
 [for (role : Role | aWebSite.roles)]
 	[for (roleWebPage : WebPage | role.webpage)]
 [generateWebPage(roleWebPage, role)/]
@@ -215,15 +235,146 @@
 [file (role.name+'/'+formPage.name.substituteAll(' ', '')+'.html', false, 'UTF-8')]
 [generateHeadAndBodyHeader(formPage, role)/]
 
-		[if (formPage.elements->size() >= 1)]
-		[generateElements(formPage)/]
+ 		<main role="main" class="container">
+		<div class="container">
+		  [if (formPage.elements->size() >= 1)]
+		  <h2>Elements</h2>
+		  [generateElements(formPage)/]
+		  [/if]
+		</div>
+
+		<div class="container">
+			[for (question : Question | formPage.questions)]
+			[generateStoredQuestions(question.oclAsType(StoredQuestion))/]
+			[/for]
+			[for (question : Question | formPage.questions)]
+			[generateQuestionDefinitions(question.oclAsType(QuestionDefinition))/]
+			[/for]
+		</div>
+		[if (formPage.formType=Form_Type::QUESTIONNAIRE)]
+		<a class="btn btn-primary" href="[formPage.name.substituteAll(' ', '')+'QuestionnaireResults'+'.html'/]" role="button">Submit form</a>
+		[elseif (formPage.formType=Form_Type::SURVEY)]
+		<a class="btn btn-primary" href="[formPage.name.substituteAll(' ', '')+'SurveyResults'+'.html'/]" role="button">Submit form</a>
 		[/if]
+	    </main>
 
 		[if (formPage.socialnetworkcontent->size() >= 1)]
 		[generateSocialNetworks(formPage)/]
 		[/if]
 	</body>
 </html>	
+[/file]
+
+[if (formPage.formType=Form_Type::QUESTIONNAIRE)]
+[generateQuestionnaireResults(formPage, role)/]
+[elseif (formPage.formType=Form_Type::SURVEY)]
+[generateSurveyResults(formPage, role)/]
+[/if]
+
+[/template]
+
+
+
+[template public generateStoredQuestions(question : StoredQuestion)]
+[generateQuestionDefinitions(question.definitionOfQuestion)/]
+[/template]
+
+
+
+[template public generateQuestionDefinitions(question : QuestionDefinition)]
+	<h4>[question.description/]</h4>
+	[if (question.type=QuestionType::MULTIPLE_CHOICE)]
+	[for (answer : PossibleAsnwer | question.possibleAsnwer)]
+	<div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">
+      [answer.answerText/]
+      </label>
+    </div>
+	[/for]
+	[elseif (question.type=QuestionType::TRUE_FALSE)]
+	[for (answer : PossibleAsnwer | question.possibleAsnwer)]
+	<div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+      <label class="form-check-label" for="exampleRadios1">
+      [answer.answerText/]
+      </label>
+    </div>
+	[/for]
+	[elseif (question.type=QuestionType::SHORT_QUESTION)]
+	<div class="form-check">
+      <label for="exampleFormControlTextarea1">Example textarea</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+	[/if]
+[/template]
+
+
+
+[template public generateQuestionnaireResults(formPage : Form, role : Role)]
+[file (role.name+'/'+formPage.name.substituteAll(' ', '')+'QuestionnaireResults'+'.html', false, 'UTF-8')]
+[generateHeadAndBodyHeader(formPage, role)/]
+<div class="container">
+	<h1>Results page</h1>
+[for (question : Question | formPage.questions)]
+	[if (question.oclIsTypeOf(StoredQuestion))]
+	<h4>Question: [question.oclAsType(StoredQuestion).definitionOfQuestion.description/]	
+	<br><code>Correct answer:</code> [question.oclAsType(StoredQuestion).definitionOfQuestion.correctAnswer.answerText/]</h4>
+	<small>33% of the people answered this question correctly</small>
+	[/if]
+	[if (question.oclIsTypeOf(QuestionDefinition))]
+	<h4>Question: [question.oclAsType(QuestionDefinition).description/] 	
+	<br><code>Correct answer:</code> [question.oclAsType(QuestionDefinition).correctAnswer.answerText/]</h4>
+	<small>33% of the people answered this question correctly</small>
+	[/if]
+[/for]
+</div>
+[/file]
+[/template]
+
+
+
+[template public generateSurveyResults(formPage : Form, role : Role)]
+[file (role.name+'/'+formPage.name.substituteAll(' ', '')+'SurveyResults'+'.html', false, 'UTF-8')]
+[generateHeadAndBodyHeader(formPage, role)/]
+<div class="container">
+	<h1>Results page</h1>
+[for (question : Question | formPage.questions)]
+	[if (question.oclIsTypeOf(StoredQuestion))]
+	<h4>Question: [question.oclAsType(StoredQuestion).definitionOfQuestion.description/]	
+    <div>
+      <canvas id="pieChart[i/]" style="max-width: 500px;"></canvas>
+    </div>
+	[/if]
+	[if (question.oclIsTypeOf(QuestionDefinition))]
+	<h4>Question: [question.oclAsType(QuestionDefinition).description/] 	
+    <div>
+      <canvas id="pieChart[i/]" style="max-width: 500px;"></canvas>
+    </div>
+	[/if]
+[/for]
+</div>
+<script type="text/javascript">
+//pie
+	config = {
+      type: 'pie',
+      data: {
+        labels: ['['/]"People who badly answered the question", "People who correctly answered the question"],
+        datasets: ['['/]{
+          data: ['['/]60, 40],
+          backgroundColor: ['['/]"#46BFBD", "#FDB45C"],
+          hoverBackgroundColor: ['['/]"#5AD3D1", "#FFC870"]
+        }]
+      },
+      options: {
+        responsive: true
+      }
+    };
+	[for (question : Question | formPage.questions)]
+	var ctxP[i/] = document.getElementById("pieChart[i/]").getContext('2d');
+    var myPieChart[i/] = new Chart(ctxP[i/], config);
+	[/for]
+</script>
 [/file]
 [/template]
 
@@ -241,6 +392,7 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 </head>
 <html>
 	<body>
