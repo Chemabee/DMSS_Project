@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Documentation of the WebDev Metamodel</title>
+	<meta name="description" content="WebDev Documentation">
+	<link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+<body>
+	<span style="font-family:calibri; color: black">
+	
+	<img src="../../figures/class_diagram.svg" border="1" alt="WebDevMM" height="1200"/>
+	<p>Name: WebDevProjectMM</p>
+	<p>NsURI: https://www.WebDevProjectMM.com</p>
+	<p>NsPrefix: WebDevProjectMM</p>
+	<br>
+	<ul>
+	</ul>
+	<span style="background-color:LightGoldenRodYellow">EClass: Role</span><br>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>numAccesiblePages</b>: EBigInteger = <span style="font-style: italic; color: blue">self.webpage->size()</span></li> 
+	</ul><br>
+	<ul><li>(1..*) <b>webpage#<i>role</i></b> : WebPage</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: WebSite</span><br>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(1..1) <b>URL</b>: EString</li> 
+	</ul><br>
+	<ul><li>(1..*) <b>roles</b> : Role (Composition)</li>
+	<li>(1..*) <b>webPages</b> : WebPage (Composition)</li>
+	<li>(0..*) <b>link</b> : PageLink (Composition)</li>
+	</ul>
+	<ul><li>invariant <b>R6MustIncludeAtLeastOneQuestionnaire</b>:
+		<span style="font-style: italic; color: blue">
+		
+				let allForms : Collection(Form) = self.webPages->selectByKind(Form),
+					existsAnyQuestionnaires : Boolean = allForms->exists(f : Form | f.formType = Form_Type::QUESTIONNAIRE)
+				in
+					existsAnyQuestionnaires
+	</span></li>
+	<li>invariant <b>R6MustIncludeAtLeastOneSurvey</b>:
+		<span style="font-style: italic; color: blue">
+		
+				let allForms : Collection(Form) = self.webPages->selectByKind(Form),
+					existsAnySurvey : Boolean = allForms->exists(f : Form | f.formType = Form_Type::SURVEY)
+				in
+					existsAnySurvey
+	</span></li>
+	</ul>
+	<span style="background-color:LightGrey">EClass: WebPage</span>(abstract)<br/>
+	<br>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	</ul>
+	<ul><li>invariant <b>R2isolatedWebPage</b>:
+		<span style="font-style: italic; color: blue">
+		Self.role->size() > 0 or self.incoming->size() > 0
+	</span></li>
+	</ul>
+	<span style="background-color:LightGoldenRodYellow">EClass: SocialNetworkContent</span><br>
+	
+	<ul><li>(1..1) <b>parameters</b>: EString</li> 
+	<li>(1..1) <b>socialNetworkType</b>: SocialNetwork_Type</li> 
+	</ul><br>
+	
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: RegularContentPage</span><br>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: Form</span><br>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	<li>(1..1) <b>formType</b>: Form_Type</li> 
+	<li>(1..1) <b>numTFQuestions</b>: EBigInteger = <span style="font-style: italic; color: blue">self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::TRUE_FALSE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definitionOfQuestion.type = QuestionType::TRUE_FALSE) )->size()</span></li> 
+	<li>(1..1) <b>numMCQuestions</b>: EBigInteger = <span style="font-style: italic; color: blue">self.questions->select(q:Question|(q.oclIsKindOf(QuestionDefinition) and q.oclAsType(QuestionDefinition).type = QuestionType::MULTIPLE_CHOICE) or (q.oclIsKindOf(StoredQuestion) and q.oclAsType(StoredQuestion).definitionOfQuestion.type = QuestionType::MULTIPLE_CHOICE) )->size()</span></li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	<li>(1..*) <b>questions</b> : Question (Composition)</li>
+	</ul>
+	<ul><li>invariant <b>R7AllQustionsInQuestionnaireHasCorrectAnswer</b>:
+		<span style="font-style: italic; color: blue">
+		
+						let isQuestionnaire : Boolean = self.formType = Form_Type::QUESTIONNAIRE,
+							allQuestionDefinitions : Collection(QuestionDefinition) = self.questions->selectByKind(QuestionDefinition),
+							allQuestionDefinitionsHaveAnAnswer : Boolean = allQuestionDefinitions->forAll(q : QuestionDefinition | q.correctAnswer->size() > 0),
+							allStoredQuestions : Collection(StoredQuestion) = self.questions->selectByKind(StoredQuestion),
+							allStoredQuestionsHaveAnAnswer : Boolean = allStoredQuestions->forAll(q : StoredQuestion |  q.definitionOfQuestion.oclAsType(QuestionDefinition).correctAnswer->size() > 0)
+						in
+							isQuestionnaire implies
+							(
+								(allQuestionDefinitions->size() > 0 implies allQuestionDefinitionsHaveAnAnswer)
+								and
+								(allStoredQuestions->size() > 0 implies allStoredQuestionsHaveAnAnswer)
+							)
+	</span></li>
+	</ul>
+	<span style="background-color:LightGrey">EClass: Question</span>(abstract)<br/>
+	<br>
+	
+	<br>
+	
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: StoredQuestion</span><br>
+	
+	<ul><li>(1..1) <b>descQuestionDefinition</b>: EString = <span style="font-style: italic; color: blue">if self.definitionOfQuestion->size() = 1 then self.definitionOfQuestion.description else '' endif</span></li> 
+	</ul><br>
+	<ul><li>(1..1) <b>definitionOfQuestion</b> : QuestionDefinition</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: QuestionsRepo</span><br>
+	
+	<br>
+	<ul><li>(0..*) <b>questionDefinitions</b> : QuestionDefinition (Composition)</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: QuestionDefinition</span><br>
+	
+	<ul><li>(1..1) <b>description</b>: EString</li> 
+	<li>(1..1) <b>type</b>: QuestionType</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>possibleAsnwer</b> : PossibleAsnwer (Composition)</li>
+	<li>(0..*) <b>correctAnswer</b> : PossibleAsnwer</li>
+	</ul>
+	<ul><li>invariant <b>OnlyItsOwnAnswers</b>:
+		<span style="font-style: italic; color: blue">
+		Self.correctAnswer->size() > 0 implies self.possibleAsnwer->includesAll(self.correctAnswer)
+	</span></li>
+	<li>invariant <b>TrueFalseAndShortQuestionHaveOnlyOneCorrectAnswer</b>:
+		<span style="font-style: italic; color: blue">
+		(self.type = QuestionType::TRUE_FALSE or self.type = QuestionType::SHORT_QUESTION) implies self.correctAnswer->size() < 2
+	</span></li>
+	</ul>
+	<span style="background-color:LightGoldenRodYellow">EClass: PossibleAsnwer</span><br>
+	
+	<ul><li>(1..1) <b>answerText</b>: EString</li> 
+	</ul><br>
+	
+	
+	<span style="background-color:LightGrey">EClass: Elements</span>(abstract)<br/>
+	<br>
+	
+	<br>
+	
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: Text</span><br>
+	
+	<ul><li>(1..1) <b>text</b>: EString</li> 
+	</ul><br>
+	
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: Database</span><br>
+	
+	<br>
+	<ul><li>(0..*) <b>entities</b> : Entity (Composition)</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: Entity</span><br>
+	
+	<ul><li>(1..1) <b>id</b>: EString</li> 
+	</ul><br>
+	<ul><li>(1..*) <b>attributes</b> : Attribute (Composition)</li>
+	<li>(0..*) <b>refersTo</b> : Entity</li>
+	<li>(1..1) <b>primary_key</b> : Attribute</li>
+	</ul>
+	<ul><li>invariant <b>PrimaryKeyMustBeOwnAttribute</b>:
+		<span style="font-style: italic; color: blue">
+		Self.attributes->includes(self.primary_key)
+	</span></li>
+	<li>invariant <b>CanNotReferToItself</b>:
+		<span style="font-style: italic; color: blue">
+		Not self.refersTo->includes(self)
+	</span></li>
+	</ul>
+	<span style="background-color:LightGoldenRodYellow">EClass: Attribute</span><br>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>attributePrimitiveData_Type</b>: AttributePrimitiveData_Type</li> 
+	</ul><br>
+	
+	
+	<span style="background-color: #e6ffe6">EEnum: QuestionType</span>
+	<br>
+	
+	{0: MULTIPLE_CHOICE
+	, 1: TRUE_FALSE
+	, 2: SHORT_QUESTION
+	}<br><br>
+	
+	
+	<span style="background-color: #e6ffe6">EEnum: AttributePrimitiveData_Type</span>
+	<br>
+	
+	{0: REAL
+	, 1: INTEGER
+	, 2: BOOLEAN
+	, 3: STRING
+	}<br><br>
+	
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: PageLink</span><br>
+	
+	<br>
+	<ul><li>(1..1) <b>source#<i>outgoing</i></b> : WebPage</li>
+	<li>(1..1) <b>target#<i>incoming</i></b> : WebPage</li>
+	</ul>
+	<ul><li>invariant <b>LinkCanNotBeToItself</b>:
+		<span style="font-style: italic; color: blue">
+		Self.source <> self.target
+	</span></li>
+	</ul>
+	<span style="background-color:LightGoldenRodYellow">EClass: MediaContent</span><br>
+	
+	<ul><li>(1..1) <b>link</b>: EString</li> 
+	</ul><br>
+	
+	
+	<span style="background-color: #e6ffe6">EEnum: SocialNetwork_Type</span>
+	<br>
+	
+	{0: TWITTER
+	, 1: RSS
+	}<br><br>
+	
+	
+	<span style="background-color: #e6ffe6">EEnum: Form_Type</span>
+	<br>
+	
+	{0: SURVEY
+	, 1: QUESTIONNAIRE
+	}<br><br>
+	
+	
+	<span style="background-color:LightGrey">EClass: CRUDPage</span>(abstract)<br/>
+	<br>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	<li>(1..1) <b>entity</b> : Entity</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: CreationCRUD</span><br>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	<li>(1..1) <b>entity</b> : Entity</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: DelitionCRUD</span><br>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	<li>(1..1) <b>entity</b> : Entity</li>
+	</ul>
+	
+	<span style="background-color:LightGoldenRodYellow">EClass: AllCRUD</span><br>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	<li>(1..1) <b>entity</b> : Entity</li>
+	</ul>
+	<ul><li>invariant <b>R3ALLCRUDImpliesNoOtherCRUD</b>:
+		<span style="font-style: italic; color: blue">
+		
+						let allCRUDPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(CRUDPage),
+							entityCRUDPages : Collection(CRUDPage) = allCRUDPages->select(p : CRUDPage | p.entity = self.entity),
+							notALLCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->select(p : CRUDPage | not p.oclIsKindOf(AllCRUD))
+						in
+							notALLCRUDTypePages->size() = 0
+	</span></li>
+	<li>invariant <b>OnlyOneCRUDOfEachTypeMax</b>:
+		<span style="font-style: italic; color: blue">
+		
+						let allCRUDPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(CRUDPage),
+							entityCRUDPages : Collection(CRUDPage) = allCRUDPages->select(p : CRUDPage | p.entity = self.entity),
+							AllCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(AllCRUD),
+							IndexCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(IndexCRUD),
+							DetailCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(DetailCRUD),
+							CreationCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(CreationCRUD),
+							DelitionCRUDTypePages : Collection(CRUDPage) = entityCRUDPages->selectByKind(DelitionCRUD)
+						in
+							AllCRUDTypePages->size() < 2 and
+							DetailCRUDTypePages->size() < 2 and
+							IndexCRUDTypePages->size() < 2 and
+							CreationCRUDTypePages->size() < 2 and
+							DelitionCRUDTypePages->size() < 2
+						
+	</span></li>
+	</ul>
+	<span style="background-color:LightGoldenRodYellow">EClass: IndexCRUD</span><br>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	<li>(1..1) <b>entity</b> : Entity</li>
+	</ul>
+	<ul><li>invariant <b>R4IndexImpliesDetail</b>:
+		<span style="font-style: italic; color: blue">
+		
+						let allDetailPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(DetailCRUD)
+						in
+							allDetailPages->exists(p : CRUDPage | p.entity = self.entity)
+	</span></li>
+	</ul>
+	<span style="background-color:LightGoldenRodYellow">EClass: DetailCRUD</span><br>
+	
+	<ul><li>(1..1) <b>name</b>: EString</li> 
+	<li>(1..1) <b>title</b>: EString</li> 
+	<li>(1..1) <b>description</b>: EString</li> 
+	<li>(0..*) <b>externalLink</b>: EString</li> 
+	</ul><br>
+	<ul><li>(0..*) <b>socialnetworkcontent</b> : SocialNetworkContent (Composition)</li>
+	<li>(0..*) <b>elements</b> : Elements (Composition)</li>
+	<li>(0..*) <b>outgoing#<i>source</i></b> : PageLink</li>
+	<li>(0..*) <b>incoming#<i>target</i></b> : PageLink</li>
+	<li>(0..*) <b>role#<i>webpage</i></b> : Role</li>
+	<li>(1..1) <b>entity</b> : Entity</li>
+	</ul>
+	<ul><li>invariant <b>R4DetailImpliesIndex</b>:
+		<span style="font-style: italic; color: blue">
+		
+						let allIndexPages : Collection(CRUDPage) = self.oclContainer().oclAsType(WebSite).webPages->selectByKind(IndexCRUD)
+						in
+							allIndexPages->exists(p : CRUDPage | p.entity = self.entity)
+	</span></li>
+	</ul>
+</body>
+

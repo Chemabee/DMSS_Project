@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<quiz>
+	<question type ="truefalse">
+		<name>
+			<text>This is a True/False Question!</text>
+		</name>
+		<questiontext format="html">
+			<text>Is this a question?</text>
+		</questiontext>
+		<answer fraction="0">
+			<text>True, It is</text>
+			<feedback><text>You're Right!!</text></feedback>
+		<answer fraction="0">
+			<text>False</text>
+			<feedback><text>I'm afraid not...</text></feedback>
+	</question>
+	
+	<question type ="shortanswer">
+		<name>
+			<text>This is a Short Question!</text>
+		</name>
+		<questiontext format="html">
+			<text>What's 2+1?</text>
+		</questiontext>
+		<answer fraction="0">
+			<text>1</text>
+			<feedback><text>I'm afraid not...</text></feedback>
+		<answer fraction="0">
+			<text>2</text>
+			<feedback><text>I'm afraid not...</text></feedback>
+		<answer fraction="100">
+			<text>3</text>
+			<feedback><text>You're Right!!</text></feedback>
+	</question>
+	
+	<question type ="multichoice">
+		<name>
+			<text>This is a Multiple Choice Question!</text>
+		</name>
+		<questiontext format="html">
+			<text>Numbers < 5</text>
+		</questiontext>
+		<answer fraction="50">
+			<text>4</text>
+			<feedback><text>You're Right!!</text></feedback>
+		<answer fraction="0">
+			<text>6</text>
+			<feedback><text>I'm afraid not...</text></feedback>
+		<answer fraction="50">
+			<text>3</text>
+			<feedback><text>You're Right!!</text></feedback>
+		<shuffleanswers>true</shuffleanswers>
+	<single>false</single>
+	
+</quiz>

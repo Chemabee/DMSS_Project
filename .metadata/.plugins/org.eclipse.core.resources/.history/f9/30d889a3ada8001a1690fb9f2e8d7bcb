@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebDevProjectMM:WebSite
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:WebDevProjectMM="https://www.WebDevProjectMM.com"
+    name="WebDevProjectMM"
+    title="WebDevProjectMM"
+    description="An Example WebSite"
+    URL="https://www.WebDevProjectMM.com">
+  <roles name="Admin"
+      webpage="//@webPages.0 //@webPages.1 //@webPages.2 //@webPages.3 //@webPages.8 //@webPages.9 //@webPages.4 //@webPages.5 //@webPages.6 //@webPages.7"/>
+  <roles name="RegularUser"
+      webpage="//@webPages.3 //@webPages.4 //@webPages.5 //@webPages.6 //@webPages.7"/>
+  <roles name="Guest"
+      webpage="//@webPages.8 //@webPages.9"/>
+  <webPages
+      xsi:type="WebDevProjectMM:RegularContentPage"
+      name="PageWithElements"
+      title="Page With Elements"
+      description="PageWithElements"
+      role="//@roles.0">
+    <elements
+        xsi:type="WebDevProjectMM:Text"
+        text="Lorem Ipsum"/>
+    <elements
+        xsi:type="WebDevProjectMM:MediaContent"
+        link="https://image.shutterstock.com/z/stock-photo-beautiful-water-drop-on-a-dandelion-flower-seed-macro-in-nature-beautiful-deep-saturated-blue-and-789676552.jpg"/>
+    <elements
+        xsi:type="WebDevProjectMM:MediaContent"
+        link="https://www.youtube.com/watch?v=9bZkp7q19f0"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:Form"
+      name="Survey1"
+      title="Survey1"
+      description="First Form_Survey"
+      role="//@roles.0">
+    <elements
+        xsi:type="WebDevProjectMM:Text"
+        text="Survey Description"/>
+    <questions
+        xsi:type="WebDevProjectMM:QuestionDefinition"
+        description="Is this a question?"
+        type="TRUE_FALSE"
+        correctAnswer="//@webPages.1/@questions.0/@possibleAsnwer.0">
+      <possibleAsnwer
+          answerText="True, It is"/>
+      <possibleAsnwer
+          answerText="False"/>
+    </questions>
+    <questions
+        xsi:type="WebDevProjectMM:QuestionDefinition"
+        description="What's 2+1?"
+        type="SHORT_QUESTION"
+        correctAnswer="//@webPages.1/@questions.1/@possibleAsnwer.2">
+      <possibleAsnwer
+          answerText="1"/>
+      <possibleAsnwer
+          answerText="2"/>
+      <possibleAsnwer
+          answerText="3"/>
+    </questions>
+    <questions
+        xsi:type="WebDevProjectMM:StoredQuestion">
+      <definitionOfQuestion
+          href="QuestionsRepo.xmi#//@questionDefinitions.0"/>
+    </questions>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:Form"
+      name="Questionnaire1"
+      title="Questionnaire1"
+      description="Questionnaire1"
+      role="//@roles.0"
+      formType="QUESTIONNAIRE">
+    <socialnetworkcontent
+        parameters="https://twitter.com/DotCSV"/>
+    <elements
+        xsi:type="WebDevProjectMM:MediaContent"
+        link="https://www.youtube.com/watch?v=CgLLF6haAik"/>
+    <questions
+        xsi:type="WebDevProjectMM:StoredQuestion">
+      <definitionOfQuestion
+          href="QuestionsRepo.xmi#//@questionDefinitions.2"/>
+    </questions>
+    <questions
+        xsi:type="WebDevProjectMM:QuestionDefinition"
+        description="Is this a question about CS?"
+        type="SHORT_QUESTION"
+        correctAnswer="//@webPages.2/@questions.1/@possibleAsnwer.0">
+      <possibleAsnwer
+          answerText="Yes, it is"/>
+      <possibleAsnwer
+          answerText="No, is not"/>
+    </questions>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:AllCRUD"
+      name="All CRUD Person"
+      title="Person ALL CRUD"
+      description="AllCRUD_Person"
+      role="//@roles.0 //@roles.1">
+    <socialnetworkcontent
+        parameters="https://twitter.com/IbaiLlanos"/>
+    <socialnetworkcontent
+        parameters="https://www.w3schools.com"
+        socialNetworkType="RSS"/>
+    <externalLink>https://www.hobbyconsolas.com/</externalLink>
+    <entity
+        href="DatabaseGood.xmi#Person"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:DetailCRUD"
+      name="Detail Car"
+      title="Car Detail"
+      description="DETAIL_Car"
+      role="//@roles.0 //@roles.1">
+    <entity
+        href="DatabaseGood.xmi#Car"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:IndexCRUD"
+      name="Index Car"
+      title="Car Index"
+      description="INDEX_Car"
+      role="//@roles.0 //@roles.1">
+    <entity
+        href="DatabaseGood.xmi#Car"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:DelitionCRUD"
+      name="Delition Car"
+      title="Car Delition"
+      description="DELITION_Car"
+      role="//@roles.0 //@roles.1">
+    <entity
+        href="DatabaseGood.xmi#Car"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:CreationCRUD"
+      name="Creation Car"
+      title="Car Creation"
+      description="CREATION_Car"
+      role="//@roles.0 //@roles.1">
+    <entity
+        href="DatabaseGood.xmi#Car"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:DetailCRUD"
+      name="Detail Speaker"
+      title="Speaker Detail"
+      description="DETAIL_Speaker"
+      role="//@roles.0 //@roles.2">
+    <entity
+        href="DatabaseGood.xmi#Speaker"/>
+  </webPages>
+  <webPages
+      xsi:type="WebDevProjectMM:IndexCRUD"
+      name="Index Speaker"
+      title="Speaker Index"
+      description="INDEX_Speaker"
+      role="//@roles.0 //@roles.2">
+    <entity
+        href="DatabaseGood.xmi#Speaker"/>
+  </webPages>
+</WebDevProjectMM:WebSite>

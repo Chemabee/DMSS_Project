@@ -1,0 +1,31 @@
+	<h1>WebPages links of Admin role</h1>
+	<li class="nav-item">
+		<a class="nav-link" href="PageWithElements.html">Link to Admin/PageWithElements.html</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="Survey1.html">Link to Admin/Survey1.html</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="Questionnaire1.html">Link to Admin/Questionnaire1.html</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="AllCRUDPerson.html">Link to Admin/AllCRUDPerson.html</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="DetailSpeaker.html">Link to Admin/DetailSpeaker.html</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="IndexSpeaker.html">Link to Admin/IndexSpeaker.html</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="DetailCar.html">Link to Admin/DetailCar.html</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="IndexCar.html">Link to Admin/IndexCar.html</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="DelitionCar.html">Link to Admin/DelitionCar.html</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="CreationCar.html">Link to Admin/CreationCar.html</a>
+	</li>

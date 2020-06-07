@@ -5,7 +5,7 @@
 <booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_TRACEABILITY" value="false"/>
 <stringAttribute key="org.eclipse.acceleo.ide.ui.LAUNCHING_STRATEGY_DESCRIPTION" value="Acceleo Plug-in Application"/>
 <stringAttribute key="org.eclipse.acceleo.ide.ui.MODEL_PATH" value="/Project/model/WebSiteGood.xmi"/>
-<stringAttribute key="org.eclipse.acceleo.ide.ui.TARGET_PATH" value="/Project/generated/forms"/>
+<stringAttribute key="org.eclipse.acceleo.ide.ui.TARGET_PATH" value="/Project/generated"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/GenerateFormXML.java"/>
 </listAttribute>
@@ -14,6 +14,6 @@
 </listAttribute>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.eclipse.acceleo.module.WebDevGeneration.main.GenerateFormXML"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;E:/Desktop/NeonDMSS1718/DMSS_Project/Project/model/WebSiteGood.xmi&quot; &quot;E:/Desktop/NeonDMSS1718/DMSS_Project/Project/generated/forms&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;D:/gsb-d/OneDrive - Universidad/OneDrive - Universidad de Extremadura/4º Año/DMSS/Practicas/Project/Project/model/WebSiteGood.xmi&quot; &quot;D:/gsb-d/OneDrive - Universidad/OneDrive - Universidad de Extremadura/4º Año/DMSS/Practicas/Project/Project/generated&quot;"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="org.eclipse.acceleo.module.WebDevGeneration"/>
 </launchConfiguration>

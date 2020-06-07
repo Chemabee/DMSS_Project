@@ -9,7 +9,7 @@
 [/template]
 
 [template public generateFile(aForm : Form)]
-[file (aForm.name.substituteAll(' ', '').toUpperFirst()+'.xml', false, 'UTF-8')]
+[file ('Forms/'+aForm.name.substituteAll(' ', '').toUpperFirst()+'.xml', false, 'UTF-8')]
 <?xml version="1.0" ?>
 <quiz>
 [for (aQuestion : Question | aForm.questions)]

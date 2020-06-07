@@ -4,7 +4,7 @@
 [comment habria que modularizarlo un poco/]
 [template public generateDatabase(aDatabase : Database)]
 [comment @main/]
-[file ('database.sql', false, 'UTF-8')]
+[file ('Database.sql', false, 'UTF-8')]
 [for (anEntity : Entity | aDatabase.entities)]
 DROP TABLE IF EXISTS '[anEntity.id.substituteAll(' ', '').toUpperCase()/]';
 

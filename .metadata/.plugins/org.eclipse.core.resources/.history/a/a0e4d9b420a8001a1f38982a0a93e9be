@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<quiz>
+	<question type ="shortanswer">
+		<name>
+			<text>This is a Short Question!</text>
+		</name>
+		<questiontext format="html">
+			<text>2 + 3 ?</text>
+		</questiontext>
+		<answer fraction="0">
+			<text>1</text>
+			<feedback><text>I'm afraid not...</text></feedback>
+		<answer fraction="0">
+			<text>2</text>
+			<feedback><text>I'm afraid not...</text></feedback>
+		<answer fraction="100">
+			<text>5</text>
+			<feedback><text>You're Right!!</text></feedback>
+	</question>
+	
+	<question type ="shortanswer">
+		<name>
+			<text>This is a Short Question!</text>
+		</name>
+		<questiontext format="html">
+			<text>Is this a question about CS?</text>
+		</questiontext>
+		<answer fraction="100">
+			<text>Yes, it is</text>
+			<feedback><text>You're Right!!</text></feedback>
+		<answer fraction="0">
+			<text>No, is not</text>
+			<feedback><text>I'm afraid not...</text></feedback>
+	</question>
+	
+</quiz>

@@ -14,6 +14,6 @@
 </listAttribute>
 <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
 <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.eclipse.acceleo.module.WebDevGeneration.main.GenerateDatabase"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;E:/Desktop/NeonDMSS1718/DMSS_Project/Project/model/DatabaseGood.xmi&quot; &quot;E:/Desktop/NeonDMSS1718/DMSS_Project/Project/generated&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;D:/gsb-d/OneDrive - Universidad/OneDrive - Universidad de Extremadura/4º Año/DMSS/Practicas/Project/Project/model/DatabaseGood.xmi&quot; &quot;D:/gsb-d/OneDrive - Universidad/OneDrive - Universidad de Extremadura/4º Año/DMSS/Practicas/Project/Project/generated&quot;"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="org.eclipse.acceleo.module.WebDevGeneration"/>
 </launchConfiguration>
