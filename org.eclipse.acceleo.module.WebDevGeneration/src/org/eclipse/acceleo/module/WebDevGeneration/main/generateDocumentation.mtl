@@ -3,7 +3,7 @@
 
 [template public generateElement(anEPackage : EPackage)] 
 [comment @main/]
-[file ('DocumentationOfMetaModel.html', false, 'UTF-8')] 
+[file ('Documentation/DocumentationOfMetaModel.html', false, 'UTF-8')] 
 <!doctype html>
 <html lang="en">
 <head>

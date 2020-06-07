@@ -1,0 +1,7 @@
+	<h1>WebPages links of Guest role</h1>
+	<li class="nav-item">
+		<a class="nav-link" href="DetailSpeaker.html">Link to Guest/DetailSpeaker.html</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="IndexSpeaker.html">Link to Guest/IndexSpeaker.html</a>
+	</li>

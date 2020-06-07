@@ -1,0 +1,10 @@
+<h1>Web pages links</h1>
+<li class="nav-item">
+	<a class="nav-link" href="Admin/index.html">Link to Admin/index.html</a>
+</li>
+<li class="nav-item">
+	<a class="nav-link" href="RegularUser/index.html">Link to RegularUser/index.html</a>
+</li>
+<li class="nav-item">
+	<a class="nav-link" href="Guest/index.html">Link to Guest/index.html</a>
+</li>

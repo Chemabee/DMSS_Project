@@ -2,12 +2,12 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.internal.views.log.EventDetailsDialog">
 		<item value="222" key="sashWidth3"/>
-		<item value="511" key="x"/>
-		<item value="500" key="width"/>
+		<item value="93" key="x"/>
+		<item value="1731" key="width"/>
 		<item value="555" key="sashWidth2"/>
-		<item value="54" key="y"/>
+		<item value="143" key="y"/>
 		<item value="222" key="sashWidth1"/>
-		<item value="550" key="height"/>
+		<item value="937" key="height"/>
 	</section>
 	<section name="org.eclipse.ui.internal.views.log.LogView">
 		<item value="true" key="allSessions"/>

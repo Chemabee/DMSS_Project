@@ -1,0 +1,16 @@
+	<h1>WebPages links of RegularUser role</h1>
+	<li class="nav-item">
+		<a class="nav-link" href="AllCRUDPerson.html">Link to RegularUser/AllCRUDPerson.html</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="DetailCar.html">Link to RegularUser/DetailCar.html</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="IndexCar.html">Link to RegularUser/IndexCar.html</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="DelitionCar.html">Link to RegularUser/DelitionCar.html</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" href="CreationCar.html">Link to RegularUser/CreationCar.html</a>
+	</li>
