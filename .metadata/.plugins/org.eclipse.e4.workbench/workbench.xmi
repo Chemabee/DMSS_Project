@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_zGC0cKcLEeqZ_rJFZv71AA" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_zGC0cacLEeqZ_rJFZv71AA" bindingContexts="_zGDd4qcLEeqZ_rJFZv71AA">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.ecore.presentation.ReflectiveEditorID&quot; name=&quot;WebSiteWithErrors.xmi&quot; tooltip=&quot;Project/model/WebSiteWithErrors.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/model/WebSiteWithErrors.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.ecore.presentation.ReflectiveEditorID&quot; name=&quot;WebSiteGood.xmi&quot; tooltip=&quot;Project/model/WebSiteGood.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/model/WebSiteGood.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor&quot; name=&quot;generateFormXML.mtl&quot; tooltip=&quot;org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateFormXML.mtl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateFormXML.mtl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor&quot; name=&quot;generateWebDev.mtl&quot; tooltip=&quot;org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateWebDev.mtl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateWebDev.mtl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor&quot; name=&quot;generateDocumentation.mtl&quot; tooltip=&quot;org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateDocumentation.mtl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateDocumentation.mtl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor&quot; name=&quot;generateDatabase.mtl&quot; tooltip=&quot;org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateDatabase.mtl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateDatabase.mtl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;DocumentationOfMetaModel.html&quot; tooltip=&quot;Project/generated/documentation/DocumentationOfMetaModel.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/documentation/DocumentationOfMetaModel.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;CreationCar.html&quot; tooltip=&quot;Project/generated/RegularUser/CreationCar.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/RegularUser/CreationCar.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;DocumentationOfMetaModel.html&quot; tooltip=&quot;Project/generated/DocumentationOfMetaModel.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/DocumentationOfMetaModel.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;DelitionCar.html&quot; tooltip=&quot;Project/generated/Admin/DelitionCar.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/Admin/DelitionCar.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;Questionnaire1QuestionnaireResults.html&quot; tooltip=&quot;Project/generated/Admin/Questionnaire1QuestionnaireResults.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/Admin/Questionnaire1QuestionnaireResults.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;Survey1SurveyResults.html&quot; tooltip=&quot;Project/generated/Admin/Survey1SurveyResults.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/Admin/Survey1SurveyResults.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.ecore.presentation.ReflectiveEditorID&quot; name=&quot;WebSiteGood.xmi&quot; tooltip=&quot;Project/model/WebSiteGood.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/model/WebSiteGood.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.pde.ui.manifestEditor&quot; name=&quot;MANIFEST.MF&quot; tooltip=&quot;Project/META-INF/MANIFEST.MF&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/META-INF/MANIFEST.MF&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.emf.ecore.presentation.ReflectiveEditorID&quot; name=&quot;WebSiteWithErrors.xmi&quot; tooltip=&quot;Project/model/WebSiteWithErrors.xmi&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/model/WebSiteWithErrors.xmi&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor&quot; name=&quot;generateFormXML.mtl&quot; tooltip=&quot;org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateFormXML.mtl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateFormXML.mtl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor&quot; name=&quot;generateWebDev.mtl&quot; tooltip=&quot;org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateWebDev.mtl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateWebDev.mtl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor&quot; name=&quot;generateDocumentation.mtl&quot; tooltip=&quot;org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateDocumentation.mtl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateDocumentation.mtl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor&quot; name=&quot;generateDatabase.mtl&quot; tooltip=&quot;org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateDatabase.mtl&quot;>&#xD;&#xA;&lt;persistable path=&quot;/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateDatabase.mtl&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;DocumentationOfMetaModel.html&quot; tooltip=&quot;Project/generated/documentation/DocumentationOfMetaModel.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/documentation/DocumentationOfMetaModel.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;CreationCar.html&quot; tooltip=&quot;Project/generated/RegularUser/CreationCar.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/RegularUser/CreationCar.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;DocumentationOfMetaModel.html&quot; tooltip=&quot;Project/generated/DocumentationOfMetaModel.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/DocumentationOfMetaModel.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;DelitionCar.html&quot; tooltip=&quot;Project/generated/Admin/DelitionCar.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/Admin/DelitionCar.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;Questionnaire1QuestionnaireResults.html&quot; tooltip=&quot;Project/generated/Admin/Questionnaire1QuestionnaireResults.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/Admin/Questionnaire1QuestionnaireResults.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.browser.editorSupport&quot; name=&quot;Survey1SurveyResults.html&quot; tooltip=&quot;Project/generated/Admin/Survey1SurveyResults.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Project/generated/Admin/Survey1SurveyResults.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_zGC0cacLEeqZ_rJFZv71AA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_zGC0cqcLEeqZ_rJFZv71AA" label="%trimmedwindow.label.eclipseSDK" x="775" y="-28" width="1024" height="768">
@@ -36,33 +36,25 @@
           <tags>persp.viewSC:org.eclipse.ui.views.ContentOutline</tags>
           <tags>persp.viewSC:org.eclipse.ui.views.ProblemView</tags>
           <tags>persp.newWizSC:org.eclipse.ecoretools.emf.design.wizardID</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_zGC0dacLEeqZ_rJFZv71AA" selectedElement="_zGC0dqcLEeqZ_rJFZv71AA" horizontal="true">
-            <children xsi:type="basic:PartSashContainer" xmi:id="_zGC0dqcLEeqZ_rJFZv71AA" visible="false" containerData="2312" selectedElement="_zGC0d6cLEeqZ_rJFZv71AA">
-              <children xsi:type="basic:PartStack" xmi:id="_zGC0d6cLEeqZ_rJFZv71AA" elementId="org.eclipse.sirius.ui.tools.views.model.explorerMStack" visible="false" containerData="5000" selectedElement="_zGC0eKcLEeqZ_rJFZv71AA">
-                <tags>Minimized</tags>
-                <tags>MinimizedByZoom</tags>
-                <tags>active</tags>
-                <tags>noFocus</tags>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_zGC0dacLEeqZ_rJFZv71AA" selectedElement="_zGC0e6cLEeqZ_rJFZv71AA" horizontal="true">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_zGC0dqcLEeqZ_rJFZv71AA" containerData="2089" selectedElement="_zGC0d6cLEeqZ_rJFZv71AA">
+              <children xsi:type="basic:PartStack" xmi:id="_zGC0d6cLEeqZ_rJFZv71AA" elementId="org.eclipse.sirius.ui.tools.views.model.explorerMStack" containerData="5000" selectedElement="_zGC0eKcLEeqZ_rJFZv71AA">
                 <children xsi:type="advanced:Placeholder" xmi:id="_zGC0eKcLEeqZ_rJFZv71AA" elementId="org.eclipse.sirius.ui.tools.views.model.explorer" ref="_zGC1rqcLEeqZ_rJFZv71AA"/>
               </children>
               <children xsi:type="basic:PartStack" xmi:id="_zGC0eacLEeqZ_rJFZv71AA" elementId="org.eclipse.ui.views.ContentOutlineMStack" visible="false" containerData="5000" selectedElement="_zGC0eqcLEeqZ_rJFZv71AA">
                 <tags>Minimized</tags>
-                <tags>MinimizedByZoom</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_zGC0eqcLEeqZ_rJFZv71AA" elementId="org.eclipse.ui.views.ContentOutline" ref="_zGDbkacLEeqZ_rJFZv71AA"/>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_zGC0e6cLEeqZ_rJFZv71AA" containerData="7688" selectedElement="_zGC0fKcLEeqZ_rJFZv71AA">
-              <children xsi:type="advanced:Placeholder" xmi:id="_zGC0fKcLEeqZ_rJFZv71AA" elementId="org.eclipse.ui.editorss" containerData="6500" ref="_zGC1h6cLEeqZ_rJFZv71AA">
-                <tags>Maximized</tags>
-              </children>
-              <children xsi:type="basic:PartStack" xmi:id="_zGC0facLEeqZ_rJFZv71AA" elementId="bottom" visible="false" containerData="3500" selectedElement="_ZdKR4KggEeqTxM9qMI2xmA">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_zGC0e6cLEeqZ_rJFZv71AA" containerData="7911" selectedElement="_zGC0fKcLEeqZ_rJFZv71AA">
+              <children xsi:type="advanced:Placeholder" xmi:id="_zGC0fKcLEeqZ_rJFZv71AA" elementId="org.eclipse.ui.editorss" containerData="8800" ref="_zGC1h6cLEeqZ_rJFZv71AA"/>
+              <children xsi:type="basic:PartStack" xmi:id="_zGC0facLEeqZ_rJFZv71AA" elementId="bottom" containerData="1200" selectedElement="_ZdKR4KggEeqTxM9qMI2xmA">
                 <tags>General</tags>
-                <tags>Minimized</tags>
-                <tags>MinimizedByZoom</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_zGC0fqcLEeqZ_rJFZv71AA" elementId="org.eclipse.ui.views.PropertySheet" ref="_zGDblKcLEeqZ_rJFZv71AA"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_zGC0f6cLEeqZ_rJFZv71AA" elementId="org.eclipse.ui.views.ProblemView" ref="_zGDbl6cLEeqZ_rJFZv71AA"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_ZdKR4KggEeqTxM9qMI2xmA" elementId="org.eclipse.ui.console.ConsoleView" ref="_ZdIcsKggEeqTxM9qMI2xmA"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_OHXMYagiEeqTxM9qMI2xmA" elementId="org.eclipse.pde.runtime.LogView" ref="_OHXMYKgiEeqTxM9qMI2xmA"/>
+                <children xsi:type="advanced:Placeholder" xmi:id="_YisjkKi2EeqNlNs994e-Eg" elementId="org.eclipse.ui.views.ProgressView" ref="_Yir8gKi2EeqNlNs994e-Eg"/>
               </children>
             </children>
           </children>
@@ -93,38 +85,17 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_zGC1h6cLEeqZ_rJFZv71AA" elementId="org.eclipse.ui.editorss" selectedElement="_zGC1iKcLEeqZ_rJFZv71AA">
-      <children xsi:type="basic:PartStack" xmi:id="_zGC1iKcLEeqZ_rJFZv71AA" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_JqLe4KiwEeqL0MLT0D3eQQ">
+      <children xsi:type="basic:PartStack" xmi:id="_zGC1iKcLEeqZ_rJFZv71AA" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_5ipL4Ki1EeqNlNs994e-Eg">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <children xsi:type="basic:Part" xmi:id="_D3NdIKggEeqTxM9qMI2xmA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="generateWebDev.mtl" iconURI="platform:/plugin/org.eclipse.acceleo.ide.ui/icons/AcceleoEditor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor&quot; name=&quot;generateWebDev.mtl&quot; partName=&quot;generateWebDev.mtl&quot; title=&quot;generateWebDev.mtl&quot; tooltip=&quot;org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateWebDev.mtl&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateWebDev.mtl&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;17844&quot; selectionTopPixel=&quot;360&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_HZWrwKiwEeqL0MLT0D3eQQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="generateDocumentation.mtl" iconURI="platform:/plugin/org.eclipse.acceleo.ide.ui/icons/AcceleoEditor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor&quot; name=&quot;generateDocumentation.mtl&quot; partName=&quot;generateDocumentation.mtl&quot; title=&quot;generateDocumentation.mtl&quot; tooltip=&quot;org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateDocumentation.mtl&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateDocumentation.mtl&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;532&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_JqLe4KiwEeqL0MLT0D3eQQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="WebSiteGood.xmi" iconURI="platform:/plugin/org.eclipse.emf.edit/icons/full/obj16/ModelFile.gif" closeable="true">
+        <tags>active</tags>
+        <children xsi:type="basic:Part" xmi:id="_5ipL4Ki1EeqNlNs994e-Eg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="WebSiteGood.xmi" iconURI="platform:/plugin/org.eclipse.emf.edit/icons/full/obj16/ModelFile.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.emf.ecore.presentation.ReflectiveEditorID&quot; name=&quot;WebSiteGood.xmi&quot; partName=&quot;WebSiteGood.xmi&quot; title=&quot;WebSiteGood.xmi&quot; tooltip=&quot;Project/model/WebSiteGood.xmi&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Project/model/WebSiteGood.xmi&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.emf.ecore.presentation.ReflectiveEditorID</tags>
           <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_zaWxQKiwEeqL0MLT0D3eQQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="generateDatabase.mtl" iconURI="platform:/plugin/org.eclipse.acceleo.ide.ui/icons/AcceleoEditor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor&quot; name=&quot;generateDatabase.mtl&quot; partName=&quot;generateDatabase.mtl&quot; title=&quot;generateDatabase.mtl&quot; tooltip=&quot;org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateDatabase.mtl&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateDatabase.mtl&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1503&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_O6JHMKixEeqL0MLT0D3eQQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="generateFormXML.mtl" iconURI="platform:/plugin/org.eclipse.acceleo.ide.ui/icons/AcceleoEditor.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor&quot; name=&quot;generateFormXML.mtl&quot; partName=&quot;generateFormXML.mtl&quot; title=&quot;generateFormXML.mtl&quot; tooltip=&quot;org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateFormXML.mtl&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/org.eclipse.acceleo.module.WebDevGeneration/src/org/eclipse/acceleo/module/WebDevGeneration/main/generateFormXML.mtl&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;600&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.acceleo.ide.ui.editors.template.AcceleoEditor</tags>
-          <tags>removeOnHide</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
         </children>
       </children>
     </sharedElements>
@@ -134,8 +105,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1591304406626&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:Sirius</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_zGDbgKcLEeqZ_rJFZv71AA" elementId="org.eclipse.sirius.ui.tools.views.model.explorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -220,6 +189,18 @@
       </menus>
       <toolbar xmi:id="_OHsjkagiEeqTxM9qMI2xmA" elementId="org.eclipse.pde.runtime.LogView" visible="false"/>
     </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_Yir8gKi2EeqNlNs994e-Eg" elementId="org.eclipse.ui.views.ProgressView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Progress" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/pview.png" tooltip="" closeable="true">
+      <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.ide"/>
+      <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.internal.progress.ProgressView"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
+      <tags>View</tags>
+      <tags>categoryTag:General</tags>
+      <menus xmi:id="_Yi1tgKi2EeqNlNs994e-Eg" elementId="org.eclipse.ui.views.ProgressView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_Yi1tgai2EeqNlNs994e-Eg" elementId="org.eclipse.ui.views.ProgressView" visible="false"/>
+    </sharedElements>
     <trimBars xmi:id="_zGDbnKcLEeqZ_rJFZv71AA" elementId="org.eclipse.ui.main.toolbar">
       <children xsi:type="menu:ToolBar" xmi:id="_zGDbnacLEeqZ_rJFZv71AA" elementId="group.file" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -227,7 +208,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_zGDbn6cLEeqZ_rJFZv71AA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_A1Z2kKiwEeqL0MLT0D3eQQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_zGEqnqcLEeqZ_rJFZv71AA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_2hMNEKi1EeqNlNs994e-Eg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_zGEqnqcLEeqZ_rJFZv71AA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_zGDbrKcLEeqZ_rJFZv71AA" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -248,7 +229,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_zGDb0KcLEeqZ_rJFZv71AA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_A1dg8KiwEeqL0MLT0D3eQQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_zGEqPqcLEeqZ_rJFZv71AA"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_2hP3cKi1EeqNlNs994e-Eg" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_zGEqPqcLEeqZ_rJFZv71AA"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_zGDb36cLEeqZ_rJFZv71AA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -283,7 +264,7 @@
       </children>
     </trimBars>
     <trimBars xmi:id="_zGDb_KcLEeqZ_rJFZv71AA" elementId="org.eclipse.ui.trim.vertical1" side="Left">
-      <children xsi:type="menu:ToolControl" xmi:id="_zGDb_acLEeqZ_rJFZv71AA" elementId="org.eclipse.sirius.ui.tools.views.model.explorerMStack(IDEWindow).(org.eclipse.sirius.ui.tools.perspective.modeling)" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+      <children xsi:type="menu:ToolControl" xmi:id="_zGDb_acLEeqZ_rJFZv71AA" elementId="org.eclipse.sirius.ui.tools.views.model.explorerMStack(IDEWindow).(org.eclipse.sirius.ui.tools.perspective.modeling)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
         <persistedState key="XSize" value="600"/>
         <persistedState key="YSize" value="722"/>
         <tags>TrimStack</tags>
@@ -294,8 +275,8 @@
         <tags>Draggable</tags>
       </children>
     </trimBars>
-    <trimBars xmi:id="_zGDb_6cLEeqZ_rJFZv71AA" elementId="org.eclipse.ui.trim.vertical2" side="Right">
-      <children xsi:type="menu:ToolControl" xmi:id="_zGDcAKcLEeqZ_rJFZv71AA" elementId="bottom(IDEWindow).(org.eclipse.sirius.ui.tools.perspective.modeling)" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+    <trimBars xmi:id="_zGDb_6cLEeqZ_rJFZv71AA" elementId="org.eclipse.ui.trim.vertical2" toBeRendered="false" side="Right">
+      <children xsi:type="menu:ToolControl" xmi:id="_zGDcAKcLEeqZ_rJFZv71AA" elementId="bottom(IDEWindow).(org.eclipse.sirius.ui.tools.perspective.modeling)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
         <tags>TrimStack</tags>
         <tags>Draggable</tags>
       </children>
